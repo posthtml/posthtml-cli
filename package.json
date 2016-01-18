@@ -1,0 +1,34 @@
+{
+  "name": "posthtml-cli",
+  "version": "0.0.0",
+  "description": "CLI for posthtml",
+  "main": "index.js",
+  "bin": {
+    "posthtml": "./bin/posthtml"
+  },
+  "scripts": {
+    "test": "xo && nyc ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitScrum/posthtml-cli.git"
+  },
+  "keywords": [
+    "posthtml",
+    "posthtml-runner",
+    "cli"
+  ],
+  "author": "gitscrum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GitScrum/posthtml-cli/issues"
+  },
+  "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
+  "dependencies": {
+    "posthtml": "^0.8.1"
+  },
+  "devDependencies": {
+    "ava": "^0.10.0",
+    "xo": "^0.12.1"
+  }
+}
