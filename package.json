@@ -25,10 +25,12 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
-    "posthtml": "^0.8.1"
+    "posthtml": "^0.8.1",
+    "yargs": "^3.32.0"
   },
   "devDependencies": {
     "ava": "^0.10.0",
+    "nyc": "^5.3.0",
     "xo": "^0.12.1"
   }
 }
