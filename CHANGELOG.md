@@ -1,3 +1,7 @@
+## [0.0.2] - 19-01-2016
+### Added
+- index.js the germ of the kernel
+
 ## [0.0.1] - 19-01-2016
 ### Added
 - nyc to devDep
