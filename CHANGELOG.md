@@ -1,3 +1,10 @@
+## [0.0.3] - 19-01-2016
+### Added
+- index.js the germ of the config
+
+### Change
+- update default example
+
 ## [0.0.2] - 19-01-2016
 ### Added
 - index.js the germ of the kernel
