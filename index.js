@@ -32,7 +32,7 @@ var html = fs.readFileSync(argv.input, 'utf8');
 var config = argv.plugins ? argv.plugins : getConfig().posthtml;
 
 var plugins = config.require.map(function (name) {
-	return require(name)(argv.plugins[name]);
+	return require(name)(config[name]);
 });
 
 posthtml(plugins)

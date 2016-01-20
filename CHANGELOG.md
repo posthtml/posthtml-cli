@@ -1,3 +1,7 @@
+## [0.0.8] - 20-01-2016
+### Fixed
+- Fixed bug #7, cannot read property ... in undefined 
+
 ## [0.0.7] - 20-01-2016
 ### Fixed
 - Fixed bug #5
