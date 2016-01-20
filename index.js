@@ -1,11 +1,12 @@
 var posthtml = require('posthtml');
+var pkgConf = require('pkg-conf');
 var fs = require('fs');
 var argv = require('yargs')
 	.usage('Usage: $0 [--config|-c config.json] [--output|-o output.html] [--input|-i input.html]')
 	.example('posthtml -o output.html input.html', 'Default example')
 	.config('c', function (configPath) {
 		return {
-			plugins: getConfig(configPath)
+			plugins: JSON.parse(fs.readFileSync(configPath, 'utf-8'))
 		};
 	})
 	.alias('c', 'config')
@@ -23,13 +24,8 @@ var argv = require('yargs')
 	.alias('h', 'help')
 	.argv;
 
-function getConfig(configPath) {
-	var path = configPath || './package.json';
-	return JSON.parse(fs.readFileSync(path, 'utf-8'));
-}
-
 var html = fs.readFileSync(argv.input, 'utf8');
-var config = argv.plugins ? argv.plugins : getConfig().posthtml;
+var config = argv.plugins || pkgConf.sync('posthtml');
 
 var plugins = config.require.map(function (name) {
 	return require(name)(config[name]);
