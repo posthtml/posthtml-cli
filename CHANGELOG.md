@@ -1,3 +1,10 @@
+## [0.0.6] - 20-01-2016
+### Added
+- read castom config file or config in package.json
+
+### Fixed
+- Fixed not read other config file
+
 ## [0.0.5] - 20-01-2016
 ### Fixed
 - Fixed errors from xo
