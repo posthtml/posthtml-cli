@@ -24,8 +24,9 @@ var argv = require('yargs')
 	.argv;
 
 var html = fs.readFileSync(argv.input, "utf8");
+
 var plugins = argv.options.require.map(function(name){
-	return require(name)();
+	return require(name)(argv.options[name]);
 });
 
 posthtml(plugins)
@@ -33,3 +34,5 @@ posthtml(plugins)
     .then(function (result) {
         fs.writeFileSync(argv.output, result.html);
     });
+
+console.log(argv)
