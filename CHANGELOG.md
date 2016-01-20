@@ -1,3 +1,7 @@
+## [0.0.5] - 20-01-2016
+### Fixed
+- Fixed errors from xo
+
 ## [0.0.4] - 20-01-2016
 ### Added
 - added support config for custom required plugins
