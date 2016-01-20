@@ -1,3 +1,7 @@
+## [0.0.7] - 20-01-2016
+### Fixed
+- Fixed bug #5
+
 ## [0.0.6] - 20-01-2016
 ### Added
 - read castom config file or config in package.json
