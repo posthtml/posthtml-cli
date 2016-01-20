@@ -1,3 +1,7 @@
+## [0.0.4] - 20-01-2016
+### Added
+- added support config for custom required plugins
+
 ## [0.0.3] - 19-01-2016
 ### Added
 - index.js the germ of the config
