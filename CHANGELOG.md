@@ -1,3 +1,7 @@
+## [0.0.9] - 20-01-2016
+### Changed
+- update read config for plugins
+
 ## [0.0.8] - 20-01-2016
 ### Fixed
 - Fixed bug #7, cannot read property ... in undefined 
