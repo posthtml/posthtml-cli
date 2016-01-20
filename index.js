@@ -6,7 +6,7 @@ var argv = require('yargs')
 	.config('c', function (configPath) {
 		return {
 			plugins: getConfig(configPath)
-		}
+		};
 	})
 	.alias('c', 'config')
 	.alias('i', 'input')
@@ -25,7 +25,7 @@ var argv = require('yargs')
 
 function getConfig(configPath) {
 	var path = configPath || './package.json';
-	return JSON.parse(fs.readFileSync(path, 'utf-8'))
+	return JSON.parse(fs.readFileSync(path, 'utf-8'));
 }
 
 var html = fs.readFileSync(argv.input, 'utf8');
