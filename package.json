@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CLI for posthtml",
   "main": "index.js",
   "bin": {
@@ -34,7 +34,10 @@
     "xo": "^0.12.1"
   },
   "posthtml": {
-    "require": ["posthtml-custom-elements"]
+    "require": ["posthtml-custom-elements"],
+    "posthtml-custom-elements": {
+      "skipTags": ["header"]
+    }
   }
 
 }
