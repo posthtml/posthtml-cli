@@ -3,9 +3,12 @@ var fs = require('fs');
 var argv = require('yargs')
 	.usage('Usage: $0 [--config|-c config.json] [--output|-o output.html] [--input|-i input.html]')
 	.example('posthtml -o output.html input.html', 'Default example')
-	.config('c', function () {
+	.config('c', function (configPath) {
+		var configFilePath = fs.statSync(configPath) ? configPath : './package.json';
+		var config = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'));
+
 		return {
-			options: JSON.parse(fs.readFileSync('./package.json', 'utf-8')).posthtml
+			options: config.posthtml ? config.posthtml : config
 		};
 	})
 	.alias('c', 'config')
