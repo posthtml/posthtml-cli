@@ -24,13 +24,21 @@ var argv = require('yargs')
 	.alias('h', 'help')
 	.argv;
 
+// get htmls
 var html = fs.readFileSync(argv.input, 'utf8');
+
+// get config
 var config = argv.plugins || pkgConf.sync('posthtml');
 
-var plugins = config.require.map(function (name) {
-	return require(name)(config[name]);
-});
+// get plugins
+var plugins = [];
+if (config.require) {
+	plugins = config.require.map(function (name) {
+		return require(name)(config[name]);
+	});
+}
 
+// processing
 posthtml(plugins)
 	.process(html)
 	.then(function (result) {
