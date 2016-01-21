@@ -1,3 +1,10 @@
+## [0.0.10] - 21-01-2016
+### Added
+- testing xo before push
+
+### Fixed
+- Fixed bug #10, Cannot read property `map` of undefined
+
 ## [0.0.9] - 20-01-2016
 ### Changed
 - update read config for plugins
