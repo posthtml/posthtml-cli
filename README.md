@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url][![Build Status][travis-image]][travis-url][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![DevDependency Status][depstat-dev-image]][depstat-dev-url][![XO code style][codestyle-image]][codestyle-url]
 
-> CLI for posthtml
+> CLI for [PostHTML][posthtml-url]
 
 ## Install
 
@@ -18,6 +18,8 @@ posthtml --help
 
 ## License
 MIT
+
+[posthtml-url]: http://github.com/posthtml/posthtml
 
 [npm-url]: https://npmjs.org/package/posthtml-cli
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
