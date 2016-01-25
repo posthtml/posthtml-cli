@@ -11,8 +11,14 @@
 
 ## Install
 
-```sh
+```
 npm install --global posthtml-cli
+```
+
+## Usage
+
+```
+posthtml-cli --help
 ```
 
 ## License
