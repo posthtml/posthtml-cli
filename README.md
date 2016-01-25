@@ -1,11 +1,6 @@
 # posthtml-cli
 
-[![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Coveralls Status][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-image]][depstat-url]
-[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
-[![XO code style][codestyle-image]][codestyle-url]
+[![NPM version][npm-image]][npm-url][![Build Status][travis-image]][travis-url][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![DevDependency Status][depstat-dev-image]][depstat-dev-url][![XO code style][codestyle-image]][codestyle-url]
 
 > CLI for posthtml
 
@@ -18,7 +13,7 @@ npm install --global posthtml-cli
 ## Usage
 
 ```
-posthtml-cli --help
+posthtml --help
 ```
 
 ## License
