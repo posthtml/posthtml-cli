@@ -1,3 +1,13 @@
+## [0.0.11] - 26-01-2016
+### Added
+- Added check input arguments
+
+### Change
+- Fixed #12, Update ava to v0.11.0
+
+### Fixed
+- Fixed #13, No such file or directory, unix system
+
 ## [0.0.10] - 21-01-2016
 ### Added
 - testing xo before push
