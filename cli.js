@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var posthtml = require('posthtml');
 var pkgConf = require('pkg-conf');
 var fs = require('fs');
@@ -22,6 +24,14 @@ var argv = require('yargs')
 	.alias('v', 'version')
 	.help('h')
 	.alias('h', 'help')
+	.check(function (argv) {
+		if (!argv.input) {
+			throw 'Not einter argument --input or -i file';
+		}
+		if (!argv.output) {
+			throw 'Not einter argument --output or -o file';
+		}
+	})
 	.argv;
 
 // get htmls
