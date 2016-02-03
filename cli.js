@@ -26,11 +26,12 @@ var argv = require('yargs')
 	.alias('h', 'help')
 	.check(function (argv) {
 		if (!argv.input) {
-			throw 'Not einter argument --input or -i file';
+			throw new Error('Not einter argument --input or -i file');
 		}
 		if (!argv.output) {
-			throw 'Not einter argument --output or -o file';
+			throw new Error('Not einter argument --output or -o file');
 		}
+		return true;
 	})
 	.argv;
 

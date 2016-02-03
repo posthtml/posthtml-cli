@@ -1,4 +1,12 @@
 ## [0.0.11] - 26-01-2016
+### Fixed
+- Fixed #18, failed when check input argument
+- Fixed xo report error
+
+### Change
+- Update dev and devDep
+
+## [0.0.11] - 26-01-2016
 ### Added
 - Added check input arguments
 
