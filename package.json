@@ -27,21 +27,11 @@
   "dependencies": {
     "pkg-conf": "^1.1.1",
     "posthtml": "^0.8.1",
-    "yargs": "^3.32.0"
+    "yargs": "^4.1.0"
   },
   "devDependencies": {
     "ava": "^0.11.0",
     "nyc": "^5.5.0",
     "xo": "^0.12.1"
-  },
-  "posthtml": {
-    "require": [
-      "posthtml-custom-elements"
-    ],
-    "posthtml-custom-elements": {
-      "skipTags": [
-        "header"
-      ]
-    }
   }
 }
