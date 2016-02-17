@@ -1,3 +1,12 @@
+## [0.0.13] - 17-02-2016
+### Change
+- Update #21, update yargvs to v4.10
+
+## [0.0.12] - 03-02-2016
+### Fixed
+- Fixed #18, argument check failed
+- Fixed xo report error
+
 ## [0.0.11] - 26-01-2016
 ### Fixed
 - Fixed #18, failed when check input argument
