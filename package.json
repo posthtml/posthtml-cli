@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
-    "pkg-conf": "^1.1.1",
     "posthtml": "^0.8.1",
     "yargs": "^4.1.0"
   },
