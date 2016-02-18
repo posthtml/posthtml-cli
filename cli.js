@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
 var posthtml = require('posthtml');
-var pkgConf = require('pkg-conf');
 var fs = require('fs');
 var argv = require('yargs')
 	.usage('Usage: $0 [--config|-c config.json] [--output|-o output.html] [--input|-i input.html]')
 	.example('posthtml -o output.html input.html', 'Default example')
-	.config('c', function (configPath) {
-		return {
-			plugins: JSON.parse(fs.readFileSync(configPath, 'utf-8'))
-		};
+	.pkgConf('posthtml')
+	.config('c', {
+		config: true
 	})
 	.alias('c', 'config')
 	.alias('i', 'input')
@@ -35,17 +33,15 @@ var argv = require('yargs')
 	})
 	.argv;
 
+
 // get htmls
 var html = fs.readFileSync(argv.input, 'utf8');
 
-// get config
-var config = argv.plugins || pkgConf.sync('posthtml');
-
 // get plugins
 var plugins = [];
-if (config.require) {
-	plugins = config.require.map(function (name) {
-		return require(name)(config[name]);
+if (argv.require) {
+	plugins = argv.require.map(function (name) {
+		return require(name)(argv[name]);
 	});
 }
 

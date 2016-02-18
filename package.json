@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "CLI for posthtml",
   "bin": {
     "posthtml": "./cli.js"
@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
-    "pkg-conf": "^1.1.1",
     "posthtml": "^0.8.1",
     "yargs": "^4.1.0"
   },
