@@ -1,6 +1,11 @@
 ## [0.0.13] - 17-02-2016
 ### Change
 - Update #21, update yargvs to v4.10
+- Update #22, used pkgConf from yargvs
+
+### Removed
+- Removed #22, pkg-conf from package.json, see update #22
+- Removed #22, pkg-conf get config, see update #22
 
 ## [0.0.12] - 03-02-2016
 ### Fixed
