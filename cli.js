@@ -33,7 +33,6 @@ var argv = require('yargs')
 	})
 	.argv;
 
-
 // get htmls
 var html = fs.readFileSync(argv.input, 'utf8');
 
