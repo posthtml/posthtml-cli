@@ -31,7 +31,10 @@
   "devDependencies": {
     "ava": "^0.12.0",
     "coveralls": "^2.11.8",
+    "execa": "^0.2.2",
     "nyc": "^6.0.0",
+    "pkg-conf": "^1.1.1",
+    "posthtml-custom-elements": "^1.0.2",
     "xo": "^0.12.1"
   }
 }
