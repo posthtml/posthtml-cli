@@ -5,9 +5,9 @@ var fs = require('fs');
 var argv = require('yargs')
 	.usage('Usage: $0 --output|-o output.html --input|-i input.html [--config|-c config.json]')
 	.example('posthtml -o output.html -i input.html', 'Default example')
+	.demand(['o', 'i'])
 	.alias('i', 'input')
 	.alias('o', 'output')
-	.demand(['o', 'i'])
 	.pkgConf('posthtml')
 	.config('c')
 	.alias('c', 'config')
@@ -18,8 +18,6 @@ var argv = require('yargs')
 	.help('h')
 	.alias('h', 'help')
 	.argv;
-
-console.log(argv);
 
 // get htmls
 var html = fs.readFileSync(argv.input, 'utf8');
