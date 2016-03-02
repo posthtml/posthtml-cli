@@ -4,11 +4,14 @@
 - Added #27, coveralls
 - Added pkg for test
   - execa
-  - pkg-conf
+  - read-pkg
+  - temp-write
   - posthtml-custom-elements
+- Added config for posthtml-cli in package.json for testing
 
 ### Change
 - Update #25, dev & devDep
+- Update test run, remove nyc (breaks the tests)
 - Update successor
   - change usage syntax
   - change reauireArg to demand
@@ -17,6 +20,7 @@
 
 ### Fixed
 - Fixed xo report error
+
 
 ## [0.0.13] - 17-02-2016
 ### Change
