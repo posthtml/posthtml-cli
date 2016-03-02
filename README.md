@@ -1,6 +1,6 @@
 # posthtml-cli
 
-[![NPM version][npm-image]][npm-url][![Build Status][travis-image]][travis-url][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![DevDependency Status][depstat-dev-image]][depstat-dev-url][![XO code style][codestyle-image]][codestyle-url]
+[![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![DevDependency Status][depstat-dev-image]][depstat-dev-url][![XO code style][codestyle-image]][codestyle-url]
 
 > CLI for [PostHTML][posthtml-url]
 
@@ -25,7 +25,10 @@ MIT
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/GitScrum/posthtml-cli
-[travis-image]: http://img.shields.io/travis/GitScrum/posthtml-cli.svg?style=flat-square
+[travis-image]: http://img.shields.io/travis/GitScrum/posthtml-cli.svg?style=flat-square&label=unix
+
+[appveyor]:     https://ci.appveyor.com/project/GitScrum/posthtml-cli
+[appveyor-img]: https://img.shields.io/appveyor/ci/GitScrum/posthtml-cli.svg?style=flat-square&label=windows
 
 [coveralls-url]: https://coveralls.io/r/GitScrum/posthtml-cli
 [coveralls-image]: http://img.shields.io/coveralls/GitScrum/posthtml-cli.svg?style=flat-square
