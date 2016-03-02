@@ -1,12 +1,12 @@
 {
   "name": "posthtml-cli",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "CLI for posthtml",
   "bin": {
     "posthtml": "./cli.js"
   },
   "scripts": {
-    "test": "xo && nyc ava",
+    "test": "xo && ava",
     "prepush": "xo"
   },
   "repository": {
@@ -25,12 +25,20 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
-    "posthtml": "^0.8.1",
-    "yargs": "^4.1.0"
+    "posthtml": "^0.8.3",
+    "yargs": "^4.2.0"
   },
   "devDependencies": {
-    "ava": "^0.11.0",
-    "nyc": "^5.5.0",
+    "ava": "^0.12.0",
+    "coveralls": "^2.11.8",
+    "execa": "^0.2.2",
+    "nyc": "^6.0.0",
+    "posthtml-custom-elements": "^1.0.2",
+    "read-pkg": "^1.1.0",
+    "temp-write": "^2.1.0",
     "xo": "^0.12.1"
+  },
+  "posthtml": {
+    "require": ["posthtml-custom-elements"]
   }
 }

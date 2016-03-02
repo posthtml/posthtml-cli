@@ -1,7 +1,31 @@
+## [0.0.14] - 29-02-2016
+### Added 
+- Added #26, travis config
+- Added #27, coveralls
+- Added pkg for test
+  - execa
+  - read-pkg
+  - temp-write
+  - posthtml-custom-elements
+- Added config for posthtml-cli in package.json for testing
+
+### Change
+- Update #25, dev & devDep
+- Update test run, remove nyc (breaks the tests)
+- Update successor
+  - change usage syntax
+  - change reauireArg to demand
+  - update get version
+  - remove check, not need, i used demand
+
+### Fixed
+- Fixed xo report error
+
+
 ## [0.0.13] - 17-02-2016
 ### Change
 - Update #21, update yargvs to v4.10
-- Update #22, used pkgConf from yargvs
+- Update #22, used pkgConf from yargs
 
 ### Removed
 - Removed #22, pkg-conf from package.json, see update #22
