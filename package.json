@@ -6,7 +6,7 @@
     "posthtml": "./cli.js"
   },
   "scripts": {
-    "test": "xo && nyc ava",
+    "test": "xo && ava",
     "prepush": "xo"
   },
   "repository": {
@@ -33,8 +33,12 @@
     "coveralls": "^2.11.8",
     "execa": "^0.2.2",
     "nyc": "^6.0.0",
-    "pkg-conf": "^1.1.1",
     "posthtml-custom-elements": "^1.0.2",
+    "read-pkg": "^1.1.0",
+    "temp-write": "^2.1.0",
     "xo": "^0.12.1"
+  },
+  "posthtml": {
+    "require": ["posthtml-custom-elements"]
   }
 }
