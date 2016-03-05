@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 var posthtml = require('posthtml');
 var fs = require('fs');
 var argv = require('yargs')
