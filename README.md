@@ -13,7 +13,26 @@ npm install --global posthtml-cli
 ## Usage
 
 ```
-posthtml --help
+$ posthtml --help
+
+  Usage
+	posthtml --output|-o output.html --input|-i input.html
+
+  Options
+	--config,  -c Path to JSON file           [string]
+	--output,  -o Output html file result     [required]
+	--input,   -i Input html file             [required]
+	--help,    -h Show help                   [boolean]
+	--version, -v Show version number         [boolean]
+  
+  Example
+	posthtml -o output.html -i input.html
+
+  Default read config in package.json
+  "posthtml": {
+	"require": ["posthtml-custom-elements"]
+  }
+
 ```
 
 ## License
