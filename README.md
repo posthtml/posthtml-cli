@@ -27,12 +27,14 @@ $ posthtml --help
   
   Example
 	posthtml -o output.html -i input.html
+```
 
-  Default read config in package.json
+*Default read config in package.json*
+```json
+  "name": "my project",
   "posthtml": {
 	"require": ["posthtml-custom-elements"]
   }
-
 ```
 
 ## License
