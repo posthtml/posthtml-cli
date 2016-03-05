@@ -31,10 +31,12 @@ $ posthtml --help
 
 *Default read config in package.json*
 ```json
+{
   "name": "my project",
   "posthtml": {
 	"require": ["posthtml-custom-elements"]
   }
+}
 ```
 
 ## License
