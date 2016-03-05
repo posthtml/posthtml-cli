@@ -1,4 +1,7 @@
 ## [0.0.15] - 05-03-2016
+### Added 
+- Added #29, usage description
+
 ### Change
 - Update #33, devDep
 
