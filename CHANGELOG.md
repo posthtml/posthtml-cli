@@ -1,3 +1,11 @@
+## [0.0.15] - 05-03-2016
+### Change
+- Update #33, devDep
+
+### Fixed
+- Fixed #32, resolved test for unix (change cmod in git)
+- Fixed #34, fixed test after update devDep and plugins
+
 ## [0.0.14] - 29-02-2016
 ### Added 
 - Added #26, travis config
