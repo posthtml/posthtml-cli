@@ -40,11 +40,10 @@
     "xo": "^0.13.0",
     "babel": "*",
     "babel-preset-es2015": "*",
-    "babel-transform-runtime": "*"
+    "babel-plugin-transform-runtime": "*"
   },
   "babel": { 
     "presets": ["es2015"], "plugins": ["transform-runtime"], "ignore": "test-cli.js", "env": { "development": { "sourceMaps": "inline" } } },
   "posthtml": {
     "require": ["posthtml-custom-elements"]
-  }
-}
+  }}
