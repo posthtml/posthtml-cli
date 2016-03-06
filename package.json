@@ -6,7 +6,7 @@
     "posthtml": "./cli.js"
   },
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo && nyc ava",
     "prepush": "xo"
   },
   "repository": {
