@@ -5,7 +5,6 @@ var fs = require('fs');
 var argv = require('yargs')
 	.usage('Usage: $0 --output|-o output.html --input|-i input.html [--config|-c config.json]')
 	.example('posthtml -o output.html -i input.html', 'Default example')
-	.demand(['o', 'i'])
 	.alias('i', 'input')
 	.alias('o', 'output')
 	.pkgConf('posthtml')
