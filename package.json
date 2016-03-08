@@ -38,12 +38,6 @@
     "read-pkg": "^1.1.0",
     "temp-write": "^2.1.0",
     "xo": "^0.13.0",
-    "babel": "*",
-    "babel-preset-es2015": "*",
-    "babel-plugin-transform-runtime": "*"
-  },
-  "babel": { 
-    "presets": ["es2015"], "plugins": ["transform-runtime"], "ignore": "test-cli.js", "env": { "development": { "sourceMaps": "inline" } } },
-  "posthtml": {
+    "posthtml": {
     "require": ["posthtml-custom-elements"]
   }}
