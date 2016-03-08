@@ -39,5 +39,7 @@
     "temp-write": "^2.1.0",
     "xo": "^0.13.0",
     "posthtml": {
-    "require": ["posthtml-custom-elements"]
-  }}
+      "require": ["posthtml-custom-elements"]
+    }
+  }
+}
