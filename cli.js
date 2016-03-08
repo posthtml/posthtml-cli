@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+delete require.cache[require.resolve('yargs')];
 
 var posthtml = require('posthtml');
 var fs = require('fs');
