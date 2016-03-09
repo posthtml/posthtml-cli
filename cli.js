@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 // tmp fix for issue #34
 delete require.cache[require.resolve('yargs')];
 
