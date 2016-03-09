@@ -16,7 +16,7 @@ npm install --global posthtml-cli
 $ posthtml --help
 
   Usage
-	posthtml --output|-o output.html --input|-i input.html
+	posthtml --output|-o output.html --input|-i input.html [--config|-c path/to/json/config]
 
   Options
 	--config,  -c Path to JSON file           [string]
