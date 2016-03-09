@@ -1,12 +1,12 @@
 {
   "name": "posthtml-cli",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "CLI for posthtml",
   "bin": {
     "posthtml": "./cli.js"
   },
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo && nyc ava",
     "prepush": "xo"
   },
   "repository": {

@@ -1,3 +1,11 @@
+## [0.0.16] - 09-03-2016
+### Added 
+- Added tmp fix for issue #34
+
+### Change
+- Update Readme, description for config
+- Update #38, test, double code
+
 ## [0.0.15] - 05-03-2016
 ### Added 
 - Added #29, usage description

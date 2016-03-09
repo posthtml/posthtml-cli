@@ -6,6 +6,17 @@ const path = require('path');
 const readPkg = require('read-pkg');
 const readFile = require('fs').readFile;
 
+function read(path) {
+	return new Promise((resolve, reject) => {
+		readFile(path, 'utf8', (err, data) => {
+			if (err) {
+				reject(err);
+			}
+			return resolve(data);
+		});
+	});
+}
+
 test('Missing required arguments -i, -o', t => {
 	t.throws(execa('../cli.js', []));
 });
@@ -25,16 +36,6 @@ test('Check version', async t => {
 
 test('Transform html witch config in package.json', async t => {
 	t.plan(2);
-	function read(path) {
-		return new Promise((resolve, reject) => {
-			readFile(path, 'utf8', (err, data) => {
-				if (err) {
-					reject(err);
-				}
-				return resolve(data);
-			});
-		});
-	}
 	const filename = await tempWrite('output.html');
 	await execa('../cli.js', ['-i', 'fixtures/input.html', '-o', filename]);
 	t.true(await pathExists(filename));
@@ -43,16 +44,6 @@ test('Transform html witch config in package.json', async t => {
 
 test('Transform html witch config in file', async t => {
 	t.plan(2);
-	function read(path) {
-		return new Promise((resolve, reject) => {
-			readFile(path, 'utf8', (err, data) => {
-				if (err) {
-					reject(err);
-				}
-				return resolve(data);
-			});
-		});
-	}
 	const filename = await tempWrite('output.html');
 	await execa('../cli.js', ['-i', 'fixtures/input.html', '-o', filename, '-c', 'fixtures/config.json']);
 	t.true(await pathExists(filename));
