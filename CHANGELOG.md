@@ -1,3 +1,10 @@
+## [0.0.17] - 13-03-2016
+### Fixed
+- Fixed #39, update pkg
+
+### Removed
+- tmp fix for issue #34
+
 ## [0.0.16] - 09-03-2016
 ### Added 
 - Added tmp fix for issue #34
