@@ -1,4 +1,8 @@
 ## [0.0.17] - 13-03-2016
+### Change
+- Update #45, devDep
+
+## [0.0.17] - 13-03-2016
 ### Fixed
 - Fixed #39, update pkg
 
