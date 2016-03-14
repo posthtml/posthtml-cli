@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "CLI for posthtml",
   "bin": {
     "posthtml": "./cli.js"
