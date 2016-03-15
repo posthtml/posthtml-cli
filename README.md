@@ -12,7 +12,7 @@ npm install --global posthtml-cli
 
 ## Usage
 
-```
+```console
 $ posthtml --help
 
   Usage
@@ -35,6 +35,9 @@ $ posthtml --help
   "name": "my project",
   "posthtml": {
 	"require": ["posthtml-custom-elements"]
+  },
+  "posthtml-custom-elements": {
+  	"defaultTag": "span"
   }
 }
 ```
