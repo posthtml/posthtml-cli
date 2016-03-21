@@ -30,6 +30,7 @@ $ posthtml --help
 ```
 
 For reading config used [posthtml-load-plugins](https://github.com/michael-ciniawsky/posthtml-load-plugins)
+
 *Default read options for plugins from package.json*
 ```json
 {
