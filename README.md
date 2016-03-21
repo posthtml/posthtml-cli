@@ -15,30 +15,37 @@ npm install --global posthtml-cli
 ```console
 $ posthtml --help
 
-  Usage
+	Usage
 	posthtml --output|-o output.html --input|-i input.html [--config|-c path/to/json/config]
 
-  Options
+	Options
 	--config,  -c Path to JSON file           [string]
 	--output,  -o Output html file result     [required]
 	--input,   -i Input html file             [required]
 	--help,    -h Show help                   [boolean]
 	--version, -v Show version number         [boolean]
-  
-  Example
+	
+	Example
 	posthtml -o output.html -i input.html
 ```
 
-*Default read config in package.json*
+For reading config used [posthtml-load-plugins](https://github.com/michael-ciniawsky/posthtml-load-plugins)
+*Default read options for plugins from package.json*
 ```json
 {
-  "name": "my project",
-  "posthtml": {
-	"require": ["posthtml-custom-elements"]
-  },
-  "posthtml-custom-elements": {
-  	"defaultTag": "span"
-  }
+	"name": "my project",
+	"devDependencies": {
+		"posthtml-custom-elements": "^1.0.3",
+		"posthtml-style-to-file": "^0.1.1"
+	},
+	"posthtml": {
+		"customElements": {
+			"defaultTag": "span"
+		},
+		"styleToFile": {
+			"path": "./dist/style.css"
+		}
+	}
 }
 ```
 

@@ -1,6 +1,5 @@
 {
-	"require": ["posthtml-custom-elements"],
-	"posthtml-custom-elements": {
+	"customElements": {
 		"defaultTag": "span"
 	}
 }

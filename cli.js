@@ -22,16 +22,8 @@ var argv = require('yargs')
 // get htmls
 var html = fs.readFileSync(argv.input, 'utf8');
 
-// get plugins
-var plugins = [];
-if (argv.require) {
-	plugins = argv.require.map(function (name) {
-		return require(name)(argv[name]);
-	});
-}
-
 // processing
-posthtml(plugins)
+posthtml(require('posthtml-load-plugins')(argv.config))
 	.process(html)
 	.then(function (result) {
 		fs.writeFileSync(argv.output, result.html);
