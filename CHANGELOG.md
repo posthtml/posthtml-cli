@@ -1,4 +1,16 @@
-## [0.0.17] - 13-03-2016
+## [0.0.20] - 21-03-2016
+### Fixed
+- Fixed #51, tests, update posthtml-load-plugins
+
+## [0.0.20] - 21-03-2016
+### Fixed
+- Fixed #49, tests, update posthtml-load-plugins
+
+## [0.0.19] - 21-03-2016
+### Change
+- Update #41, load pkg now used posthtml-load-plugins
+
+## [0.0.18] - 13-03-2016
 ### Change
 - Update #45, devDep
 
