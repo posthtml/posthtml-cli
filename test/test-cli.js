@@ -42,6 +42,14 @@ test('Transform html witch config in package.json', async t => {
 	t.is((await read('expected/output-config-pkg.html')), (await read(filename)));
 });
 
+test('Transform html witch indent', async t => {
+	t.plan(2);
+	const filename = await tempWrite('output.html');
+	await execa('../cli.js', ['-i', 'fixtures/input-indent.html', '-o', filename]);
+	t.true(await pathExists(filename));
+	t.is((await read('expected/output-indent.html')), (await read(filename)));
+});
+
 test('Transform html witch config in file', async t => {
 	t.plan(2);
 	const filename = await tempWrite('output.html');
