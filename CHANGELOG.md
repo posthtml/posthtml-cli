@@ -1,4 +1,15 @@
-## [0.0.20] - 21-03-2016
+## [0.0.22] - 23-03-2016
+## Added 
+- Added test with indent
+- Added node support in package.json
+
+## Fixed
+- Fixed #53, coverage for windows
+
+## Removed
+- Fixed #56, support node 0.12
+
+## [0.0.21] - 21-03-2016
 ### Fixed
 - Fixed #51, tests, update posthtml-load-plugins
 
