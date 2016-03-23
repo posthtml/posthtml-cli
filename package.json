@@ -5,6 +5,9 @@
   "bin": {
     "posthtml": "./cli.js"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "test": "xo && nyc ava",
     "prepush": "xo"
