@@ -3,12 +3,14 @@ const execa = require('execa');
 const tempWrite = require('temp-write');
 const pathExists = require('path-exists');
 const path = require('path');
+const del = require('del');
 const readPkg = require('read-pkg');
+const copy = require('cpy');
 const readFile = require('fs').readFile;
 
-function read(path) {
+function read(pathFile) {
 	return new Promise((resolve, reject) => {
-		readFile(path, 'utf8', (err, data) => {
+		readFile(pathFile, 'utf8', (err, data) => {
 			if (err) {
 				reject(err);
 			}
@@ -30,13 +32,18 @@ test('Missing required arguments -i', t => {
 	t.throws(execa('../cli.js', [`-o ${filename}`]));
 });
 
+test('One of the arguments', t => {
+	const filename = tempWrite.sync('output.html');
+	t.throws(execa('../cli.js', ['-o', filename, '-r', '-i', 'fixtures/input.html']));
+});
+
 test('Check version', async t => {
 	t.is((await execa('../cli.js', ['-v'])).stdout, (await readPkg(path.dirname(__dirname))).version);
 });
 
 test('Transform html witch config in package.json', async t => {
 	t.plan(2);
-	const filename = await tempWrite('output.html');
+	const filename = await tempWrite('output.html', 'output.html');
 	await execa('../cli.js', ['-i', 'fixtures/input.html', '-o', filename]);
 	t.true(await pathExists(filename));
 	t.is((await read('expected/output-config-pkg.html')), (await read(filename)));
@@ -44,7 +51,7 @@ test('Transform html witch config in package.json', async t => {
 
 test('Transform html witch indent', async t => {
 	t.plan(2);
-	const filename = await tempWrite('output.html');
+	const filename = await tempWrite('output.html', 'output.html');
 	await execa('../cli.js', ['-i', 'fixtures/input-indent.html', '-o', filename]);
 	t.true(await pathExists(filename));
 	t.is((await read('expected/output-indent.html')), (await read(filename)));
@@ -52,8 +59,25 @@ test('Transform html witch indent', async t => {
 
 test('Transform html witch config in file', async t => {
 	t.plan(2);
-	const filename = await tempWrite('output.html');
+	const filename = await tempWrite('output.html', 'output.html');
 	await execa('../cli.js', ['-i', 'fixtures/input.html', '-o', filename, '-c', 'fixtures/config.json']);
 	t.true(await pathExists(filename));
 	t.is((await read('expected/output-config-file.html')), (await read(filename)));
+});
+
+test('Transform html from folder', async t => {
+	t.plan(2);
+	await execa('../cli.js', ['-i', 'fixtures/*.html', '-o', 'tmpDefault/']);
+	t.is((await read('expected/output-config-pkg.html')), (await read('tmpDefault/input.html')));
+	t.is((await read('expected/output-indent.html')), (await read('tmpDefault/input-indent.html')));
+	del('tmpDefault/');
+});
+
+test('Transform html witch options replace', async t => {
+	t.plan(2);
+	await copy(['fixtures/*.html'], 'tmpReplace/');
+	await execa('../cli.js', ['-i', 'tmpReplace/*.html', '-r']);
+	t.is((await read('expected/output-config-pkg.html')), (await read('tmpReplace/input.html')));
+	t.is((await read('expected/output-indent.html')), (await read('tmpReplace/input-indent.html')));
+	del('tmpReplace/');
 });
