@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
+    "del": "^2.2.0",
+    "globby": "^4.0.0",
     "posthtml": "^0.8.3",
     "posthtml-load-plugins": "^0.9.5",
     "yargs": "^4.3.1"
@@ -35,6 +37,7 @@
   "devDependencies": {
     "ava": "^0.13.0",
     "coveralls": "^2.11.8",
+    "cpy": "^4.0.0",
     "execa": "^0.2.2",
     "nyc": "^6.1.1",
     "path-exists": "^2.1.0",
