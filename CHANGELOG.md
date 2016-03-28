@@ -1,5 +1,10 @@
 ## [0.0.22] - 23-03-2016
 ## Added 
+- Added #16, replace file(s)
+- Added #9, read filed in folder and transform to folder
+
+## [0.0.22] - 23-03-2016
+## Added 
 - Added test with indent
 - Added node support in package.json
 
