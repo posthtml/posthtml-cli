@@ -19,14 +19,25 @@ $ posthtml --help
 	posthtml --output|-o output.html --input|-i input.html [--config|-c path/to/json/config]
 
 	Options
-	--config,  -c Path to JSON file           [string]
-	--output,  -o Output html file result     [required]
-	--input,   -i Input html file             [required]
-	--help,    -h Show help                   [boolean]
-	--version, -v Show version number         [boolean]
+	--config,  -c Path to JSON file                  [string]
+	--output,  -o Output html file/folder result     [required]
+	--input,   -i Input html file/folder             [required]
+	--replace, -r Replace input file(s)              [boolean]
+	--help,    -h Show help                          [boolean]
+	--version, -v Show version number                [boolean]
 	
-	Example
-	posthtml -o output.html -i input.html
+	Example sample
+		posthtml -o output.html -i input.html
+
+	Example options config
+		posthtml -o output.html -i input.html -c posthtml.json
+		or
+		posthtml -o output.html -i input.html -c posthtml.js
+
+	Example read dir
+		posthtml -o outputFolder/ -i inputFolder/*.html
+		or
+		posthtml -o outputFolder/ -i inputFolder/**/*.html
 ```
 
 For reading config used [posthtml-load-plugins](https://github.com/michael-ciniawsky/posthtml-load-plugins)
