@@ -11,7 +11,7 @@
   "scripts": {
     "test": "xo && nyc ava",
     "prepush": "xo",
-    "update": "updtr"
+    "update": "updtr && ava-codemods"
   },
   "repository": {
     "type": "git",
@@ -35,10 +35,11 @@
     "yargs": "^4.6.0"
   },
   "devDependencies": {
-    "del": "^2.2.0",
     "ava": "^0.14.0",
+    "ava-codemods": "^0.2.1",
     "coveralls": "^2.11.8",
     "cpy": "^4.0.0",
+    "del": "^2.2.0",
     "execa": "^0.2.2",
     "nyc": "^6.4.0",
     "path-exists": "^2.1.0",
