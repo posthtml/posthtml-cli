@@ -1,4 +1,19 @@
-## [0.0.22] - 23-03-2016
+## [0.1.1] - 22-04-2016
+## Added 
+- Added #64, updtr
+- Added #62, ava-codemods
+- Added #59, tempfile for test
+
+### Change
+- Update #61, devDep not update xo, In xo not added eslint-plugin-ava
+- Move #63, del to dev
+- Update #60, .editorconfig
+- Update #59, test
+
+## Removed
+- Remove #59, del not need
+
+## [0.1.0] - 23-03-2016
 ## Added 
 - Added #16, replace file(s)
 - Added #9, read filed in folder and transform to folder
@@ -12,7 +27,7 @@
 - Fixed #53, coverage for windows
 
 ## Removed
-- Fixed #56, support node 0.12
+- Remove #56, support node 0.12
 
 ## [0.0.21] - 21-03-2016
 ### Fixed
