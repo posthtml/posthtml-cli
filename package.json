@@ -29,13 +29,13 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
-    "del": "^2.2.0",
     "globby": "^4.0.0",
     "posthtml": "^0.8.3",
     "posthtml-load-plugins": "^0.9.5",
     "yargs": "^4.6.0"
   },
   "devDependencies": {
+    "del": "^2.2.0",
     "ava": "^0.14.0",
     "coveralls": "^2.11.8",
     "cpy": "^4.0.0",
