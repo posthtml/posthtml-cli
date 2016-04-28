@@ -11,7 +11,7 @@
   "scripts": {
     "test": "xo && nyc ava",
     "prepush": "xo",
-    "update": "updtr && ava-codemods"
+    "update": "updtr && ava-codemods --force"
   },
   "repository": {
     "type": "git",
@@ -30,17 +30,17 @@
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
     "globby": "^4.0.0",
-    "posthtml": "^0.8.3",
+    "posthtml": "^0.8.6",
     "posthtml-load-plugins": "^0.9.5",
     "yargs": "^4.6.0"
   },
   "devDependencies": {
     "ava": "^0.14.0",
     "ava-codemods": "^0.2.1",
-    "coveralls": "^2.11.8",
+    "coveralls": "^2.11.9",
     "cpy": "^4.0.0",
-    "execa": "^0.2.2",
-    "nyc": "^6.4.0",
+    "execa": "^0.4.0",
+    "nyc": "^6.4.1",
     "path-exists": "^2.1.0",
     "posthtml-custom-elements": "^1.0.3",
     "read-pkg": "^1.1.0",
