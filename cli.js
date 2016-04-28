@@ -46,6 +46,9 @@ function processing(file, output) {
 }
 
 function isFile(outputPath) {
+	if (outputPath === undefined) {
+		return false;
+	}
 	return Boolean(path.extname(outputPath));
 }
 
@@ -70,7 +73,6 @@ globby(argv.input).then(function (files) {
 	if (argv.output !== undefined) {
 		createFolder(argv.output);
 	}
-
 	files.forEach(function (file) {
 		var output = isFile(argv.output) ? argv.output : getOutput(file);
 		processing(file, output);

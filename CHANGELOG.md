@@ -1,5 +1,17 @@
+## [0.1.2] - 28-04-2016
+### Added
+- Added #68, node 6 to config travis
+
+### Change
+- Update #67, readme
+- Update test, add await when create tmpFolder
+- Update #65, update devDep
+
+### Fixed
+- Fixed bug witch replace options. !path.extname(undefined) === true O_o
+
 ## [0.1.1] - 22-04-2016
-## Added 
+### Added 
 - Added #64, updtr
 - Added #62, ava-codemods
 - Added #59, tempfile for test
@@ -14,19 +26,19 @@
 - Remove #59, del not need
 
 ## [0.1.0] - 23-03-2016
-## Added 
+### Added 
 - Added #16, replace file(s)
 - Added #9, read filed in folder and transform to folder
 
 ## [0.0.22] - 23-03-2016
-## Added 
+### Added 
 - Added test with indent
 - Added node support in package.json
 
-## Fixed
+### Fixed
 - Fixed #53, coverage for windows
 
-## Removed
+### Removed
 - Remove #56, support node 0.12
 
 ## [0.0.21] - 21-03-2016

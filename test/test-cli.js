@@ -67,7 +67,7 @@ test('Transform html witch config in file', async t => {
 
 test('Transform html from folder', async t => {
 	t.plan(2);
-	const folder = tempfile();
+	const folder = await tempfile();
 	await execa('../cli.js', ['-i', 'fixtures/*.html', '-o', `${folder}/`]);
 	t.is((await read('expected/output-config-pkg.html')), (await read(`${folder}/input.html`)));
 	t.is((await read('expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
@@ -75,7 +75,7 @@ test('Transform html from folder', async t => {
 
 test('Transform html witch options replace', async t => {
 	t.plan(2);
-	const folder = tempfile();
+	const folder = await tempfile();
 	await copy(['fixtures/*.html'], `${folder}/`);
 	await execa('../cli.js', ['-i', `${folder}/*.html`, '-r']);
 	t.is((await read('expected/output-config-pkg.html')), (await read(`${folder}/input.html`)));
