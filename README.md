@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![DevDependency Status][depstat-dev-image]][depstat-dev-url][![XO code style][codestyle-image]][codestyle-url]
 
-> CLI for [PostHTML][posthtml-url]
+> Simple CLI for [PostHTML][posthtml-url]
 
 ## Install
 
@@ -15,50 +15,112 @@ npm install --global posthtml-cli
 ```console
 $ posthtml --help
 
-	Usage
-	posthtml --output|-o output.html --input|-i input.html [--config|-c path/to/json/config]
+    Usage
+    posthtml --output|-o output.html --input|-i input.html [--config|-c path/to/json/config]
 
-	Options
-	--config,  -c Path to JSON file                  [string]
-	--output,  -o Output html file/folder result     [required]
-	--input,   -i Input html file/folder             [required]
-	--replace, -r Replace input file(s)              [boolean]
-	--help,    -h Show help                          [boolean]
-	--version, -v Show version number                [boolean]
-	
-	Example sample
-		posthtml -o output.html -i input.html
-
-	Example options config
-		posthtml -o output.html -i input.html -c posthtml.json
-		or
-		posthtml -o output.html -i input.html -c posthtml.js
-
-	Example read dir
-		posthtml -o outputFolder/ -i inputFolder/*.html
-		or
-		posthtml -o outputFolder/ -i inputFolder/**/*.html
+    Options
+    --config,  -c Path to JSON file                  [string]
+    --output,  -o Output html file/folder result     [required]
+    --input,   -i Input html file/folder             [required]
+    --replace, -r Replace input file(s)              [boolean]
+    --help,    -h Show help                          [boolean]
+    --version, -v Show version number                [boolean]    
 ```
 
-For reading config used [posthtml-load-plugins](https://github.com/michael-ciniawsky/posthtml-load-plugins)
+## Config
+*Default read options for plugins from package.json usin [posthtml-load-plugins](https://github.com/michael-ciniawsky/posthtml-load-plugins)*
 
-*Default read options for plugins from package.json*
+### ```package.json```
+
 ```json
 {
-	"name": "my project",
-	"devDependencies": {
-		"posthtml-custom-elements": "^1.0.3",
-		"posthtml-style-to-file": "^0.1.1"
-	},
-	"posthtml": {
-		"customElements": {
-			"defaultTag": "span"
-		},
-		"styleToFile": {
-			"path": "./dist/style.css"
-		}
-	}
+    "name": "my project",
+    "dependencies": {
+        "posthtml-bem": "^0.2.2",
+        "posthtml-each": "^1.0.1",
+        "posthtml-include": "^1.0.2"
+    },
+    "devDependencies": {
+        "posthtml-style-to-file": "^0.1.1"
+    },
+    "posthtml": {
+        "bem": {
+            "elemPrefix": "__",
+            "modPrefix": "-",
+            "modDlmtr": "--"
+        },
+        "include": {
+            "root": "./",
+            "encoding": "utf-8"
+        },
+        "styleToFile": {
+            "path": "./dist/style.css"
+        }
+    }
 }
+```
+
+### ```[name].[ext]```
+
+#### JS
+```js
+module.exports = {
+    bem: {
+        elemPrefix: '__',
+        modPrefix: '-',
+        modDlmtr: '--'
+    },
+    include: {
+        root: './',
+        encoding: 'utf-8'
+    },
+    styleToFile: {
+        path: './dist/style.css'
+    }
+}
+```
+#### ```JSON```
+
+```json
+{
+    "bem": {
+        "elemPrefix": "__",
+        "modPrefix": "-",
+        "modDlmtr": "--"
+    },
+    "include": {
+        "root": "./",
+        "encoding": "utf-8"
+    },
+    "styleToFile": {
+        "path": "./dist/style.css"
+    }
+}
+```
+
+## Examples
+
+### Example sample
+```console
+$ posthtml -o output.html -i input.html
+```
+
+### Example options config
+```console
+$ posthtml -o output.html -i input.html -c posthtml.json
+```
+
+```console
+$ posthtml -o output.html -i input.html -c posthtml.js
+```
+
+### Example read dir
+```console
+$ posthtml -o outputFolder/ -i inputFolder/*.html
+```
+
+```console
+$ posthtml -o outputFolder/ -i inputFolder/**/*.html
 ```
 
 ## License
