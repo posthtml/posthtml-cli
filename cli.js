@@ -9,11 +9,11 @@ var fs = require('fs');
 var argv = require('yargs')
 	.usage('Usage: $0 --output|-o output.html/outputFolder --input|-i input.html/inputFolder [--config|-c config.(js|json)] [--replace|-r]')
 	.example('posthtml -o output.html -i input.html', 'Default example')
-  .alias('u', 'use')
-  .describe('u', 'posthtml plugin name (can be used multiple times)')
-  .option('local-plugins', {
-    describe: 'lookup plugins in current node_modules directory'
-  })
+	.alias('u', 'use')
+	.describe('u', 'posthtml plugin name (can be used multiple times)')
+	.option('local-plugins', {
+		describe: 'lookup plugins in current node_modules directory'
+	})
 	.alias('i', 'input')
 	.alias('o', 'output')
 	.alias('r', 'replace')
@@ -29,9 +29,9 @@ var argv = require('yargs')
 	.help('h')
 	.alias('h', 'help')
 	.check(function (argv) {
-    if (!argv.use) {
-      throw 'Please specify at least one plugin name.';
-    }
+		if (!argv.use) {
+			throw new Error('Please specify at least one plugin name.');
+		}
 		if (argv.output && argv.replace) {
 			throw new Error('Both `output file` and `replace` provided: please use either --output or --replace option.');
 		}
@@ -43,25 +43,25 @@ var argv = require('yargs')
 	.argv;
 
 if (!Array.isArray(argv.use)) {
-  argv.use = [argv.use];
+	argv.use = [argv.use];
 }
 
 // load and configure plugin array
-var plugins = argv.use.map(function(name) {
-  var local = argv['local-plugins'];
-  var plugin;
-  if (local) {
-    var resolved = resolve.sync(name, {basedir: process.cwd()});
-    plugin = require(resolved);
-  } else {
-    plugin = require(name);
-  }
-  if (name in argv) {
-    plugin = plugin(argv[name]);
-  } else {
-    plugin = plugin.posthtml || plugin();
-  }
-  return plugin;
+var plugins = argv.use.map(function (name) {
+	var local = argv['local-plugins'];
+	var plugin;
+	if (local) {
+		var resolved = resolve.sync(name, {basedir: process.cwd()});
+		plugin = require(resolved);
+	} else {
+		plugin = require(name);
+	}
+	if (name in argv) {
+		plugin = plugin(argv[name]);
+	} else {
+		plugin = plugin.posthtml || plugin();
+	}
+	return plugin;
 });
 
 function processing(file, output) {
