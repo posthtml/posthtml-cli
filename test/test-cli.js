@@ -19,7 +19,7 @@ function read(pathFile) {
 	});
 }
 
-test('Missing required arguments -i, -o', t => {
+test('Missing required arguments -i, -o, -u', t => {
 	t.throws(execa('../cli.js', []));
 });
 
@@ -32,6 +32,11 @@ test('Missing required arguments -i', t => {
 	t.throws(execa('../cli.js', [`-o ${filename}`]));
 });
 
+test('Missing required arguments -u', t => {
+	const filename = tempWrite.sync('output.html');
+	t.throws(execa('../cli.js', [`-o ${filename} -i fixtures/input.html`]));
+});
+
 test('One of the arguments', t => {
 	const filename = tempWrite.sync('output.html');
 	t.throws(execa('../cli.js', ['-o', filename, '-r', '-i', 'fixtures/input.html']));
@@ -41,34 +46,18 @@ test('Check version', async t => {
 	t.is((await execa('../cli.js', ['-v'])).stdout, (await readPkg(path.dirname(__dirname))).version);
 });
 
-test('Transform html witch config in package.json', async t => {
-	t.plan(2);
-	const filename = await tempWrite('output.html', 'output.html');
-	await execa('../cli.js', ['-i', 'fixtures/input.html', '-o', filename]);
-	t.true(await pathExists(filename));
-	t.is((await read('expected/output-config-pkg.html')), (await read(filename)));
-});
-
 test('Transform html witch indent', async t => {
 	t.plan(2);
 	const filename = await tempWrite('output.html', 'output.html');
-	await execa('../cli.js', ['-i', 'fixtures/input-indent.html', '-o', filename]);
+	await execa('../cli.js', ['-i', 'fixtures/input-indent.html', '-o', filename, '-u', 'posthtml-custom-elements']);
 	t.true(await pathExists(filename));
 	t.is((await read('expected/output-indent.html')), (await read(filename)));
-});
-
-test('Transform html witch config in file', async t => {
-	t.plan(2);
-	const filename = await tempWrite('output.html', 'output.html');
-	await execa('../cli.js', ['-i', 'fixtures/input.html', '-o', filename, '-c', 'fixtures/config.json']);
-	t.true(await pathExists(filename));
-	t.is((await read('expected/output-config-file.html')), (await read(filename)));
 });
 
 test('Transform html from folder', async t => {
 	t.plan(2);
 	const folder = await tempfile();
-	await execa('../cli.js', ['-i', 'fixtures/*.html', '-o', `${folder}/`]);
+	await execa('../cli.js', ['-i', 'fixtures/*.html', '-o', `${folder}/`, '-u', 'posthtml-custom-elements']);
 	t.is((await read('expected/output-config-pkg.html')), (await read(`${folder}/input.html`)));
 	t.is((await read('expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
 });
@@ -77,7 +66,15 @@ test('Transform html witch options replace', async t => {
 	t.plan(2);
 	const folder = await tempfile();
 	await copy(['fixtures/*.html'], `${folder}/`);
-	await execa('../cli.js', ['-i', `${folder}/*.html`, '-r']);
+	await execa('../cli.js', ['-i', `${folder}/*.html`, '-r', '-u', 'posthtml-custom-elements']);
 	t.is((await read('expected/output-config-pkg.html')), (await read(`${folder}/input.html`)));
 	t.is((await read('expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
+});
+
+test('Transform html witch config in command', async t => {
+	t.plan(2);
+	const filename = await tempWrite('output.html', 'output.html');
+	await execa('../cli.js', ['-i', 'fixtures/input.html', '-o', filename, '-u', 'posthtml-custom-elements', '--posthtml-custom-elements.defaultTag', 'span']);
+	t.true(await pathExists(filename));
+	t.is((await read('expected/output-config-file.html')), (await read(filename)));
 });
