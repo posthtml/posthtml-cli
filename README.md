@@ -16,111 +16,42 @@ npm install --global posthtml-cli
 $ posthtml --help
 
     Usage
-    posthtml --output|-o output.html --input|-i input.html [--config|-c path/to/json/config]
+    posthtml --output|-o output.html/outputFolder --input|-i input.html/inputFolder --use|-u plugin-name [--replace|-r]
 
     Options
-    --config,  -c Path to JSON file                  [string]
+	 --use,		  -u posthtml plugin name           [required]
     --output,  -o Output html file/folder result     [required]
     --input,   -i Input html file/folder             [required]
     --replace, -r Replace input file(s)              [boolean]
     --help,    -h Show help                          [boolean]
-    --version, -v Show version number                [boolean]    
-```
-
-## Config
-*Default read options for plugins from package.json using [posthtml-load-plugins](https://github.com/michael-ciniawsky/posthtml-load-plugins)*
-
-### ```package.json```
-
-```json
-{
-    "name": "my project",
-    "dependencies": {
-        "posthtml-bem": "^0.2.2",
-        "posthtml-each": "^1.0.1",
-        "posthtml-include": "^1.0.2"
-    },
-    "devDependencies": {
-        "posthtml-style-to-file": "^0.1.1"
-    },
-    "posthtml": {
-        "bem": {
-            "elemPrefix": "__",
-            "modPrefix": "-",
-            "modDlmtr": "--"
-        },
-        "include": {
-            "root": "./",
-            "encoding": "utf-8"
-        },
-        "styleToFile": {
-            "path": "./dist/style.css"
-        }
-    }
-}
-```
-
-### ```[name].[ext]```
-
-#### JS
-```js
-module.exports = {
-    bem: {
-        elemPrefix: '__',
-        modPrefix: '-',
-        modDlmtr: '--'
-    },
-    include: {
-        root: './',
-        encoding: 'utf-8'
-    },
-    styleToFile: {
-        path: './dist/style.css'
-    }
-}
-```
-#### ```JSON```
-
-```json
-{
-    "bem": {
-        "elemPrefix": "__",
-        "modPrefix": "-",
-        "modDlmtr": "--"
-    },
-    "include": {
-        "root": "./",
-        "encoding": "utf-8"
-    },
-    "styleToFile": {
-        "path": "./dist/style.css"
-    }
-}
+    --version, -v Show version number                [boolean] 
+	 --local-plugins lookup plugins in current node_modules directory   
 ```
 
 ## Examples
 
 ### Example sample
 ```console
-$ posthtml -o output.html -i input.html
+$ posthtml -o output.html -i input.html -u posthtml-custom-elements
 ```
 
-### Example options config
+### Pass in options for plugins (similar to [postcss-cli](https://github.com/postcss/postcss-cli))
 ```console
-$ posthtml -o output.html -i input.html -c posthtml.json
+$ posthtml -o output.html -i input.html -u posthtml-custom-elements --posthtml-custom-elements span
 ```
 
+### Multiple plugins
 ```console
-$ posthtml -o output.html -i input.html -c posthtml.js
+$ posthtml -o outputFolder/ -i inputFolder/*.html -u posthtml-custom-elements -u posthtml-include
 ```
 
 ### Example read dir
 ```console
-$ posthtml -o outputFolder/ -i inputFolder/*.html
+$ posthtml -o outputFolder/ -i inputFolder/*.html -u posthtml-custom-elements
 ```
 
 ```console
-$ posthtml -o outputFolder/ -i inputFolder/**/*.html
+$ posthtml -o outputFolder/ -i inputFolder/**/*.html -u posthtml-custom-elements
 ```
 
 ## License
