@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var posthtml = require('posthtml');
+var resolve = require('resolve');
 var globby = require('globby');
 var path = require('path');
 const pathExists = require('path-exists');
