@@ -7,8 +7,8 @@ var path = require('path');
 const pathExists = require('path-exists');
 var fs = require('fs');
 var argv = require('yargs')
-	.usage('Usage: $0 --output|-o output.html/outputFolder --input|-i input.html/inputFolder [--config|-c config.(js|json)] [--replace|-r]')
-	.example('posthtml -o output.html -i input.html', 'Default example')
+	.usage('Usage: $0 --output|-o output.html/outputFolder --input|-i input.html/inputFolder --use|-u plugin-name [--replace|-r]')
+	.example('posthtml -o output.html -i input.html -u plugin-name', 'Default example')
 	.alias('u', 'use')
 	.describe('u', 'posthtml plugin name (can be used multiple times)')
 	.option('local-plugins', {
