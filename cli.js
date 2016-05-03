@@ -68,7 +68,7 @@ function processing(file, output) {
 	var html = fs.readFileSync(file, 'utf8');
 
 	// processing
-	posthtml(require('posthtml-load-plugins')(argv.config))
+	posthtml(plugins)
 		.process(html)
 		.then(function (result) {
 			fs.writeFileSync(output, result.html);
