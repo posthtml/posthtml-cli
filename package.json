@@ -50,6 +50,6 @@
     "xo": "^0.15.0"
   },
   "posthtml": {
-    "posthtmlCustomElements": {}
+    "customElements": {}
   }
 }
