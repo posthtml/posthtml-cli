@@ -1,11 +1,11 @@
+const path = require('path');
+const readFile = require('fs').readFile;
 const test = require('ava');
 const execa = require('execa');
 const tempWrite = require('temp-write');
 const pathExists = require('path-exists');
-const path = require('path');
 const readPkg = require('read-pkg');
 const copy = require('cpy');
-const readFile = require('fs').readFile;
 const tempfile = require('tempfile');
 
 function read(pathFile) {

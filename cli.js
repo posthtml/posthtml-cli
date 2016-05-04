@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
+var path = require('path');
+var fs = require('fs');
 var posthtml = require('posthtml');
 var globby = require('globby');
-var path = require('path');
-const pathExists = require('path-exists');
-var fs = require('fs');
+var pathExists = require('path-exists');
 var argv = require('yargs')
 	.usage('Usage: $0 --output|-o output.html/outputFolder --input|-i input.html/inputFolder [--config|-c config.(js|json)] [--replace|-r]')
 	.example('posthtml -o output.html -i input.html', 'Default example')
