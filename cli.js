@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 
+var path = require('path');
+var fs = require('fs');
 var posthtml = require('posthtml');
 var globby = require('globby');
-var path = require('path');
-const pathExists = require('path-exists');
-var fs = require('fs');
+var pathExists = require('path-exists');
 var argv = require('yargs')
-	.usage('Usage: $0 --output|-o output.html/outputFolder --input|-i input.html/inputFolder [--config|-c config.(js|json)] [--replace|-r]')
+	.usage('Usage: $0 [-o output-file/directory|-r] [-i input-file/directory] [--config|-c path/to/file/config]')
 	.example('posthtml -o output.html -i input.html', 'Default example')
 	.alias('i', 'input')
+	.array('input')
+	.demand(['i'])
 	.alias('o', 'output')
 	.alias('r', 'replace')
-	.demand(['i'])
-	.array('input')
+	.alias('u', 'use')
+	.array('use')
 	.pkgConf('posthtml')
 	.config('c')
 	.alias('c', 'config')
@@ -36,9 +38,17 @@ var argv = require('yargs')
 function processing(file, output) {
 	// get htmls
 	var html = fs.readFileSync(file, 'utf8');
+	var ext = {};
+
+	// create config extends for posthtml-load-plugins
+	if (argv.use) {
+		argv.use.forEach(function (plugin) {
+			ext[plugin] = argv[plugin] || {};
+		});
+	}
 
 	// processing
-	posthtml(require('posthtml-load-plugins')(argv.config))
+	posthtml(require('posthtml-load-plugins')(argv.config, ext))
 		.process(html)
 		.then(function (result) {
 			fs.writeFileSync(output, result.html);
@@ -73,6 +83,7 @@ globby(argv.input).then(function (files) {
 	if (argv.output !== undefined) {
 		createFolder(argv.output);
 	}
+
 	files.forEach(function (file) {
 		var output = isFile(argv.output) ? argv.output : getOutput(file);
 		processing(file, output);

@@ -1,3 +1,20 @@
+## [0.2.0] - 05-05-2016
+### Added
+- Added #72, options --use
+
+### Change
+- Update #73, devDep
+- Update config posthtml in package.json for test
+- Update #75, readme
+- Update tests for options --use
+
+### Fixed
+- Fixed linter report error
+- Fixed #79, test for windows
+
+## Removed
+- Remove temp-write now used tempfile
+
 ## [0.1.2] - 28-04-2016
 ### Added
 - Added #68, node 6 to config travis
