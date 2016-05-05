@@ -16,7 +16,7 @@ npm install --global posthtml-cli
 $ posthtml --help
 
     Usage
-    posthtml --output|-o output.html --input|-i input.html [--config|-c path/to/json/config]
+    posthtml [-o output-file/directory|-r] [-i input-file/directory] [--config|-c path/to/file/config] [--use|-u plugin]
 
     Options
     --config,  -c Path to JSON file                  [string]
@@ -62,7 +62,8 @@ $ posthtml --help
 
 ### ```[name].[ext]```
 
-#### JS
+#### ```JS```
+
 ```js
 module.exports = {
     bem: {
@@ -79,6 +80,7 @@ module.exports = {
     }
 }
 ```
+
 #### ```JSON```
 
 ```json
@@ -100,12 +102,12 @@ module.exports = {
 
 ## Examples
 
-### Example sample
+### Sample
 ```console
 $ posthtml -o output.html -i input.html
 ```
 
-### Example options config
+### Options config
 ```console
 $ posthtml -o output.html -i input.html -c posthtml.json
 ```
@@ -114,13 +116,34 @@ $ posthtml -o output.html -i input.html -c posthtml.json
 $ posthtml -o output.html -i input.html -c posthtml.js
 ```
 
-### Example read dir
+### Options use
+```console
+$ posthtml 
+    -o output.html 
+    -i input.html 
+    -c config.json 
+    -u posthtml-bem 
+    --posthtml-bem.elemPrefix __
+    --posthtml-bem.elemMod _
+    -u posthtml-custom-elements
+```
+
+### Read dir
 ```console
 $ posthtml -o outputFolder/ -i inputFolder/*.html
 ```
 
 ```console
 $ posthtml -o outputFolder/ -i inputFolder/**/*.html
+```
+
+### Replace
+```console
+$ posthtml -i input.html -r
+```
+
+```console
+$ posthtml -i inputFolder/*.html -r
 ```
 
 ## License
