@@ -10,6 +10,7 @@
 
 ### Fixed
 - Fixed linter report error
+- Fixed #79, test for windows
 
 ## Removed
 - Remove temp-write now used tempfile
