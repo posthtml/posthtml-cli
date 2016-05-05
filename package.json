@@ -42,6 +42,7 @@
     "execa": "^0.4.0",
     "nyc": "^6.4.1",
     "path-exists": "^3.0.0",
+    "posthtml-bem": "^0.2.2",
     "posthtml-custom-elements": "^1.0.3",
     "read-pkg": "^1.1.0",
     "tempfile": "^1.1.1",
