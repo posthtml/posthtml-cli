@@ -1,0 +1,10 @@
+{
+    "bem": {
+        "elemPrefix": "__",
+        "modPrefix": "-",
+        "modDlmtr": "--"
+    },
+    "customElements": {
+        "defaultTag": "span"
+    }
+}
