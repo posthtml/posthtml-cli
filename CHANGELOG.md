@@ -1,4 +1,8 @@
 ## [0.2.0] - 05-05-2016
+### Change
+- Update #78, readme, add description for use
+
+## [0.2.0] - 05-05-2016
 ### Added
 - Added #72, options --use
 
