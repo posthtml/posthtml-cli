@@ -11,6 +11,9 @@
 ### Fixed
 - Fixed linter report error
 
+## Removed
+- Remove temp-write now used tempfile
+
 ## [0.1.2] - 28-04-2016
 ### Added
 - Added #68, node 6 to config travis
