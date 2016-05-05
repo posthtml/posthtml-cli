@@ -22,6 +22,7 @@ $ posthtml --help
     --config,  -c Path to JSON file                  [string]
     --output,  -o Output html file/folder result     [required]
     --input,   -i Input html file/folder             [required]
+    --use,     -u Posthtml plugin name               [string]
     --replace, -r Replace input file(s)              [boolean]
     --help,    -h Show help                          [boolean]
     --version, -v Show version number                [boolean]    
