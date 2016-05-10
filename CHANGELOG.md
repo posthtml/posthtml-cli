@@ -1,4 +1,14 @@
-## [0.2.0] - 05-05-2016
+## [0.2.2] - 05-05-2016
+### Added
+- Added posthtml-css-modules for the test
+- Added test css modules
+
+### Change
+- Update #81, add files to pkg.json
+- Update devDep
+- Update Readme, added css modules to use example
+
+## [0.2.1] - 05-05-2016
 ### Change
 - Update #78, readme, add description for use
 

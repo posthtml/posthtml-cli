@@ -104,3 +104,20 @@ test('Transform html witch config in file and stdin options use', async t => {
 	t.true(await pathExists(filename));
 	t.is((await read('expected/output-bem.html')), (await read(filename)));
 });
+
+test('Transform html stdin options use witch modules', async t => {
+	t.plan(2);
+	const filename = tempfile('.html');
+	await execa(cli, [
+		'-o',
+		filename,
+		'-i',
+		'fixtures/input-modules.html',
+		'-u',
+		'posthtml-css-modules',
+		'--posthtml-css-modules',
+		'fixtures/css-modules.json'
+	]);
+	t.true(await pathExists(filename));
+	t.is((await read('expected/output-modules.html')), (await read(filename)));
+});
