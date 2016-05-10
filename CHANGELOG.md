@@ -6,6 +6,7 @@
 ### Change
 - Update #81, add files to pkg.json
 - Update devDep
+- Update Readme, added css modules to use example
 
 ## [0.2.1] - 05-05-2016
 ### Change
