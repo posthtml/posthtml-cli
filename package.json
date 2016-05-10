@@ -5,6 +5,9 @@
   "bin": {
     "posthtml": "./cli.js"
   },
+  "files": [
+    "cli.js"
+  ],
   "engines": {
     "node": ">=4"
   },
