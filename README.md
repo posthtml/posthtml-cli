@@ -126,6 +126,8 @@ $ posthtml
     -u posthtml-bem 
     --posthtml-bem.elemPrefix __
     --posthtml-bem.elemMod _
+    -u posthtml-css-modules
+    --posthtml-css-modules path/to/json
     -u posthtml-custom-elements
 ```
 
