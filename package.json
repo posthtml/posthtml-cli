@@ -32,16 +32,16 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
-    "globby": "^4.0.0",
+    "globby": "^4.1.0",
     "posthtml": "^0.8.7",
     "posthtml-load-plugins": "^0.11.1",
-    "yargs": "^4.7.0"
+    "yargs": "^4.7.1"
   },
   "devDependencies": {
-    "ava": "^0.15.0",
+    "ava": "^0.15.1",
     "ava-codemods": "^0.2.1",
     "coveralls": "^2.11.9",
-    "cpy": "^4.0.0",
+    "cpy": "^4.0.1",
     "execa": "^0.4.0",
     "nyc": "^6.4.4",
     "path-exists": "^3.0.0",
@@ -50,8 +50,8 @@
     "posthtml-custom-elements": "^1.0.3",
     "read-pkg": "^1.1.0",
     "tempfile": "^1.1.1",
-    "updtr": "^0.1.13",
-    "xo": "^0.15.0"
+    "updtr": "^0.1.15",
+    "xo": "^0.15.1"
   },
   "posthtml": {
     "customElements": {}
