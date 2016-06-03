@@ -34,7 +34,7 @@
   "dependencies": {
     "globby": "^4.0.0",
     "posthtml": "^0.8.7",
-    "posthtml-load-plugins": "^0.10.1",
+    "posthtml-load-plugins": "^0.11.1",
     "yargs": "^4.7.0"
   },
   "devDependencies": {
