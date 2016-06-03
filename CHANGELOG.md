@@ -1,3 +1,7 @@
+## [0.2.3] - 03-06-2016
+### Change
+- Update devDep
+
 ## [0.2.2] - 05-05-2016
 ### Added
 - Added posthtml-css-modules for the test
