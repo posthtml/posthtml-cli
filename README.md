@@ -157,20 +157,20 @@ MIT
 [npm-url]: https://npmjs.org/package/posthtml-cli
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
 
-[travis-url]: https://travis-ci.org/GitScrum/posthtml-cli
-[travis-image]: http://img.shields.io/travis/GitScrum/posthtml-cli.svg?style=flat-square&label=unix
+[travis-url]: https://travis-ci.org/posthtml/posthtml-cli
+[travis-image]: http://img.shields.io/travis/posthtml/posthtml-cli.svg?style=flat-square&label=unix
 
-[appveyor]:     https://ci.appveyor.com/project/GitScrum/posthtml-cli
-[appveyor-img]: https://img.shields.io/appveyor/ci/GitScrum/posthtml-cli.svg?style=flat-square&label=windows
+[appveyor]:     https://ci.appveyor.com/project/posthtml/posthtml-cli
+[appveyor-img]: https://img.shields.io/appveyor/ci/posthtml/posthtml-cli.svg?style=flat-square&label=windows
 
-[coveralls-url]: https://coveralls.io/r/GitScrum/posthtml-cli
-[coveralls-image]: http://img.shields.io/coveralls/GitScrum/posthtml-cli.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/posthtml/posthtml-cli
+[coveralls-image]: http://img.shields.io/coveralls/posthtml/posthtml-cli.svg?style=flat-square
 
-[depstat-url]: https://david-dm.org/GitScrum/posthtml-cli
-[depstat-image]: https://david-dm.org/GitScrum/posthtml-cli.svg?style=flat-square
+[depstat-url]: https://david-dm.org/posthtml/posthtml-cli
+[depstat-image]: https://david-dm.org/posthtml/posthtml-cli.svg?style=flat-square
 
-[depstat-dev-url]: https://david-dm.org/GitScrum/posthtml-cli
-[depstat-dev-image]: https://david-dm.org/GitScrum/posthtml-cli/dev-status.svg?style=flat-square
+[depstat-dev-url]: https://david-dm.org/posthtml/posthtml-cli
+[depstat-dev-image]: https://david-dm.org/posthtml/posthtml-cli/dev-status.svg?style=flat-square
 
 [codestyle-url]: https://github.com/sindresorhus/xo
 [codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
