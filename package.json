@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/GitScrum/posthtml-cli#readme",
   "dependencies": {
-    "globby": "^4.1.0",
+    "globby": "^5.0.0",
     "posthtml": "^0.8.7",
     "posthtml-load-plugins": "^0.11.2",
     "yargs": "^4.7.1"
