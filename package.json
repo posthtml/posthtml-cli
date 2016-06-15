@@ -54,7 +54,7 @@
     "read-pkg": "^1.1.0",
     "tempfile": "^1.1.1",
     "updtr": "^0.1.15",
-    "xo": "^0.15.1"
+    "xo": "^0.16.0"
   },
   "posthtml": {
     "customElements": {}
