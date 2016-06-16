@@ -1,3 +1,10 @@
+## [0.2.4] - 16-06-2016
+### Change
+- Update devDep
+
+### Fixed
+- Fixed linter report error
+
 ## [0.2.3] - 03-06-2016
 ### Change
 - Update devDep
