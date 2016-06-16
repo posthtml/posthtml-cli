@@ -6,6 +6,7 @@ const pathExists = require('path-exists');
 const readPkg = require('read-pkg');
 const copy = require('cpy');
 const tempfile = require('tempfile');
+
 const cli = path.resolve('../cli.js');
 
 function read(pathFile) {
