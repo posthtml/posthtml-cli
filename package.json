@@ -53,7 +53,7 @@
     "posthtml-custom-elements": "^1.0.3",
     "read-pkg": "^1.1.0",
     "tempfile": "^1.1.1",
-    "updtr": "^0.1.15",
+    "updtr": "^0.2.0",
     "xo": "^0.16.0"
   },
   "posthtml": {
