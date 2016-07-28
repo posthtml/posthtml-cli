@@ -13,8 +13,10 @@
   },
   "scripts": {
     "commitmsg": "conventional-changelog-lint -e",
-    "test": "xo && nyc ava",
-    "prepush": "xo",
+    "lintjs": "eslint ./src/*.js ./test/*.js",
+    "lintmd": "eslint --ext md --rule indent: [error, 4] .",
+    "pretest": "npm run lintjs && npm run lintmd",
+    "test": "nyc ava",
     "testen": "testen -n -- ava",
     "update": "updtr && ava-codemods --force"
   },
@@ -45,9 +47,18 @@
   "devDependencies": {
     "ava": "^0.15.1",
     "ava-codemods": "^0.2.1",
+    "babel-eslint": "^6.1.2",
     "conventional-changelog-lint": "^1.0.0",
     "coveralls": "^2.11.9",
     "cpy": "^4.0.1",
+    "eslint": "^3.1.1",
+    "eslint-config-xo": "^0.15.3",
+    "eslint-formatter-pretty": "^0.2.2",
+    "eslint-plugin-ava": "^2.5.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-markdown": "^1.0.0-beta.2",
+    "eslint-plugin-require-path-exists": "^1.1.5",
+    "eslint-plugin-xo": "^0.5.1",
     "execa": "^0.4.0",
     "husky": "^0.11.6",
     "nyc": "^7.0.0",
@@ -58,8 +69,7 @@
     "read-pkg": "^1.1.0",
     "tempfile": "^1.1.1",
     "testen": "^1.8.2",
-    "updtr": "^0.2.0",
-    "xo": "^0.16.0"
+    "updtr": "^0.2.0"
   },
   "testen": {
     "node": [
@@ -70,5 +80,21 @@
   },
   "posthtml": {
     "customElements": {}
+  },
+  "eslintConfig": {
+      "format": "node_modules/eslint-formatter-pretty",
+      "parser": "babel-eslint",
+      "plugins": [
+        "ava",
+        "xo",
+        "babel",
+        "require-path-exists",
+        "markdown"
+      ],
+      "extends": [
+        "xo",
+        "plugin:xo/recommended",
+        "plugin:ava/recommended"
+      ]
   }
 }
