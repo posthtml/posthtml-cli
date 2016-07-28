@@ -15,7 +15,7 @@
     "commitmsg": "conventional-changelog-lint -e",
     "lintjs": "eslint ./src/*.js ./test/*.js",
     "lintmd": "eslint --ext md --rule indent: [error, 4] .",
-    "pretest": "npm run lintjs && npm run lintmd",
+    "pretest": "clinton && npm run lintjs && npm run lintmd",
     "test": "nyc ava",
     "testen": "testen -n -- ava",
     "update": "updtr && ava-codemods --force"
@@ -48,6 +48,7 @@
     "ava": "^0.15.1",
     "ava-codemods": "^0.2.1",
     "babel-eslint": "^6.1.2",
+    "clinton": "^0.6.0",
     "conventional-changelog-lint": "^1.0.0",
     "coveralls": "^2.11.9",
     "cpy": "^4.0.1",
@@ -82,19 +83,27 @@
     "customElements": {}
   },
   "eslintConfig": {
-      "format": "node_modules/eslint-formatter-pretty",
-      "parser": "babel-eslint",
-      "plugins": [
-        "ava",
-        "xo",
-        "babel",
-        "require-path-exists",
-        "markdown"
-      ],
-      "extends": [
-        "xo",
-        "plugin:xo/recommended",
-        "plugin:ava/recommended"
-      ]
+    "format": "node_modules/eslint-formatter-pretty",
+    "parser": "babel-eslint",
+    "plugins": [
+      "ava",
+      "xo",
+      "babel",
+      "require-path-exists",
+      "markdown"
+    ],
+    "extends": [
+      "xo",
+      "plugin:xo/recommended",
+      "plugin:ava/recommended"
+    ]
+  },
+  "clinton": {
+    "ignores": [
+      "test/**",
+      "tmp/**",
+      "lib/**",
+      "*.{html,jpg}"
+    ]
   }
 }
