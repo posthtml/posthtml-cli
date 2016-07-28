@@ -12,9 +12,9 @@
     "url": "https://github.com/posthtml/posthtml-cli/issues"
   },
   "author": {
-      "name": "Ivan Demidov",
-      "email": "Scrum@list.ru",
-      "url": "https://twitter.com/Scrum_"
+    "name": "Ivan Demidov",
+    "email": "Scrum@list.ru",
+    "url": "https://twitter.com/Scrum_"
   },
   "bin": {
     "posthtml": "cli.js"
@@ -24,6 +24,7 @@
   },
   "scripts": {
     "commitmsg": "conventional-changelog-lint -e",
+    "postpublish": "conventional-changelog -i CHANGELOG.md -s -r 0 && git commit -am \"chore(changelog): Update changelog\"",
     "lintjs": "eslint ./src/*.js ./test/*.js",
     "lintmd": "eslint --ext md --rule indent: [error, 4] .",
     "pretest": "clinton && npm run lintjs && npm run lintmd",
@@ -34,10 +35,6 @@
   "files": [
     "cli.js"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/posthtml/posthtml-cli.git"
-  },
   "keywords": [
     "posthtml",
     "posthtml-runner",
@@ -54,6 +51,7 @@
     "ava-codemods": "^0.2.1",
     "babel-eslint": "^6.1.2",
     "clinton": "^0.6.0",
+    "conventional-changelog-cli": "^1.2.0",
     "conventional-changelog-lint": "^1.0.0",
     "coveralls": "^2.11.9",
     "cpy": "^4.0.1",
@@ -67,6 +65,8 @@
     "eslint-plugin-xo": "^0.5.1",
     "execa": "^0.4.0",
     "husky": "^0.11.6",
+    "i": "^0.3.5",
+    "npm": "^3.10.5",
     "nyc": "^7.0.0",
     "path-exists": "^3.0.0",
     "posthtml-bem": "^0.2.2",
