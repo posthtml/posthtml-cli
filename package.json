@@ -15,6 +15,7 @@
     "commitmsg": "conventional-changelog-lint -e",
     "test": "xo && nyc ava",
     "prepush": "xo",
+    "testen": "testen -n -- ava",
     "update": "updtr && ava-codemods --force"
   },
   "repository": {
@@ -56,8 +57,16 @@
     "posthtml-custom-elements": "^1.0.3",
     "read-pkg": "^1.1.0",
     "tempfile": "^1.1.1",
+    "testen": "^1.8.2",
     "updtr": "^0.2.0",
     "xo": "^0.16.0"
+  },
+  "testen": {
+    "node": [
+      "4",
+      "5",
+      "6"
+    ]
   },
   "posthtml": {
     "customElements": {}
