@@ -1,5 +1,6 @@
 # posthtml-cli
 
+[![node][node-image]][node-url]
 [![NPM version][npm-image]][npm-url]
 
 [![testen badge][testen-image]][testen-url]
@@ -164,6 +165,9 @@ $ posthtml -i inputFolder/*.html -r
 MIT
 
 [posthtml-url]: http://github.com/posthtml/posthtml
+
+[node-url]: ""
+[node-image]: https://img.shields.io/node/v/post-sequence.svg?maxAge=2592000&style=flat-square
 
 [npm-url]: https://npmjs.org/package/posthtml-cli
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
