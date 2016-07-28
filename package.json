@@ -12,8 +12,9 @@
     "url": "https://github.com/posthtml/posthtml-cli/issues"
   },
   "author": {
-    "name": "GitScrum",
-    "email": "Scrum@list.ru"
+      "name": "Ivan Demidov",
+      "email": "Scrum@list.ru",
+      "url": "https://twitter.com/Scrum_"
   },
   "bin": {
     "posthtml": "cli.js"
