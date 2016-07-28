@@ -9,7 +9,7 @@
     "cli.js"
   ],
   "engines": {
-    "node": ">=6"
+    "node": ">=4"
   },
   "scripts": {
     "commitmsg": "conventional-changelog-lint -e",
