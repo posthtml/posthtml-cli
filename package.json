@@ -56,8 +56,18 @@
     "posthtml-custom-elements": "^1.0.3",
     "read-pkg": "^1.1.0",
     "tempfile": "^1.1.1",
+    "testen": "^1.8.2",
     "updtr": "^0.2.0",
     "xo": "^0.16.0"
+  },
+  "testen": {
+    "node": [
+      "0.10",
+      "0.12",
+      "4",
+      "5",
+      "6"
+    ]
   },
   "posthtml": {
     "customElements": {}
