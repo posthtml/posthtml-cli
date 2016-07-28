@@ -2,12 +2,22 @@
   "name": "posthtml-cli",
   "version": "0.2.4",
   "description": "CLI for posthtml",
-  "bin": {
-    "posthtml": "./cli.js"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posthtml/posthtml-cli.git"
   },
-  "files": [
-    "cli.js"
-  ],
+  "homepage": "https://github.com/posthtml/posthtml-cli#readme",
+  "bugs": {
+    "url": "https://github.com/posthtml/posthtml-cli/issues"
+  },
+  "author": {
+    "name": "GitScrum",
+    "email": "Scrum@list.ru"
+  },
+  "bin": {
+    "posthtml": "cli.js"
+  },
   "engines": {
     "node": ">=4"
   },
@@ -20,6 +30,9 @@
     "testen": "testen -n -- ava",
     "update": "updtr && ava-codemods --force"
   },
+  "files": [
+    "cli.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/posthtml/posthtml-cli.git"
@@ -29,15 +42,6 @@
     "posthtml-runner",
     "cli"
   ],
-  "author": {
-    "name": "GitScrum",
-    "email": "Scrum@list.ru"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/posthtml/posthtml-cli/issues"
-  },
-  "homepage": "https://github.com/posthtml/posthtml-cli#readme",
   "dependencies": {
     "globby": "^6.0.0",
     "posthtml": "^0.9.0",
@@ -45,7 +49,7 @@
     "yargs": "^4.7.1"
   },
   "devDependencies": {
-    "ava": "^0.15.1",
+    "ava": "*",
     "ava-codemods": "^0.2.1",
     "babel-eslint": "^6.1.2",
     "clinton": "^0.6.0",
@@ -93,7 +97,7 @@
       "markdown"
     ],
     "extends": [
-      "xo",
+      "xo/esnext",
       "plugin:xo/recommended",
       "plugin:ava/recommended"
     ]
@@ -104,6 +108,11 @@
       "tmp/**",
       "lib/**",
       "*.{html,jpg}"
-    ]
+    ],
+    "rules": {
+      "xo": [
+        "off"
+      ]
+    }
   }
 }
