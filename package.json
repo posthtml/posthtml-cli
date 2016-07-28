@@ -12,6 +12,7 @@
     "node": ">=6"
   },
   "scripts": {
+    "commitmsg": "conventional-changelog-lint -e",
     "test": "xo && nyc ava",
     "prepush": "xo",
     "update": "updtr && ava-codemods --force"
@@ -43,9 +44,11 @@
   "devDependencies": {
     "ava": "^0.15.1",
     "ava-codemods": "^0.2.1",
+    "conventional-changelog-lint": "^1.0.0",
     "coveralls": "^2.11.9",
     "cpy": "^4.0.1",
     "execa": "^0.4.0",
+    "husky": "^0.11.6",
     "nyc": "^7.0.0",
     "path-exists": "^3.0.0",
     "posthtml-bem": "^0.2.2",
