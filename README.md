@@ -1,6 +1,17 @@
 # posthtml-cli
 
-[![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![DevDependency Status][depstat-dev-image]][depstat-dev-url][![XO code style][codestyle-image]][codestyle-url]
+[![NPM version][npm-image]][npm-url]
+
+[![testen badge][testen-image]][testen-url]
+[![Trasiv Build Status][travis-image]][travis-url]
+[![AppVeyor Build Status][appveyor-img]][appveyor]
+
+[![Coveralls Status][coveralls-image]][coveralls-url]
+
+[![Dependency Status][depstat-image]][depstat-url]
+[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
+
+[![XO code style][codestyle-image]][codestyle-url]
 
 > Simple CLI for [PostHTML][posthtml-url]
 
@@ -156,6 +167,9 @@ MIT
 
 [npm-url]: https://npmjs.org/package/posthtml-cli
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
+
+[testen-url]: https://github.com/egoist/testen
+[testen-image]: https://img.shields.io/badge/testen-passing-brightgreen.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/posthtml/posthtml-cli
 [travis-image]: http://img.shields.io/travis/posthtml/posthtml-cli.svg?style=flat-square&label=unix
