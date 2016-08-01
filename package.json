@@ -53,7 +53,7 @@
     "ava": "*",
     "ava-codemods": "^0.2.1",
     "babel-eslint": "^6.1.2",
-    "clinton": "^0.6.0",
+    "clinton": "^0.7.0",
     "conventional-changelog-cli": "^1.2.0",
     "conventional-changelog-lint": "^1.0.0",
     "coveralls": "^2.11.9",
