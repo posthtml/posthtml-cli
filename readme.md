@@ -1,20 +1,7 @@
 # posthtml-cli
-
-[![node][node-image]][node-url]
-[![NPM version][npm-image]][npm-url]
-
-[![testen badge][testen-image]][testen-url]
-[![Trasiv Build Status][travis-image]][travis-url]
-[![AppVeyor Build Status][appveyor-img]][appveyor]
-
-[![Coveralls Status][coveralls-image]][coveralls-url]
-
-[![Dependency Status][depstat-image]][depstat-url]
-[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
-
-[![XO code style][codestyle-image]][codestyle-url]
-
 > Simple CLI for [PostHTML][posthtml-url]
+
+[![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![Standard Code Style][style]][style-url]
 
 ## Install
 
@@ -161,39 +148,12 @@ $ posthtml -i input.html -r
 $ posthtml -i inputFolder/*.html -r
 ```
 
-## LICENSE
-
-> MIT License (MIT)
-
->Copyright (c) Ivan Demidov <scrum@list.ru>
-
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-> The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+### License [MIT](LICENSE)
 
 [posthtml-url]: http://github.com/posthtml/posthtml
 
-[node-url]: ""
-[node-image]: https://img.shields.io/node/v/post-sequence.svg?maxAge=2592000&style=flat-square
-
 [npm-url]: https://npmjs.org/package/posthtml-cli
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
-
-[testen-url]: https://github.com/egoist/testen
-[testen-image]: https://img.shields.io/badge/testen-passing-brightgreen.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/posthtml/posthtml-cli
 [travis-image]: http://img.shields.io/travis/posthtml/posthtml-cli.svg?style=flat-square&label=unix
@@ -207,8 +167,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 [depstat-url]: https://david-dm.org/posthtml/posthtml-cli
 [depstat-image]: https://david-dm.org/posthtml/posthtml-cli.svg?style=flat-square
 
-[depstat-dev-url]: https://david-dm.org/posthtml/posthtml-cli
-[depstat-dev-image]: https://david-dm.org/posthtml/posthtml-cli/dev-status.svg?style=flat-square
-
-[codestyle-url]: https://github.com/sindresorhus/xo
-[codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
+[style-url]: http://standardjs.com/
+[style]: https://img.shields.io/badge/code%20style-standard-yellow.svg?style=flat-square
