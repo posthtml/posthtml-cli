@@ -78,7 +78,7 @@ module.exports = {
     styleToFile: {
         path: './dist/style.css'
     }
-};
+}
 ```
 
 #### ```JSON```
