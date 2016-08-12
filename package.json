@@ -3,14 +3,7 @@
   "version": "0.2.5",
   "description": "CLI for posthtml",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/posthtml/posthtml-cli.git"
-  },
-  "homepage": "https://github.com/posthtml/posthtml-cli#readme",
-  "bugs": {
-    "url": "https://github.com/posthtml/posthtml-cli/issues"
-  },
+  "repository": "posthtml/posthtml-cli",
   "author": {
     "name": "Ivan Demidov",
     "email": "Scrum@list.ru",
@@ -50,7 +43,7 @@
     "yargs": "^4.7.1"
   },
   "devDependencies": {
-    "ava": "0.16.0",
+    "ava": "*",
     "ava-codemods": "^0.2.1",
     "babel-eslint": "^6.1.2",
     "clinton": "^0.8.0",
