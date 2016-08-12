@@ -1,7 +1,7 @@
 # posthtml-cli
 > Simple CLI for [PostHTML][posthtml-url]
 
-[![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![Standard Code Style][style]][style-url]
+[![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![Standard Code Style][style]][style-url]
 
 ## Install
 
@@ -78,7 +78,7 @@ module.exports = {
     styleToFile: {
         path: './dist/style.css'
     }
-}
+};
 ```
 
 #### ```JSON```
@@ -148,12 +148,18 @@ $ posthtml -i input.html -r
 $ posthtml -i inputFolder/*.html -r
 ```
 
-### License [MIT](LICENSE)
+### License [MIT](license)
 
 [posthtml-url]: http://github.com/posthtml/posthtml
 
+[node-url]: ""
+[node-image]: https://img.shields.io/node/v/post-sequence.svg?maxAge=2592000&style=flat-square
+
 [npm-url]: https://npmjs.org/package/posthtml-cli
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
+
+[testen-url]: https://github.com/egoist/testen
+[testen-image]: https://img.shields.io/badge/testen-passing-brightgreen.svg?style=flat-square
 
 [travis-url]: https://travis-ci.org/posthtml/posthtml-cli
 [travis-image]: http://img.shields.io/travis/posthtml/posthtml-cli.svg?style=flat-square&label=unix
@@ -166,6 +172,9 @@ $ posthtml -i inputFolder/*.html -r
 
 [depstat-url]: https://david-dm.org/posthtml/posthtml-cli
 [depstat-image]: https://david-dm.org/posthtml/posthtml-cli.svg?style=flat-square
+
+[depstat-dev-url]: https://david-dm.org/posthtml/posthtml-cli
+[depstat-dev-image]: https://david-dm.org/posthtml/posthtml-cli/dev-status.svg?style=flat-square
 
 [style-url]: http://standardjs.com/
 [style]: https://img.shields.io/badge/code%20style-standard-yellow.svg?style=flat-square
