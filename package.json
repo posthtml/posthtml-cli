@@ -47,7 +47,7 @@
     "globby": "^6.0.0",
     "posthtml": "^0.9.0",
     "posthtml-load-plugins": "^0.11.2",
-    "yargs": "^4.7.1"
+    "yargs": "^5.0.0"
   },
   "devDependencies": {
     "ava": "*",
