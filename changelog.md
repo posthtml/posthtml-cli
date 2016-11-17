@@ -1,3 +1,32 @@
+<a name="0.2.8"></a>
+## 0.2.8 (2016-11-16)
+
+* 0.2.8 ([96d2030](https://github.com/posthtml/posthtml-cli/commit/96d2030))
+* Delete maintainers ([f9d7ff1](https://github.com/posthtml/posthtml-cli/commit/f9d7ff1))
+* refactor(*): change posthtml to post-load-plugins, fixed #130 ([541a54a](https://github.com/posthtml/posthtml-cli/commit/541a54a)), closes [#130](https://github.com/posthtml/posthtml-cli/issues/130)
+* chore(package): update ava-codemods to version 0.3.0 ([8f8f93d](https://github.com/posthtml/posthtml-cli/commit/8f8f93d))
+* chore(package): update babel-eslint to version 7.0.0 ([d93a68f](https://github.com/posthtml/posthtml-cli/commit/d93a68f))
+* chore(package): update eslint-plugin-ava to version 4.0.0 ([446dd5f](https://github.com/posthtml/posthtml-cli/commit/446dd5f))
+* chore(package): update eslint-plugin-promise to version 3.0.0 ([f4fff15](https://github.com/posthtml/posthtml-cli/commit/f4fff15))
+* chore(package): update eslint-plugin-standard to version 2.0.1 ([b66f4b2](https://github.com/posthtml/posthtml-cli/commit/b66f4b2))
+* chore(package): update execa to version 0.5.0 ([c98c3dc](https://github.com/posthtml/posthtml-cli/commit/c98c3dc))
+* chore(package): update nyc to version 9.0.1 ([d360c5e](https://github.com/posthtml/posthtml-cli/commit/d360c5e))
+* chore(package): update read-pkg to version 2.0.0 ([bb455ad](https://github.com/posthtml/posthtml-cli/commit/bb455ad))
+* chore(package): update yargs to version 6.0.0 ([9124e38](https://github.com/posthtml/posthtml-cli/commit/9124e38))
+
+
+
+<a name="0.2.7"></a>
+## 0.2.7 (2016-09-23)
+
+* 0.2.7 ([44b00f9](https://github.com/posthtml/posthtml-cli/commit/44b00f9))
+* Update package.json ([be793d6](https://github.com/posthtml/posthtml-cli/commit/be793d6))
+* chore(changelog): Update changelog ([6294c40](https://github.com/posthtml/posthtml-cli/commit/6294c40))
+* chore(package): update eslint-config-standard to version 6.0.1 ([d2cd9bc](https://github.com/posthtml/posthtml-cli/commit/d2cd9bc))
+* chore(package): update eslint-formatter-pretty to version 1.0.0 ([e6ddfc5](https://github.com/posthtml/posthtml-cli/commit/e6ddfc5))
+
+
+
 <a name="0.2.6"></a>
 ## 0.2.6 (2016-09-08)
 

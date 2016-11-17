@@ -48,7 +48,7 @@ function processing(file, output) {
   }
 
   // processing
-  posthtml(require('posthtml-load-plugins')(argv.config, ext))
+  posthtml(require('post-load-plugins')(argv.config, ext))
     .process(html)
     .then(function (result) {
       fs.writeFileSync(output, result.html)

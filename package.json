@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
@@ -38,10 +38,10 @@
   ],
   "dependencies": {
     "globby": "^6.0.0",
+    "path-exists": "^3.0.0",
+    "post-load-plugins": "0.0.1",
     "posthtml": "^0.9.0",
-    "posthtml-load-plugins": "^0.11.2",
-    "yargs": "^6.0.0",
-    "path-exists": "^3.0.0"
+    "yargs": "^6.0.0"
   },
   "devDependencies": {
     "ava": "*",
