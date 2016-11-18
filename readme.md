@@ -28,7 +28,7 @@ $ posthtml --help
 ```
 
 ## Config
-*Default read options for plugins from package.json using [posthtml-load-plugins](https://github.com/michael-ciniawsky/posthtml-load-plugins)*
+*Automatically loads plug-ins with configuration from package.json using [post-load-plugins](https://github.com/post-org/post-load-plugins)*
 
 ### ```package.json```
 
