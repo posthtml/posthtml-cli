@@ -44,7 +44,7 @@
     "yargs": "^6.0.0"
   },
   "devDependencies": {
-    "ava": "*",
+    "ava": "0.17.0",
     "ava-codemods": "^0.3.0",
     "babel-eslint": "^7.0.0",
     "clinton": "^0.8.0",
