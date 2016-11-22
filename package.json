@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
