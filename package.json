@@ -39,7 +39,7 @@
   "dependencies": {
     "globby": "^6.0.0",
     "path-exists": "^3.0.0",
-    "post-load-plugins": "0.0.2",
+    "post-load-plugins": "0.0.3",
     "posthtml": "^0.9.0",
     "yargs": "^6.0.0"
   },
