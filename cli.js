@@ -38,17 +38,23 @@ var argv = require('yargs')
 function processing(file, output) {
   // get htmls
   var html = fs.readFileSync(file, 'utf8')
-  var ext = {}
+
+  // config
+  var config = {}
 
   // create config extends for post-load-plugins
   if (argv.use) {
     argv.use.forEach(function (plugin) {
-      ext[plugin] = argv[plugin] || {}
+      config[plugin] = argv[plugin] || {}
     })
   }
 
+  if (argv.config) {
+    config = Object.assign(require(path.resolve(argv.config)), config)
+  }
+
   // processing
-  posthtml(require('post-load-plugins')(argv.config, ext))
+  posthtml(require('post-load-plugins')(config))
     .process(html)
     .then(function (result) {
       fs.writeFileSync(output, result.html)
