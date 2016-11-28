@@ -1,3 +1,28 @@
+<a name="0.2.10"></a>
+## 0.2.10 (2016-11-28)
+
+* 0.2.10 ([e4bdfed](https://github.com/posthtml/posthtml-cli/commit/e4bdfed))
+* Update readme.md ([9b98e50](https://github.com/posthtml/posthtml-cli/commit/9b98e50))
+* fix(cli): fix typo plugin name ([2796587](https://github.com/posthtml/posthtml-cli/commit/2796587))
+* fix(package): fix clinton recommendation ava version ([ea4ef4c](https://github.com/posthtml/posthtml-cli/commit/ea4ef4c))
+* fix(package): fix incorrect pkg npm, fixed #142 ([d107907](https://github.com/posthtml/posthtml-cli/commit/d107907)), closes [#142](https://github.com/posthtml/posthtml-cli/issues/142)
+* fix(package): fix version ([c884ddf](https://github.com/posthtml/posthtml-cli/commit/c884ddf))
+* fix(test-cli): fix path for test folder ([7696f59](https://github.com/posthtml/posthtml-cli/commit/7696f59))
+* perf(cli): update create configuration ([f3efb36](https://github.com/posthtml/posthtml-cli/commit/f3efb36))
+* test(*): add node  for CI, fixed #134 ([b8c5803](https://github.com/posthtml/posthtml-cli/commit/b8c5803)), closes [#134](https://github.com/posthtml/posthtml-cli/issues/134)
+* test(package): add node 7 in config testen ([9f5bc09](https://github.com/posthtml/posthtml-cli/commit/9f5bc09))
+* chore(changelog): Update changelog ([6784f2e](https://github.com/posthtml/posthtml-cli/commit/6784f2e))
+* chore(package): update ava to version 0.17.0 ([363fc3b](https://github.com/posthtml/posthtml-cli/commit/363fc3b))
+* chore(package): update babel-eslint to version 7.1.1 ([4a9a186](https://github.com/posthtml/posthtml-cli/commit/4a9a186))
+* chore(package): update cpy to version 5.0.0 ([77aa1cb](https://github.com/posthtml/posthtml-cli/commit/77aa1cb))
+* chore(package): update eslint-plugin-babel to version 4.0.0 ([6fdea38](https://github.com/posthtml/posthtml-cli/commit/6fdea38))
+* chore(package): update eslint-plugin-promise to version 3.4.0 ([61c6ce1](https://github.com/posthtml/posthtml-cli/commit/61c6ce1))
+* chore(package): update nyc to version 10.0.0 ([c5d9676](https://github.com/posthtml/posthtml-cli/commit/c5d9676))
+* chore(package): update post-load-plugins to version 0.0.2 ([4ab4430](https://github.com/posthtml/posthtml-cli/commit/4ab4430))
+* chore(package): update post-load-plugins to version 0.0.3 ([c19f0c8](https://github.com/posthtml/posthtml-cli/commit/c19f0c8))
+
+
+
 <a name="0.2.8"></a>
 ## 0.2.8 (2016-11-16)
 
