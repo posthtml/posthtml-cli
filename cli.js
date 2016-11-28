@@ -40,7 +40,7 @@ function processing(file, output) {
   var html = fs.readFileSync(file, 'utf8')
   var ext = {}
 
-  // create config extends for posthtml-load-plugins
+  // create config extends for post-load-plugins
   if (argv.use) {
     argv.use.forEach(function (plugin) {
       ext[plugin] = argv[plugin] || {}
