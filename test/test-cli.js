@@ -95,15 +95,31 @@ test('Transform html witch config in file and stdin options use', async t => {
     'test/fixtures/config.json',
     '-u',
     'posthtml-bem',
-    '--posthtml-bem.elemPrefix',
-    '__',
-    '--posthtml-bem.elemMod',
+    '--posthtml-bem.elemPrefix=--',
+    '--posthtml-bem.modPrefix',
     '_',
-    '-u',
-    'posthtml-custom-elements'
+    '--posthtml-bem.modDlmtr',
+    '--'
   ])
   t.true(await pathExists(filename))
   t.is((await read('test/expected/output-bem.html')), (await read(filename)))
+})
+
+test('Transform html witch stdin options use', async t => {
+  t.plan(2)
+  const filename = tempfile('.html')
+  await execa(cli, [
+    '-o',
+    filename,
+    '-i',
+    'test/fixtures/input-custom-elements.html',
+    '-u',
+    'posthtml-custom-elements',
+    '--posthtml-custom-elements.defaultTag',
+    'span'
+  ])
+  t.true(await pathExists(filename))
+  t.is((await read('test/expected/output-custom-elements.html')), (await read(filename)))
 })
 
 test('Transform html stdin options use witch modules', async t => {
