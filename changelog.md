@@ -1,3 +1,16 @@
+<a name="0.2.11"></a>
+## 0.2.11 (2016-12-28)
+
+* 0.2.11 ([1acd5f8](https://github.com/posthtml/posthtml-cli/commit/1acd5f8))
+* chore(changelog): Update changelog ([0bdf662](https://github.com/posthtml/posthtml-cli/commit/0bdf662))
+* chore(package): add version on prepublich commit ([c596e71](https://github.com/posthtml/posthtml-cli/commit/c596e71))
+* chore(package): update devDep ([8b67757](https://github.com/posthtml/posthtml-cli/commit/8b67757))
+* chore(package): update post-load-plugins ([eff1309](https://github.com/posthtml/posthtml-cli/commit/eff1309))
+* chore(package): update post-load-plugins to version 0.0.5 ([9f41ba8](https://github.com/posthtml/posthtml-cli/commit/9f41ba8))
+* test(*): fix and add ([f9df871](https://github.com/posthtml/posthtml-cli/commit/f9df871))
+
+
+
 <a name="0.2.10"></a>
 ## 0.2.10 (2016-11-28)
 
