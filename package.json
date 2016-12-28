@@ -17,7 +17,7 @@
   },
   "scripts": {
     "commitmsg": "conventional-changelog-lint -e",
-    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"chore(changelog): Update changelog\"",
+    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"chore(changelog): Update changelog v`npm view posthtml-cli version`\"",
     "patch": "np patch --any-branch",
     "minor": "np minor --any-branch",
     "major": "np major --any-branch",
