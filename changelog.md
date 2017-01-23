@@ -1,3 +1,19 @@
+<a name="0.2.12"></a>
+## 0.2.12 (2017-01-23)
+
+* 0.2.12 ([4210a0a](https://github.com/posthtml/posthtml-cli/commit/4210a0a))
+* chore(changelog): Update changelog v0.2.11 ([f1fc5c4](https://github.com/posthtml/posthtml-cli/commit/f1fc5c4))
+* chore(package): update clinton to version 0.10.0 ([dfa3074](https://github.com/posthtml/posthtml-cli/commit/dfa3074))
+* chore(package): update clinton to version 0.11.0 ([a5d3f18](https://github.com/posthtml/posthtml-cli/commit/a5d3f18))
+* chore(package): update clinton to version 0.9.0 ([b550e97](https://github.com/posthtml/posthtml-cli/commit/b550e97))
+* chore(package): update depDev ([7fa2cc2](https://github.com/posthtml/posthtml-cli/commit/7fa2cc2))
+* chore(package): update execa to version 0.6.0 ([bcc22ba](https://github.com/posthtml/posthtml-cli/commit/bcc22ba))
+* chore(package): update husky to version 0.13.0 ([456210e](https://github.com/posthtml/posthtml-cli/commit/456210e))
+* chore(package): update post-load-plugins to version 0.0.6 ([acb6532](https://github.com/posthtml/posthtml-cli/commit/acb6532))
+* chore(package): update post-load-plugins to version 0.0.7 ([19274fe](https://github.com/posthtml/posthtml-cli/commit/19274fe))
+
+
+
 <a name="0.2.11"></a>
 ## 0.2.11 (2016-12-28)
 
