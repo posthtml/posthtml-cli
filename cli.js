@@ -4,7 +4,6 @@ var path = require('path')
 var fs = require('fs')
 var posthtml = require('posthtml')
 var globby = require('globby')
-var pathExists = require('path-exists')
 var argv = require('yargs')
   .usage('Usage: $0 [-o output-file/directory|-r] [-i input-file/directory] [--config|-c path/to/file/config]')
   .example('posthtml -o output.html -i input.html', 'Default example')
@@ -80,7 +79,7 @@ function createFolder(outputPath) {
     outputPath = path.dirname(outputPath)
   }
 
-  if (pathExists.sync(outputPath) === false) {
+  if (fs.existsSync(outputPath) === false) {
     fs.mkdirSync(outputPath)
   }
 }
