@@ -1,3 +1,16 @@
+<a name="0.2.13"></a>
+## 0.2.13 (2017-02-01)
+
+* 0.2.13 ([7b069ba](https://github.com/posthtml/posthtml-cli/commit/7b069ba))
+* chore(changelog): Update changelog v0.2.12 ([004c7fd](https://github.com/posthtml/posthtml-cli/commit/004c7fd))
+* chore(package): move path-exists to devDep ([68aaadc](https://github.com/posthtml/posthtml-cli/commit/68aaadc))
+* chore(package): update dep ([8030887](https://github.com/posthtml/posthtml-cli/commit/8030887))
+* chore(package): update post-load-plugins to version 0.0.8 ([3bc51f9](https://github.com/posthtml/posthtml-cli/commit/3bc51f9))
+* docs(readme): change branch master to ci badges ([4d34f75](https://github.com/posthtml/posthtml-cli/commit/4d34f75))
+* perf(cli): use native fs exists sync ([3bd8e49](https://github.com/posthtml/posthtml-cli/commit/3bd8e49))
+
+
+
 <a name="0.2.12"></a>
 ## 0.2.12 (2017-01-23)
 
