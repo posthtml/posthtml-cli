@@ -70,7 +70,7 @@
     "posthtml-custom-elements": "^1.0.3",
     "read-pkg": "^2.0.0",
     "tempfile": "^1.1.1",
-    "testen": "^1.8.2",
+    "testen": "^2.1.0",
     "updtr": "^0.2.3"
   },
   "testen": {
