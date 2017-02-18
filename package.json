@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "path-exists": "^3.0.0",
-    "ava": "*",
+    "ava": "0.18.2",
     "ava-codemods": "^0.3.0",
     "babel-eslint": "^7.1.1",
     "clinton": "^0.11.0",
