@@ -49,7 +49,7 @@
     "babel-eslint": "^7.1.1",
     "clinton": "^0.11.0",
     "conventional-changelog-cli": "^1.2.0",
-    "conventional-changelog-lint": "^1.1.0",
+    "conventional-changelog-lint": "^1.1.2",
     "coveralls": "^2.11.15",
     "cpy": "^5.0.0",
     "eslint": "^3.14.0",
