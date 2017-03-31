@@ -1042,7 +1042,7 @@ babel-register@^6.18.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.2"
 
-babel-runtime@6.23.0, babel-runtime@^6.0.0, babel-runtime@^6.20.0, babel-runtime@^6.22.0, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
+babel-runtime@6.23.0, babel-runtime@^6.0.0, babel-runtime@^6.20.0, babel-runtime@^6.22.0:
   version "6.23.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.23.0.tgz#0a9489f144de70efb3ce4300accdb329e2fc543b"
   dependencies:
@@ -1055,7 +1055,7 @@ babel-runtime@^5.6.18:
   dependencies:
     core-js "^1.0.0"
 
-babel-runtime@^6.11.6:
+babel-runtime@^6.11.6, babel-runtime@^6.9.0, babel-runtime@^6.9.1:
   version "6.11.6"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.11.6.tgz#6db707fef2d49c49bfa3cb64efdb436b518b8222"
   dependencies:
@@ -1671,26 +1671,24 @@ conventional-changelog-jshint@^0.1.0:
     compare-func "^1.3.1"
     q "^1.4.1"
 
-conventional-changelog-lint-config-angular@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/conventional-changelog-lint-config-angular/-/conventional-changelog-lint-config-angular-0.4.0.tgz#1489340a2428af54a32171aa77c625fa376ad1ff"
+conventional-changelog-lint-config-angular@0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-lint-config-angular/-/conventional-changelog-lint-config-angular-0.4.1.tgz#0f1d090883636ca45f08304ce72ee0b2c60d9ffa"
 
-conventional-changelog-lint@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/conventional-changelog-lint/-/conventional-changelog-lint-1.1.7.tgz#e1756f3dc65d70e73dd7ab9b7fe0fd638cf19bcc"
+conventional-changelog-lint@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-lint/-/conventional-changelog-lint-1.1.8.tgz#62d646fc01a677e9be43b91b73916900b548b593"
   dependencies:
     babel-polyfill "6.20.0"
     babel-runtime "6.23.0"
     chalk "1.1.3"
     conventional-changelog-angular "1.3.0"
-    conventional-changelog-lint-config-angular "0.4.0"
+    conventional-changelog-lint-config-angular "0.4.1"
     conventional-commits-parser "1.3.0"
-    denodeify "1.2.1"
     franc "2.0.0"
     get-stdin "5.0.1"
     git-raw-commits "1.1.2"
     git-toplevel "1.1.1"
-    globby "6.1.0"
     lodash "4.17.4"
     meow "3.7.0"
     mz "2.6.0"
@@ -1977,10 +1975,6 @@ delayed-stream@~1.0.0:
 delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
-
-denodeify@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/denodeify/-/denodeify-1.2.1.tgz#3a36287f5034e699e7577901052c2e6c94251631"
 
 detect-indent@^3.0.0:
   version "3.0.1"
@@ -2986,16 +2980,6 @@ globals@^9.0.0, globals@^9.14.0:
   version "9.17.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-9.17.0.tgz#0c0ca696d9b9bb694d2e5470bd37777caad50286"
 
-globby@6.1.0, globby@^6.0.0, globby@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/globby/-/globby-6.1.0.tgz#f5a6d70e8395e21c858fb0489d64df02424d506c"
-  dependencies:
-    array-union "^1.0.1"
-    glob "^7.0.3"
-    object-assign "^4.0.1"
-    pify "^2.0.0"
-    pinkie-promise "^2.0.0"
-
 globby@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-4.1.0.tgz#080f54549ec1b82a6c60e631fc82e1211dbe95f8"
@@ -3013,6 +2997,16 @@ globby@^5.0.0:
   dependencies:
     array-union "^1.0.1"
     arrify "^1.0.0"
+    glob "^7.0.3"
+    object-assign "^4.0.1"
+    pify "^2.0.0"
+    pinkie-promise "^2.0.0"
+
+globby@^6.0.0, globby@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-6.1.0.tgz#f5a6d70e8395e21c858fb0489d64df02424d506c"
+  dependencies:
+    array-union "^1.0.1"
     glob "^7.0.3"
     object-assign "^4.0.1"
     pify "^2.0.0"
@@ -4845,28 +4839,29 @@ pos@0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/pos/-/pos-0.4.2.tgz#20e9c77fbeedcc356823cea63c7585cace93be2a"
 
-post-config@0.0.4-alpha.8:
-  version "0.0.4-alpha.8"
-  resolved "https://registry.yarnpkg.com/post-config/-/post-config-0.0.4-alpha.8.tgz#31dc4d1bba306b38d8682617d7a76e50659850ba"
+post-config@0.0.4-alpha.9:
+  version "0.0.4-alpha.9"
+  resolved "https://registry.yarnpkg.com/post-config/-/post-config-0.0.4-alpha.9.tgz#5930c2b4ba20cb96fbfceb0fda635153f40e59aa"
   dependencies:
     core-js "^2.4.1"
     deepmerge "^1.3.1"
     to-camel-case "^1.0.0"
+    to-slug-case "^1.0.0"
 
-post-load-plugins@0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/post-load-plugins/-/post-load-plugins-0.0.13.tgz#14cfcb09fc8965778bfc48f5ca05256284c451e2"
+post-load-plugins@0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/post-load-plugins/-/post-load-plugins-0.0.14.tgz#29e8cb4961a198568acb23ecd9b325190cb470ca"
   dependencies:
     chalk "^1.1.3"
     core-js "^2.4.1"
     indent-string "^3.1.0"
     log-symbols "^1.0.2"
-    post-config "0.0.4-alpha.8"
-    post-sequence "^0.1.10"
+    post-config "0.0.4-alpha.9"
+    post-sequence "^0.1.11"
     text-table "^0.2.0"
     to-slug-case "^1.0.0"
 
-post-sequence@^0.1.10:
+post-sequence@^0.1.11:
   version "0.1.11"
   resolved "https://registry.yarnpkg.com/post-sequence/-/post-sequence-0.1.11.tgz#e46c79e53165dd6130f1b04795de3564bc48ff17"
 
