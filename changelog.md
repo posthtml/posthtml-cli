@@ -1,3 +1,15 @@
+<a name="0.2.15"></a>
+## 0.2.15 (2017-03-31)
+
+* 0.2.15 ([981be22](https://github.com/posthtml/posthtml-cli/commit/981be22))
+* chore(.conventional-changelog-lintrc): fix in path ([7f43c07](https://github.com/posthtml/posthtml-cli/commit/7f43c07))
+* chore(changelog): Update changelog v`npm view posthtml-cli version` ([240cbc4](https://github.com/posthtml/posthtml-cli/commit/240cbc4))
+* chore(package): update conventional-changelog-lint to version 1.1.8 ([93a7212](https://github.com/posthtml/posthtml-cli/commit/93a7212))
+* chore(package): update post-load-plugins to version 0.0.14 ([88e9785](https://github.com/posthtml/posthtml-cli/commit/88e9785))
+* chore(yarn.lock): add yarn lock ([db0fce8](https://github.com/posthtml/posthtml-cli/commit/db0fce8))
+
+
+
 <a name="0.2.14"></a>
 ## 0.2.14 (2017-03-31)
 

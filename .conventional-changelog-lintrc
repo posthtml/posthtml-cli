@@ -1,6 +1,0 @@
-{
-  "extends": ["angular"],
-  "wildcards": {
-    "merge": ["^(Merge pull request)|(Merge (.*?) into (.*?)|(Merge (.*?) branch (.*?))$)"]
-  }
-}
