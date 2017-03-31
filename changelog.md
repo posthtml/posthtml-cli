@@ -1,3 +1,31 @@
+<a name="0.2.14"></a>
+## 0.2.14 (2017-03-31)
+
+* 0.2.14 ([7ca36b1](https://github.com/posthtml/posthtml-cli/commit/7ca36b1))
+* chore(.conventional-changelog-lintrc): tmp Waiting for the adoption PR ([ad530e4](https://github.com/posthtml/posthtml-cli/commit/ad530e4))
+* chore(changelog): Update changelog v0.2.13 ([661322a](https://github.com/posthtml/posthtml-cli/commit/661322a))
+* chore(package): update ava-codemods to version 0.3.2 ([ba3f76f](https://github.com/posthtml/posthtml-cli/commit/ba3f76f))
+* chore(package): update babel-eslint to version 7.2.0 ([5a0d3bc](https://github.com/posthtml/posthtml-cli/commit/5a0d3bc))
+* chore(package): update changelog lint ([140ee3c](https://github.com/posthtml/posthtml-cli/commit/140ee3c))
+* chore(package): update conventional-changelog-cli to 1.3.1 ([f2a7f5b](https://github.com/posthtml/posthtml-cli/commit/f2a7f5b))
+* chore(package): update coveralls to version 2.13.0 ([1316b6a](https://github.com/posthtml/posthtml-cli/commit/1316b6a))
+* chore(package): update eslint to version 3.18.0 ([587c49f](https://github.com/posthtml/posthtml-cli/commit/587c49f))
+* chore(package): update eslint-config-standard to version 7.1.0 ([e7bb993](https://github.com/posthtml/posthtml-cli/commit/e7bb993))
+* chore(package): update eslint-plugin-babel to version 4.1.0 ([a32f623](https://github.com/posthtml/posthtml-cli/commit/a32f623))
+* chore(package): update eslint-plugin-promise to version 3.5.0 ([edcc089](https://github.com/posthtml/posthtml-cli/commit/edcc089))
+* chore(package): update eslint-plugin-standard to version 2.1.1 ([8a7e2cf](https://github.com/posthtml/posthtml-cli/commit/8a7e2cf))
+* chore(package): update execa to version 0.6.3 ([90625b7](https://github.com/posthtml/posthtml-cli/commit/90625b7))
+* chore(package): update husky to version 0.13.2 ([a1438b3](https://github.com/posthtml/posthtml-cli/commit/a1438b3))
+* chore(package): update np to version 2.13.0 ([3da8fbd](https://github.com/posthtml/posthtml-cli/commit/3da8fbd))
+* chore(package): update post-load-plugins to version 0.0.10 ([426eea9](https://github.com/posthtml/posthtml-cli/commit/426eea9))
+* chore(package): update post-load-plugins to version 0.0.13 ([1de6d18](https://github.com/posthtml/posthtml-cli/commit/1de6d18))
+* chore(package): update testen to version 2.2.0 ([e882985](https://github.com/posthtml/posthtml-cli/commit/e882985))
+* chore(package): update yargs to version 7.0.2 ([dd2b9a2](https://github.com/posthtml/posthtml-cli/commit/dd2b9a2))
+* chore(yarn.lock): update deps ([037f3fd](https://github.com/posthtml/posthtml-cli/commit/037f3fd))
+* chore(yarn): add yarn lock ([3cc6360](https://github.com/posthtml/posthtml-cli/commit/3cc6360))
+
+
+
 <a name="0.2.13"></a>
 ## 0.2.13 (2017-02-01)
 
