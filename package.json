@@ -59,7 +59,7 @@
     "eslint-plugin-markdown": "^1.0.0-beta.3",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-require-path-exists": "^1.1.5",
-    "eslint-plugin-standard": "^2.0.1",
+    "eslint-plugin-standard": "^2.1.1",
     "execa": "^0.6.0",
     "husky": "^0.13.0",
     "np": "^2.12.0",
