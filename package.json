@@ -71,7 +71,7 @@
     "read-pkg": "^2.0.0",
     "tempfile": "^1.1.1",
     "testen": "^2.2.0",
-    "updtr": "^0.2.3"
+    "updtr": "^1.0.0"
   },
   "testen": {
     "node": [
