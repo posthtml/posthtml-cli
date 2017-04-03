@@ -1,3 +1,15 @@
+<a name="0.2.16"></a>
+## 0.2.16 (2017-04-03)
+
+* 0.2.16 ([3153345](https://github.com/posthtml/posthtml-cli/commit/3153345))
+* chore(changelog): Update changelog v`npm view posthtml-cli version` ([affb53c](https://github.com/posthtml/posthtml-cli/commit/affb53c))
+* chore(package): update eslint to version 3.19.0 ([5f4ab4f](https://github.com/posthtml/posthtml-cli/commit/5f4ab4f))
+* chore(package): update post-load-plugins to version 0.0.15 ([6ef67f8](https://github.com/posthtml/posthtml-cli/commit/6ef67f8))
+* chore(package): update updtr to version 1.0.0 ([6f667a4](https://github.com/posthtml/posthtml-cli/commit/6f667a4))
+* chore(yarn.lock): add yarn ([e6610b6](https://github.com/posthtml/posthtml-cli/commit/e6610b6))
+
+
+
 <a name="0.2.15"></a>
 ## 0.2.15 (2017-03-31)
 
