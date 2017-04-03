@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.2.15",
+  "version": "0.2.16",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "globby": "^6.1.0",
-    "post-load-plugins": "0.0.14",
+    "post-load-plugins": "0.0.15",
     "posthtml": "^0.9.2",
     "yargs": "^7.0.2"
   },
@@ -51,7 +51,7 @@
     "conventional-changelog-lint": "^1.1.8",
     "coveralls": "^2.13.0",
     "cpy": "^5.0.0",
-    "eslint": "^3.18.0",
+    "eslint": "^3.19.0",
     "eslint-config-standard": "^7.1.0",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-ava": "^4.0.1",
@@ -71,7 +71,7 @@
     "read-pkg": "^2.0.0",
     "tempfile": "^1.1.1",
     "testen": "^2.2.0",
-    "updtr": "^0.2.3"
+    "updtr": "^1.0.0"
   },
   "testen": {
     "node": [
