@@ -45,7 +45,7 @@
   "devDependencies": {
     "ava": "*",
     "ava-codemods": "^0.3.2",
-    "babel-eslint": "^7.2.0",
+    "babel-eslint": "^7.2.3",
     "clinton": "^0.11.0",
     "conventional-changelog-cli": "^1.3.1",
     "conventional-changelog-lint": "^1.1.8",
