@@ -80,7 +80,6 @@
       "ava",
       "standard",
       "babel",
-      "require-path-exists",
       "markdown"
     ],
     "extends": [
