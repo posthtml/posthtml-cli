@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - node
+  - v7
+  - v6
+  - v5
   - v4
 
 after_success:
