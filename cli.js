@@ -36,20 +36,20 @@ var argv = require('yargs')
 
 function processing(file, output) {
   // get htmls
-  const html = fs.readFileSync(file, 'utf8')
-  let plugins;
+  var html = fs.readFileSync(file, 'utf8')
+  var plugins;
 
   console.log(argv);
 
   if (argv.autoOff) {
-    const use = argv.use ? argv.use : [];
-    const cfg = argv.config ? Object.keys(require(path.resolve(argv.config))) : [];
+    var use = argv.use ? argv.use : [];
+    var cfg = argv.config ? Object.keys(require(path.resolve(argv.config))) : [];
     plugins = [].concat(use, cfg).map((plugin) => {
       try {
           return require(plugin)(argv[plugin])
       } catch (e) {
           if (err.code === 'MODULE_NOT_FOUND') {
-            throw new TypeError(`Plugin Error: Cannot find module '${plugin}'`);
+            throw new TypeError('Plugin Error: Cannot find module ' + plugin);
           }
       }
     });
