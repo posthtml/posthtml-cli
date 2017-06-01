@@ -15,7 +15,7 @@ var argv = require('yargs')
   .alias('u', 'use')
   .array('use')
   .pkgConf('posthtml')
-  .config('c')
+  .config()
   .alias('c', 'config')
   .version(function () {
     return require('./package.json').version
@@ -37,23 +37,40 @@ var argv = require('yargs')
 function processing(file, output) {
   // get htmls
   var html = fs.readFileSync(file, 'utf8')
+  var plugins;
 
-  // config
-  var config = {}
+  console.log(argv);
 
-  // create config extends for post-load-plugins
-  if (argv.use) {
-    argv.use.forEach(function (plugin) {
-      config[plugin] = argv[plugin] || {}
-    })
-  }
+  if (argv.autoOff) {
+    var use = argv.use ? argv.use : [];
+    var cfg = argv.config ? Object.keys(require(path.resolve(argv.config))) : [];
+    plugins = [].concat(use, cfg).map((plugin) => {
+      try {
+          return require(plugin)(argv[plugin])
+      } catch (e) {
+          if (err.code === 'MODULE_NOT_FOUND') {
+            throw new TypeError('Plugin Error: Cannot find module ' + plugin);
+          }
+      }
+    });
+  } else {
+    // config
+    var config = {}
 
-  if (argv.config) {
-    config = Object.assign(require(path.resolve(argv.config)), config)
+    // create config extends for post-load-plugins
+    if (argv.use) {
+      argv.use.forEach(function (plugin) {
+        config[plugin] = argv[plugin] || {}
+      })
+    }
+
+    if (argv.config) {
+      config = Object.assign(require(path.resolve(argv.config)), config)
+    }
   }
 
   // processing
-  posthtml(require('post-load-plugins')(config))
+  posthtml(argv.autoOff ? plugins : require('post-load-plugins')(config))
     .process(html)
     .then(function (result) {
       fs.writeFileSync(output, result.html)

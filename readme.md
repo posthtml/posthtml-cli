@@ -1,123 +1,51 @@
 # posthtml-cli
-> Simple CLI for [PostHTML][posthtml-url]
+> Command line interface for [PostHTML][posthtml-url]
 
 [![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![Standard Code Style][style]][style-url]
 
 ## Install
 
+```bash
+$ npm install --global posthtml-cli
 ```
-npm install --global posthtml-cli
+> **Note:** This project is compatible with node v4+
+
+## Usage  
+```bash
+$ posthtml [-o output-file/directory|-r] [-i input-file/directory] [OPTIONS]
 ```
+> **Note:** Automatically loads plug-ins with configuration from package.json using [post-load-plugins](https://github.com/post-org/post-load-plugins) if not used `--config` key
 
-## Usage
-
-```console
-$ posthtml --help
-
-    Usage
-    posthtml [-o output-file/directory|-r] [-i input-file/directory] [--config|-c path/to/file/config] [--use|-u plugin]
-
-    Options
-    --config,  -c Path to JSON file                  [string]
-    --output,  -o Output html file/folder result     [required]
-    --input,   -i Input html file/folder             [required]
-    --use,     -u Posthtml plugin name               [string]
-    --replace, -r Replace input file(s)              [boolean]
-    --help,    -h Show help                          [boolean]
-    --version, -v Show version number                [boolean]    
-```
-
-## Config
-*Automatically loads plug-ins with configuration from package.json using [post-load-plugins](https://github.com/post-org/post-load-plugins)*
-
-### ```package.json```
-
-```json
-{
-    "name": "my project",
-    "dependencies": {
-        "posthtml-bem": "^0.2.2",
-        "posthtml-each": "^1.0.1",
-        "posthtml-include": "^1.0.2"
-    },
-    "devDependencies": {
-        "posthtml-style-to-file": "^0.1.1"
-    },
-    "posthtml": {
-        "bem": {
-            "elemPrefix": "__",
-            "modPrefix": "-",
-            "modDlmtr": "--"
-        },
-        "include": {
-            "root": "./",
-            "encoding": "utf-8"
-        },
-        "styleToFile": {
-            "path": "./dist/style.css"
-        }
-    }
-}
-```
-
-### ```[name].[ext]```
-
-#### ```JS```
-
-```js
-module.exports = {
-    bem: {
-        elemPrefix: '__',
-        modPrefix: '-',
-        modDlmtr: '--'
-    },
-    include: {
-        root: './',
-        encoding: 'utf-8'
-    },
-    styleToFile: {
-        path: './dist/style.css'
-    }
-}
-```
-
-#### ```JSON```
-
-```json
-{
-    "bem": {
-        "elemPrefix": "__",
-        "modPrefix": "-",
-        "modDlmtr": "--"
-    },
-    "include": {
-        "root": "./",
-        "encoding": "utf-8"
-    },
-    "styleToFile": {
-        "path": "./dist/style.css"
-    }
-}
-```
+## Options
+|Name|Type|Default|Description|
+|:----|:--:|:-----:|:---------|
+|`-o, --output`|`{String}`|`undefined`|Output File or Folder|
+|`-r, --replace`|`{Boolean}`|`false`|Replace Input File or Files in Input Folder|
+|`-i, --input`|`{String}`|`undefined`|Input File or Folder|
+|`-c, --config`|`{String}`|`dirname(package.json)`|Path to config file `config.[js|json]`|
+|`--auto-off`|`{Boolean}`|`false`|Disable automatically loads plug-ins with configuration from package.json|
+|`-u, --use`|`{Array}`|`[]`|PostHTML plugin name|
+|`-h, --help`|`{Boolean}`|`false`|CLI Help|
+|`-v, --version`|`{Boolean}`|`false`|CLI Version|
 
 ## Examples
 
 ### Sample
-```console
+```bash
 $ posthtml -o output.html -i input.html
 ```
 
 ### Options config
-```console
+```bash
 $ posthtml -o output.html -i input.html -c posthtml.json
 ```
 
-```console
+```bash
 $ posthtml -o output.html -i input.html -c posthtml.js
 ```
 
 ### Options use
-```console
+```bash
 $ posthtml 
     -o output.html 
     -i input.html 
@@ -131,20 +59,20 @@ $ posthtml
 ```
 
 ### Read dir
-```console
+```bash
 $ posthtml -o outputFolder/ -i inputFolder/*.html
 ```
 
-```console
+```bash
 $ posthtml -o outputFolder/ -i inputFolder/**/*.html
 ```
 
 ### Replace
-```console
+```bash
 $ posthtml -i input.html -r
 ```
 
-```console
+```bash
 $ posthtml -i inputFolder/*.html -r
 ```
 
