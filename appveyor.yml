@@ -1,6 +1,6 @@
 environment:
   matrix:
-    - nodejs_version: "latest"
+    - nodejs_version: "node"
     - nodejs_version: "4"
 
 version: "{build}"
