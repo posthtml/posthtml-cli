@@ -51,23 +51,23 @@
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-formatter-pretty": "^1.1.0",
-    "eslint-plugin-ava": "^4.0.1",
+    "eslint-plugin-ava": "^4.2.0",
     "eslint-plugin-babel": "^4.1.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-markdown": "^1.0.0-beta.3",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^2.3.1",
+    "eslint-plugin-standard": "^3.0.1",
     "execa": "^0.6.3",
     "husky": "^0.13.4",
     "np": "^2.15.0",
-    "nyc": "^10.3.2",
+    "nyc": "^11.0.1",
     "path-exists": "^3.0.0",
     "posthtml-bem": "^0.2.2",
     "posthtml-css-modules": "^0.1.1",
     "posthtml-custom-elements": "^1.1.0",
     "read-pkg": "^2.0.0",
-    "tempfile": "^1.1.1"
+    "tempfile": "^2.0.0"
   },
   "posthtml": {
     "customElements": {}
