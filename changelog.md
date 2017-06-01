@@ -1,3 +1,38 @@
+<a name="0.3.0"></a>
+# 0.3.0 (2017-06-01)
+
+* 0.3.0 ([e4ad2b5](https://github.com/posthtml/posthtml-cli/commit/e4ad2b5))
+* chore: add lock file ([a87c4ff](https://github.com/posthtml/posthtml-cli/commit/a87c4ff))
+* chore: not need ([0dab12c](https://github.com/posthtml/posthtml-cli/commit/0dab12c))
+* chore: remove not use pkg ([85a6aeb](https://github.com/posthtml/posthtml-cli/commit/85a6aeb))
+* chore: remove not use pkg ([46028b8](https://github.com/posthtml/posthtml-cli/commit/46028b8))
+* chore: update depDev ([b93c713](https://github.com/posthtml/posthtml-cli/commit/b93c713))
+* chore(changelog): Update changelog v`npm view posthtml-cli version` ([4676e0e](https://github.com/posthtml/posthtml-cli/commit/4676e0e))
+* chore(package): update babel-eslint to version 7.2.3 ([09e4f7f](https://github.com/posthtml/posthtml-cli/commit/09e4f7f))
+* chore(package): update clinton to version 0.12.0 ([cf28557](https://github.com/posthtml/posthtml-cli/commit/cf28557))
+* chore(package): update clinton to version 0.13.0 ([3a64fa8](https://github.com/posthtml/posthtml-cli/commit/3a64fa8))
+* chore(package): update conventional-changelog-lint to version 1.1.9 ([4313cad](https://github.com/posthtml/posthtml-cli/commit/4313cad))
+* chore(package): update coveralls to version 2.13.1 ([bec8ac1](https://github.com/posthtml/posthtml-cli/commit/bec8ac1))
+* chore(package): update eslint-config-standard to version 10.2.1 ([17d6789](https://github.com/posthtml/posthtml-cli/commit/17d6789))
+* chore(package): update eslint-plugin-standard to version 2.3.1 ([4b69e9f](https://github.com/posthtml/posthtml-cli/commit/4b69e9f))
+* chore(package): update husky to version 0.13.4 ([3880564](https://github.com/posthtml/posthtml-cli/commit/3880564))
+* chore(package): update np to version 2.15.0 ([7a9a1c8](https://github.com/posthtml/posthtml-cli/commit/7a9a1c8))
+* chore(package): update nyc to version 10.3.2 ([bfe73a3](https://github.com/posthtml/posthtml-cli/commit/bfe73a3))
+* chore(package): update post-load-plugins to version 0.0.16 ([56ed71c](https://github.com/posthtml/posthtml-cli/commit/56ed71c))
+* chore(package): update posthtml-custom-elements to version 1.1.0 ([315d944](https://github.com/posthtml/posthtml-cli/commit/315d944))
+* chore(package): update yargs to version 8.0.1 ([0fb07d7](https://github.com/posthtml/posthtml-cli/commit/0fb07d7))
+* fix: downgraded ([e91a443](https://github.com/posthtml/posthtml-cli/commit/e91a443))
+* ci: change node version ([a03ff44](https://github.com/posthtml/posthtml-cli/commit/a03ff44))
+* ci: fix latest node version ([feb75a4](https://github.com/posthtml/posthtml-cli/commit/feb75a4))
+* ci: fix latest node version ([b92be10](https://github.com/posthtml/posthtml-cli/commit/b92be10))
+* ci: fix latest node version ([22c6ce1](https://github.com/posthtml/posthtml-cli/commit/22c6ce1))
+* feat: add disabled post-load-plugins option, close #162 ([e16414f](https://github.com/posthtml/posthtml-cli/commit/e16414f)), closes [#162](https://github.com/posthtml/posthtml-cli/issues/162)
+* style: fix lint ([e5a794c](https://github.com/posthtml/posthtml-cli/commit/e5a794c))
+* test: modified for auto-off ([197f7e7](https://github.com/posthtml/posthtml-cli/commit/197f7e7))
+* docs: add auto-off description and visual update ([d86ec70](https://github.com/posthtml/posthtml-cli/commit/d86ec70))
+
+
+
 <a name="0.2.16"></a>
 ## 0.2.16 (2017-04-03)
 
