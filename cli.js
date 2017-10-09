@@ -43,7 +43,7 @@ function processing(file, output) {
     plugins = [].concat(use, cfg).map((plugin) => {
       try {
           return require(plugin)(argv[plugin])
-      } catch (e) {
+      } catch (err) {
           if (err.code === 'MODULE_NOT_FOUND') {
             throw new TypeError('Plugin Error: Cannot find module ' + plugin);
           }
