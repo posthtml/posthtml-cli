@@ -37,8 +37,6 @@ function processing(file, output) {
   var html = fs.readFileSync(file, 'utf8')
   var plugins;
 
-  console.log(argv);
-
   if (argv.autoOff) {
     var use = argv.use ? argv.use : [];
     var cfg = argv.config ? Object.keys(require(path.resolve(argv.config))) : [];
