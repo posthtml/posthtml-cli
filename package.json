@@ -21,9 +21,7 @@
     "patch": "np patch --any-branch --no-yarg",
     "minor": "np minor --any-branch --no-yarg",
     "major": "np major --any-branch --no-yarg",
-    "lintjs": "eslint ./{src,test}/*.js",
-    "lintmd": "eslint --ext md --rule indent: [error, 4] .",
-    "pretest": "clinton && npm run lintjs && npm run lintmd",
+    "pretest": "clinton && lint-staged",
     "test": "nyc ava"
   },
   "files": [
@@ -60,6 +58,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "execa": "^0.6.3",
     "husky": "^0.13.4",
+    "lint-staged": "^4.2.3",
     "np": "^2.15.0",
     "nyc": "^11.0.1",
     "path-exists": "^3.0.0",
@@ -68,6 +67,10 @@
     "posthtml-custom-elements": "^1.1.0",
     "read-pkg": "^2.0.0",
     "tempfile": "^2.0.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.md": "eslint --rule indent: [error, 4] ."
   },
   "posthtml": {
     "customElements": {}
