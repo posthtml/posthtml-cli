@@ -17,9 +17,7 @@ var argv = require('yargs')
   .pkgConf('posthtml')
   .config()
   .alias('c', 'config')
-  .version(function () {
-    return require('./package.json').version
-  })
+  .version()
   .alias('v', 'version')
   .help('h')
   .alias('h', 'help')
