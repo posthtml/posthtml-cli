@@ -15,7 +15,9 @@ var argv = require('yargs')
   .alias('u', 'use')
   .array('use')
   .pkgConf('posthtml')
-  .config()
+  .config('config', function (config) {
+    return JSON.parse(fs.readFileSync(config, 'utf-8'))
+  })
   .alias('c', 'config')
   .version()
   .alias('v', 'version')
@@ -36,10 +38,11 @@ function processing(file, output) {
   // get htmls
   var html = fs.readFileSync(file, 'utf8')
   var plugins;
+  var fileConfig = argv.config && JSON.parse(fs.readFileSync(argv.config, 'utf-8'));
 
   if (argv.autoOff) {
     var use = argv.use ? argv.use : [];
-    var cfg = argv.config ? Object.keys(require(path.resolve(argv.config))) : [];
+    var cfg = argv.config ? Object.keys(fileConfig) : [];
     plugins = [].concat(use, cfg).map((plugin) => {
       try {
           return require(plugin)(argv[plugin])
@@ -61,7 +64,7 @@ function processing(file, output) {
     }
 
     if (argv.config) {
-      config = Object.assign(require(path.resolve(argv.config)), config)
+      config = Object.assign(fileConfig, config)
     }
   }
 
