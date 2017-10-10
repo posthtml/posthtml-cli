@@ -67,6 +67,14 @@ test('Transform html witch config in file', async t => {
   t.true(await pathExists(filename))
   t.is((await read('test/expected/output-config-file.html')), (await read(filename)))
 })
+
+test('Transform html witch dot config in file', async t => {
+  t.plan(2)
+  const filename = tempfile('.html')
+  await execa(cli, ['-i', 'test/fixtures/input.html', '-o', filename, '-c', 'test/fixtures/.config', '--auto-off'])
+  t.true(await pathExists(filename))
+  t.is((await read('test/expected/output-config-file.html')), (await read(filename)))
+})
 /*
 test('Transform html from folder', async t => {
   t.plan(2)
