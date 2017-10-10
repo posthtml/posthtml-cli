@@ -1,3 +1,21 @@
+<a name="0.3.1"></a>
+## 0.3.1 (2017-10-10)
+
+* 0.3.1 ([71ea44d](https://github.com/posthtml/posthtml-cli/commit/71ea44d))
+* chore: add lint-staged ([90e21f8](https://github.com/posthtml/posthtml-cli/commit/90e21f8))
+* chore: lock ([1640193](https://github.com/posthtml/posthtml-cli/commit/1640193))
+* chore: space for js according to standard ([c4c4e82](https://github.com/posthtml/posthtml-cli/commit/c4c4e82))
+* chore: update changelint ([065d8b9](https://github.com/posthtml/posthtml-cli/commit/065d8b9))
+* chore: update depDev ([44e08e6](https://github.com/posthtml/posthtml-cli/commit/44e08e6))
+* chore(changelog): Update changelog ([56852a3](https://github.com/posthtml/posthtml-cli/commit/56852a3))
+* fix: config file without extension, close #255 ([25c6bb0](https://github.com/posthtml/posthtml-cli/commit/25c6bb0)), closes [#255](https://github.com/posthtml/posthtml-cli/issues/255)
+* fix: incorrect argument, close #257 ([68ee0b2](https://github.com/posthtml/posthtml-cli/commit/68ee0b2)), closes [#257](https://github.com/posthtml/posthtml-cli/issues/257)
+* test: add for issue #255 ([44e1f7c](https://github.com/posthtml/posthtml-cli/commit/44e1f7c))
+* style: remove consloe log, close #254 ([682215c](https://github.com/posthtml/posthtml-cli/commit/682215c)), closes [#254](https://github.com/posthtml/posthtml-cli/issues/254)
+* perf: not need function for get version from pkg ([563002b](https://github.com/posthtml/posthtml-cli/commit/563002b))
+
+
+
 <a name="0.3.0"></a>
 # 0.3.0 (2017-06-01)
 
