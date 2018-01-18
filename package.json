@@ -16,12 +16,9 @@
     "node": ">=4"
   },
   "scripts": {
+    "precommit": "clinton && lint-staged",
     "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
-    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"chore(changelog): Update changelog\"",
-    "patch": "np patch --any-branch --no-yarg",
-    "minor": "np minor --any-branch --no-yarg",
-    "major": "np major --any-branch --no-yarg",
-    "pretest": "clinton && lint-staged",
+    "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "test": "nyc ava"
   },
   "files": [
