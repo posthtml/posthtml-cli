@@ -50,6 +50,8 @@
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-markdown": "^1.0.0-beta.7",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "execa": "^0.9.0",
     "husky": "^0.14.3",
