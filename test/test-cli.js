@@ -4,7 +4,7 @@ const test = require('ava')
 const execa = require('execa')
 const pathExists = require('path-exists')
 const readPkg = require('read-pkg')
-// const copy = require('cpy')
+const copy = require('cpy')
 const tempfile = require('tempfile')
 
 const cli = path.resolve('cli.js')
@@ -43,7 +43,6 @@ test('Check version', async t => {
   )
 })
 
-/*
 test('Transform html witch config in package.json', async t => {
   t.plan(2)
   const filename = tempfile('.html')
@@ -59,7 +58,7 @@ test('Transform html witch indent', async t => {
   t.true(await pathExists(filename))
   t.is((await read('test/expected/output-indent.html')), (await read(filename)))
 })
-*/
+
 test('Transform html witch config in file', async t => {
   t.plan(2)
   const filename = tempfile('.html')
@@ -75,7 +74,7 @@ test('Transform html witch dot config in file', async t => {
   t.true(await pathExists(filename))
   t.is((await read('test/expected/output-config-file.html')), (await read(filename)))
 })
-/*
+
 test('Transform html from folder', async t => {
   t.plan(2)
   const folder = await tempfile()
@@ -92,7 +91,6 @@ test('Transform html witch options replace', async t => {
   t.is((await read('test/expected/output-config-pkg.html')), (await read(`${folder}/input.html`)))
   t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/input-indent.html`)))
 })
-*/
 
 test('Transform html witch config in file and stdin options use', async t => {
   t.plan(2)
