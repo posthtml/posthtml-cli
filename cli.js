@@ -34,24 +34,24 @@ var argv = require('yargs')
   })
   .argv
 
-function processing(file, output) {
+function processing (file, output) {
   // get htmls
   var html = fs.readFileSync(file, 'utf8')
-  var plugins;
-  var fileConfig = argv.config && JSON.parse(fs.readFileSync(argv.config, 'utf-8'));
+  var plugins
+  var fileConfig = argv.config && JSON.parse(fs.readFileSync(argv.config, 'utf-8'))
 
   if (argv.autoOff) {
-    var use = argv.use ? argv.use : [];
-    var cfg = argv.config ? Object.keys(fileConfig) : [];
+    var use = argv.use ? argv.use : []
+    var cfg = argv.config ? Object.keys(fileConfig) : []
     plugins = [].concat(use, cfg).map((plugin) => {
       try {
-          return require(plugin)(argv[plugin])
+        return require(plugin)(argv[plugin])
       } catch (err) {
-          if (err.code === 'MODULE_NOT_FOUND') {
-            throw new TypeError('Plugin Error: Cannot find module ' + plugin);
-          }
+        if (err.code === 'MODULE_NOT_FOUND') {
+          throw new TypeError('Plugin Error: Cannot find module ' + plugin)
+        }
       }
-    });
+    })
   } else {
     // config
     var config = {}
@@ -76,21 +76,21 @@ function processing(file, output) {
     })
 }
 
-function isFile(outputPath) {
+function isFile (outputPath) {
   if (outputPath === undefined) {
     return false
   }
   return Boolean(path.extname(outputPath))
 }
 
-function getOutput(file) {
+function getOutput (file) {
   if (argv.output === undefined) {
     return file
   }
   return argv.output + path.basename(file)
 }
 
-function createFolder(outputPath) {
+function createFolder (outputPath) {
   if (isFile(outputPath) === true) {
     outputPath = path.dirname(outputPath)
   }

@@ -1,3 +1,19 @@
+<a name="0.3.2"></a>
+## 0.3.2 (2018-01-21)
+
+* 0.3.2 ([c5643d6](https://github.com/posthtml/posthtml-cli/commit/c5643d6))
+* build: drop not use pkg ([5eb2e31](https://github.com/posthtml/posthtml-cli/commit/5eb2e31))
+* build: perfomance for scrip ([3840b4e](https://github.com/posthtml/posthtml-cli/commit/3840b4e))
+* build: pkf requested eslint ([c6cd37d](https://github.com/posthtml/posthtml-cli/commit/c6cd37d))
+* build: update dep ([0ea202e](https://github.com/posthtml/posthtml-cli/commit/0ea202e))
+* build: update dep ([0b20e06](https://github.com/posthtml/posthtml-cli/commit/0b20e06))
+* build: update depDev ([8911ee0](https://github.com/posthtml/posthtml-cli/commit/8911ee0))
+* build: update depDev, clise #261, close #252 ([cc64eca](https://github.com/posthtml/posthtml-cli/commit/cc64eca)), closes [#252](https://github.com/posthtml/posthtml-cli/issues/252)
+* test: restore comment tests ([ba5f12d](https://github.com/posthtml/posthtml-cli/commit/ba5f12d))
+* chore(changelog): Update changelog ([018f46d](https://github.com/posthtml/posthtml-cli/commit/018f46d))
+
+
+
 <a name="0.3.1"></a>
 ## 0.3.1 (2017-10-10)
 
@@ -10,7 +26,7 @@
 * chore(changelog): Update changelog ([56852a3](https://github.com/posthtml/posthtml-cli/commit/56852a3))
 * fix: config file without extension, close #255 ([25c6bb0](https://github.com/posthtml/posthtml-cli/commit/25c6bb0)), closes [#255](https://github.com/posthtml/posthtml-cli/issues/255)
 * fix: incorrect argument, close #257 ([68ee0b2](https://github.com/posthtml/posthtml-cli/commit/68ee0b2)), closes [#257](https://github.com/posthtml/posthtml-cli/issues/257)
-* test: add for issue #255 ([44e1f7c](https://github.com/posthtml/posthtml-cli/commit/44e1f7c))
+* test: add for issue #255 ([44e1f7c](https://github.com/posthtml/posthtml-cli/commit/44e1f7c)), closes [#255](https://github.com/posthtml/posthtml-cli/issues/255)
 * style: remove consloe log, close #254 ([682215c](https://github.com/posthtml/posthtml-cli/commit/682215c)), closes [#254](https://github.com/posthtml/posthtml-cli/issues/254)
 * perf: not need function for get version from pkg ([563002b](https://github.com/posthtml/posthtml-cli/commit/563002b))
 
@@ -423,7 +439,7 @@
 
 * bump ([8104b0c](https://github.com/posthtml/posthtml-cli/commit/8104b0c))
 * Fixed #39, remove tmp fixed ([01f2367](https://github.com/posthtml/posthtml-cli/commit/01f2367)), closes [#39](https://github.com/posthtml/posthtml-cli/issues/39)
-* Update pkg for issue #39 ([5e5e808](https://github.com/posthtml/posthtml-cli/commit/5e5e808))
+* Update pkg for issue #39 ([5e5e808](https://github.com/posthtml/posthtml-cli/commit/5e5e808)), closes [#39](https://github.com/posthtml/posthtml-cli/issues/39)
 * v0.0.16 ... v0.0.17 ([86eb306](https://github.com/posthtml/posthtml-cli/commit/86eb306))
 
 
@@ -521,8 +537,8 @@
 ## 0.0.11 (2016-01-26)
 
 * Add PostHTML link ([4029634](https://github.com/posthtml/posthtml-cli/commit/4029634))
-* Add readme #2 ([066ef10](https://github.com/posthtml/posthtml-cli/commit/066ef10))
-* Add readme #2 ([c274c97](https://github.com/posthtml/posthtml-cli/commit/c274c97))
+* Add readme #2 ([066ef10](https://github.com/posthtml/posthtml-cli/commit/066ef10)), closes [#2](https://github.com/posthtml/posthtml-cli/issues/2)
+* Add readme #2 ([c274c97](https://github.com/posthtml/posthtml-cli/commit/c274c97)), closes [#2](https://github.com/posthtml/posthtml-cli/issues/2)
 * bump ([5eba701](https://github.com/posthtml/posthtml-cli/commit/5eba701))
 * Fixed #12, update ava and rename bin path to cli.js ([630f80f](https://github.com/posthtml/posthtml-cli/commit/630f80f)), closes [#12](https://github.com/posthtml/posthtml-cli/issues/12)
 * Fixed #13, No such file or directory, unix system and add check inpit arguments ([99f552c](https://github.com/posthtml/posthtml-cli/commit/99f552c)), closes [#13](https://github.com/posthtml/posthtml-cli/issues/13)
