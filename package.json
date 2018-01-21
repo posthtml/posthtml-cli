@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "globby": "^7.1.1",
-    "post-load-plugins": "^0.0.20",
+    "post-load-plugins": "0.0.21",
     "posthtml": "^0.11.2",
     "yargs": "^10.1.2"
   },
