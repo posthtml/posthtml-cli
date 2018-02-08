@@ -10,7 +10,7 @@
     "url": "https://twitter.com/Scrum_"
   },
   "bin": {
-    "posthtml": "cli.js"
+    "posthtml": "lib/cli.js"
   },
   "engines": {
     "node": ">=4"
@@ -21,7 +21,7 @@
     "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
     "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "prepare": "npm run build",
-    "build": "rimraf cli.js && babel src -d .",
+    "build": "rimraf lib && babel src -d lib",
     "test": "nyc ava"
   },
   "files": [
@@ -124,9 +124,8 @@
       "*.{html,jpg}"
     ],
     "rules": {
-      "xo": [
-        "off"
-      ]
+      "cli": ["off"],
+      "xo": ["off"]
     }
   }
 }
