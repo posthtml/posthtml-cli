@@ -1,7 +1,7 @@
 # posthtml-cli
 > Command line interface for [PostHTML][posthtml-url]
 
-[![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![Standard Code Style][style]][style-url]
+[![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![XO code style][style]][style-url]
 
 ## Install
 
@@ -104,5 +104,5 @@ $ posthtml -i inputFolder/*.html -r
 [depstat-dev-url]: https://david-dm.org/posthtml/posthtml-cli
 [depstat-dev-image]: https://david-dm.org/posthtml/posthtml-cli/dev-status.svg?style=flat-square
 
-[style-url]: http://standardjs.com/
-[style]: https://img.shields.io/badge/code%20style-standard-yellow.svg?style=flat-square
+[style-url]: https://github.com/sindresorhus/xo
+[style]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
