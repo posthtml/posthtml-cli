@@ -3,6 +3,8 @@
 
 [![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![XO code style][style]][style-url]
 
+[![npm downloads](https://img.shields.io/npm/dm/posthtml-cli.svg?style=flat-square)](https://www.npmjs.com/package/posthtml-cli)[![npm](https://img.shields.io/npm/dt/posthtml-cli.svg?style=flat-square)](https://www.npmjs.com/package/posthtml-cli)[![Package Quality](http://npm.packagequality.com/shield/posthtml-cli.svg?style=flat-square)](http://packagequality.com/#?package=posthtml-cli)
+
 ## Install
 
 ```bash
