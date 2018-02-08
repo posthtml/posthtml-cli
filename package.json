@@ -21,7 +21,7 @@
     "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
     "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "prepare": "npm run build",
-    "build": "rimraf lib && babel src -d lib",
+    "build": "rimraf cli.js && babel src -d .",
     "test": "nyc ava"
   },
   "files": [
@@ -52,7 +52,6 @@
     "coveralls": "^3.0.0",
     "cpy": "^6.0.0",
     "eslint": "^4.15.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-ava": "^4.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-html": "^4.0.1",
@@ -60,7 +59,7 @@
     "eslint-plugin-markdown": "^1.0.0-beta.7",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-unicorn": "^3.0.1",
     "execa": "^0.9.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.1",
