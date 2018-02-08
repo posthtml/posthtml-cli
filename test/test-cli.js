@@ -7,7 +7,7 @@ const readPkg = require('read-pkg')
 const copy = require('cpy')
 const tempfile = require('tempfile')
 
-const cli = path.resolve('cli.js')
+const cli = path.resolve('src/cli.js')
 
 function read (pathFile) {
   return new Promise((resolve, reject) => {
