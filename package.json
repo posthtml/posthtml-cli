@@ -16,13 +16,16 @@
     "node": ">=4"
   },
   "scripts": {
+    "prepush": "npm t",
     "precommit": "clinton && lint-staged",
     "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
     "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
+    "prepare": "npm run build",
+    "build": "rimraf lib && babel src -d lib",
     "test": "nyc ava"
   },
   "files": [
-    "cli.js"
+    "lib/"
   ],
   "keywords": [
     "posthtml",
@@ -39,7 +42,11 @@
     "@commitlint/cli": "^6.0.2",
     "@commitlint/config-angular": "^6.0.2",
     "ava": "*",
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-minify": "^0.2.0",
+    "babel-register": "^6.24.1",
     "clinton": "^0.13.0",
     "conventional-changelog-cli": "^1.3.5",
     "coveralls": "^3.0.0",
@@ -48,6 +55,7 @@
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-plugin-ava": "^4.4.0",
     "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-markdown": "^1.0.0-beta.7",
     "eslint-plugin-node": "^5.2.1",
@@ -68,19 +76,44 @@
     "*.js": "eslint",
     "*.md": "eslint --rule indent: [error, 4] ."
   },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 4
+          },
+          "useBuiltIns": true
+        }
+      ],
+      [
+        "minify",
+        {
+          "mangle": false
+        }
+      ]
+    ]
+  },
   "posthtml": {
     "customElements": {}
   },
   "eslintConfig": {
     "parser": "babel-eslint",
     "plugins": [
+      "html",
       "ava",
-      "standard",
+      "unicorn",
       "babel",
       "markdown"
     ],
     "extends": [
-      "standard",
+      "plugin:unicorn/recommended",
       "plugin:ava/recommended"
     ]
   },
