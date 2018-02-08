@@ -72,8 +72,8 @@
     "tempfile": "^2.0.0"
   },
   "lint-staged": {
-    "*.js": "eslint",
-    "*.md": "eslint --rule indent: [error, 4] ."
+    "{src,test}*.js": "eslint",
+    "*.md": "eslint"
   },
   "ava": {
     "require": [
@@ -124,8 +124,12 @@
       "*.{html,jpg}"
     ],
     "rules": {
-      "cli": ["off"],
-      "xo": ["off"]
+      "cli": [
+        "off"
+      ],
+      "xo": [
+        "off"
+      ]
     }
   }
 }
