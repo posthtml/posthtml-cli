@@ -1,9 +1,9 @@
 # posthtml-cli
-> Command line interface for [PostHTML][posthtml-url]
+> [PostHTML][posthtml-url] сommand line interface
 
-[![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![Coveralls Status][coveralls-image]][coveralls-url][![Dependency Status][depstat-image]][depstat-url][![XO code style][style]][style-url]
+[![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Dependency Status][depstat-image]][depstat-url][![XO code style][style]][style-url][![Coveralls Status][coveralls-image]][coveralls-url]
 
-[![npm downloads](https://img.shields.io/npm/dm/posthtml-cli.svg?style=flat-square)](https://www.npmjs.com/package/posthtml-cli)[![npm](https://img.shields.io/npm/dt/posthtml-cli.svg?style=flat-square)](https://www.npmjs.com/package/posthtml-cli)[![Package Quality](http://npm.packagequality.com/shield/posthtml-cli.svg?style=flat-square)](http://packagequality.com/#?package=posthtml-cli)
+[![npm downloads][npm-download-image]][npm-download-url][![npm][npm-total-download-image]][npm-total-download-url][![Package Quality][pkg-q-image]][pkg-q-url]
 
 ## Install
 
@@ -14,73 +14,43 @@ $ npm install --global posthtml-cli
 
 ## Usage  
 ```bash
-$ posthtml [-o output-file/directory|-r] [-i input-file/directory] [OPTIONS]
+$ posthtml --help
+
+  Usage: 
+    $ posthtml <patterns>
+
+  Options:
+    --output -o    Output File or Folder
+    --config -c    Path to config file
+    --use -u       PostHTML plugin name
+    --auto-off     Disable automatically loads plug-ins with configuration from package.json
+    --help -h      CLI Help
+    --version -v   CLI Version
+
+  Examples:
+    $ posthtml input.html
+    $ posthtml input.html -o output.html
+    $ posthtml inputFolder/*.html !unicorn.html
+    $ posthtml input.html -o output.html -c posthtml.js
+    $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
+    $ posthtml inputFolder/*.html -o outputFolder
+    $ posthtml inputFolder/**/*.html -o outputFolder
 ```
-> **Note:** Automatically loads plug-ins with configuration from package.json using [post-load-plugins](https://github.com/post-org/post-load-plugins) if not used `--config` key
+>**Note:** This package does not respect the order of patterns. First, all the negative patterns are applied, and only then the positive patterns.
 
-## Options
-|Name|Type|Default|Description|
-|:----|:--:|:-----:|:---------|
-|`-o, --output`|`{String}`|`undefined`|Output File or Folder|
-|`-r, --replace`|`{Boolean}`|`false`|Replace Input File or Files in Input Folder|
-|`-i, --input`|`{String}`|`undefined`|Input File or Folder|
-|`-c, --config`|`{String}`|`dirname(package.json)`|Path to config file `config.[js|json]`|
-|`--auto-off`|`{Boolean}`|`false`|Disable automatically loads plug-ins with configuration from package.json|
-|`-u, --use`|`{Array}`|`[]`|PostHTML plugin name|
-|`-h, --help`|`{Boolean}`|`false`|CLI Help|
-|`-v, --version`|`{Boolean}`|`false`|CLI Version|
+> **Note:** Automatically loads plug-ins with configuration from package.json using [post-load-plugins](https://github.com/post-org/post-load-plugins) if not used `--auto-off` key
 
-## Examples
-
-### Sample
-```bash
-$ posthtml -o output.html -i input.html
-```
-
-### Options config
-```bash
-$ posthtml -o output.html -i input.html -c posthtml.json
-```
-
-```bash
-$ posthtml -o output.html -i input.html -c posthtml.js
-```
-
-### Options use
-```bash
-$ posthtml 
-    -o output.html 
-    -i input.html 
-    -c config.json 
-    -u posthtml-bem 
-    --posthtml-bem.elemPrefix __
-    --posthtml-bem.elemMod _
-    -u posthtml-css-modules
-    --posthtml-css-modules path/to/json
-    -u posthtml-custom-elements
-```
-
-### Read dir
-```bash
-$ posthtml -o outputFolder/ -i inputFolder/*.html
-```
-
-```bash
-$ posthtml -o outputFolder/ -i inputFolder/**/*.html
-```
-
-### Replace
-```bash
-$ posthtml -i input.html -r
-```
-
-```bash
-$ posthtml -i inputFolder/*.html -r
-```
-
-### License [MIT](license)
 
 [posthtml-url]: http://github.com/posthtml/posthtml
+
+[pkg-q-url]: http://packagequality.com/#?package=posthtml-cli
+[pkg-q-image]: http://npm.packagequality.com/shield/posthtml-cli.svg?style=flat-square
+
+[npm-total-download-url]: https://www.npmjs.com/package/posthtml-cli
+[npm-total-download-image]: https://img.shields.io/npm/dt/posthtml-cli.svg?style=flat-square
+
+[npm-download-url]: https://www.npmjs.com/package/posthtml-cli
+[npm-download-image]: https://img.shields.io/npm/dm/posthtml-cli.svg?style=flat-square
 
 [node-url]: ""
 [node-image]: https://img.shields.io/node/v/post-sequence.svg?maxAge=2592000&style=flat-square
