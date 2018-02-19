@@ -1,13 +1,13 @@
 import path from 'path';
 
-export default (input, output) => {
+export default (input, output) => new Promise(resolve => {
   if (output && path.extname(output)) {
-    return output;
+    return resolve(output);
   }
 
   if (output) {
-    return path.join(output, input);
+    return resolve(path.join(output, input));
   }
 
-  return input;
-};
+  resolve(input);
+});
