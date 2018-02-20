@@ -23,7 +23,7 @@ test('should return config with one use key without property', async t => {
 test('should return config with one use key with one property', async t => {
   const flags = {
     use: 'posthtml-bem',
-    'posthtml-bem': {
+    posthtmlBem: {
       prefix: '__'
     }
   };
