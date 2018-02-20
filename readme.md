@@ -23,7 +23,6 @@ $ posthtml --help
     --output -o    Output File or Folder
     --config -c    Path to config file
     --use -u       PostHTML plugin name
-    --auto-off     Disable automatically loads plug-ins with configuration from package.json
     --help -h      CLI Help
     --version -v   CLI Version
 
