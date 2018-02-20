@@ -1,28 +1,35 @@
 {
   "name": "posthtml-cli",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
+  "homepage": "posthtml/posthtml-cli#readme",
+  "bugs": "posthtml/posthtml-cli/issues",
   "author": {
     "name": "Ivan Demidov",
     "email": "Scrum@list.ru",
     "url": "https://twitter.com/Scrum_"
   },
   "bin": {
-    "posthtml": "cli.js"
+    "posthtml": "lib/cli.js"
   },
   "engines": {
     "node": ">=4"
   },
   "scripts": {
+    "prepush": "npm t",
     "precommit": "clinton && lint-staged",
     "commitmsg": "commitlint --extends=@commitlint/config-angular -e",
     "postpublish": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
+    "prepare": "npm run build",
+    "build": "rimraf lib && babel src -d lib",
+    "lint": "eslint src/cli.js",
+    "pretest": "npm run build",
     "test": "nyc ava"
   },
   "files": [
-    "cli.js"
+    "lib/"
   ],
   "keywords": [
     "posthtml",
@@ -30,43 +37,83 @@
     "cli"
   ],
   "dependencies": {
-    "globby": "^7.1.1",
-    "post-load-plugins": "0.0.21",
-    "posthtml": "^0.11.2",
-    "yargs": "^10.1.2"
+    "fast-glob": "^2.0.4",
+    "get-cff": "^0.1.1",
+    "make-dir": "^1.2.0",
+    "meow": "^4.0.0",
+    "path-exists": "^3.0.0",
+    "post-load-plugins": "0.0.23",
+    "posthtml": "^0.11.3",
+    "to-camel-case": "^1.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^6.0.2",
-    "@commitlint/config-angular": "^6.0.2",
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/node": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/register": "^7.0.0-beta.40",
+    "@commitlint/cli": "^6.1.0",
+    "@commitlint/config-angular": "^6.1.0",
     "ava": "*",
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-minify": "^0.3.0",
     "clinton": "^0.13.0",
-    "conventional-changelog-cli": "^1.3.5",
+    "conventional-changelog-cli": "^1.3.14",
     "coveralls": "^3.0.0",
     "cpy": "^6.0.0",
-    "eslint": "^4.15.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-plugin-ava": "^4.4.0",
+    "deep-assign": "^2.0.0",
+    "eslint": "^4.18.0",
+    "eslint-config-xo": "^0.20.1",
+    "eslint-config-xo-space": "^0.18.0",
+    "eslint-plugin-ava": "^4.5.1",
     "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-markdown": "^1.0.0-beta.7",
-    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-unicorn": "^4.0.2",
     "execa": "^0.9.0",
     "husky": "^0.14.3",
-    "lint-staged": "^6.0.1",
-    "nyc": "^11.4.1",
-    "path-exists": "^3.0.0",
+    "is-promise": "^2.1.0",
+    "lint-staged": "^6.1.1",
+    "nyc": "^11.5.0",
     "posthtml-bem": "^0.2.2",
     "posthtml-css-modules": "^0.1.3",
     "posthtml-custom-elements": "^1.1.0",
     "read-pkg": "^3.0.0",
+    "rimraf": "^2.6.2",
     "tempfile": "^2.0.0"
   },
+  "readme": "posthtml/posthtml-cli/readme",
   "lint-staged": {
-    "*.js": "eslint",
-    "*.md": "eslint --rule indent: [error, 4] ."
+    "{src,test}/**/*.js": "eslint",
+    "*.md": "eslint"
+  },
+  "ava": {
+    "require": [
+      "@babel/register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": 4
+          },
+          "useBuiltIns": "usage"
+        }
+      ],
+      [
+        "minify",
+        {
+          "removeUndefined": false,
+          "mangle": false
+        }
+      ]
+    ]
   },
   "posthtml": {
     "customElements": {}
@@ -74,15 +121,21 @@
   "eslintConfig": {
     "parser": "babel-eslint",
     "plugins": [
+      "html",
       "ava",
-      "standard",
+      "unicorn",
       "babel",
       "markdown"
     ],
     "extends": [
-      "standard",
-      "plugin:ava/recommended"
-    ]
+      "plugin:unicorn/recommended",
+      "plugin:ava/recommended",
+      "xo",
+      "xo-space"
+    ],
+    "rules": {
+      "capitalized-comments": "off"
+    }
   },
   "clinton": {
     "ignores": [
@@ -92,6 +145,9 @@
       "*.{html,jpg}"
     ],
     "rules": {
+      "cli": [
+        "off"
+      ],
       "xo": [
         "off"
       ]
