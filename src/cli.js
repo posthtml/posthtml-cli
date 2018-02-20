@@ -1,112 +1,85 @@
 #!/usr/bin/env node
 
-var path = require('path')
-var fs = require('fs')
-var posthtml = require('posthtml')
-var globby = require('globby')
-var argv = require('yargs')
-  .usage('Usage: $0 [-o output-file/directory|-r] [-i input-file/directory] [--config|-c path/to/file/config]')
-  .example('posthtml -o output.html -i input.html', 'Default example')
-  .alias('i', 'input')
-  .array('input')
-  .demand(['i'])
-  .alias('o', 'output')
-  .alias('r', 'replace')
-  .alias('u', 'use')
-  .array('use')
-  .pkgConf('posthtml')
-  .config('config', function (config) {
-    return JSON.parse(fs.readFileSync(config, 'utf-8'))
-  })
-  .alias('c', 'config')
-  .version()
-  .alias('v', 'version')
-  .help('h')
-  .alias('h', 'help')
-  .check(function (argv) {
-    if (argv.output && argv.replace) {
-      throw new Error('Both `output file` and `replace` provided: please use either --output or --replace option.')
-    }
-    if (!argv.output && !argv.replace) {
-      throw new Error('Both `output file` and `replace` missing: please use either --output or --replace option.')
-    }
-    return true
-  })
-  .argv
+import path from 'path';
+import fs from 'fs';
+import fg from 'fast-glob';
+import meow from 'meow';
+import makeDir from 'make-dir';
+import posthtml from 'posthtml';
+import load from 'post-load-plugins';
+import outResolve from './out-resolve';
+import cfgResolve from './cfg-resolve';
 
-function processing (file, output) {
-  // get htmls
-  var html = fs.readFileSync(file, 'utf8')
-  var plugins
-  var fileConfig = argv.config && JSON.parse(fs.readFileSync(argv.config, 'utf-8'))
+const cli = meow(`
+  Usage: posthtml <patterns>
 
-  if (argv.autoOff) {
-    var use = argv.use ? argv.use : []
-    var cfg = argv.config ? Object.keys(fileConfig) : []
-    plugins = [].concat(use, cfg).map((plugin) => {
-      try {
-        return require(plugin)(argv[plugin])
-      } catch (err) {
-        if (err.code === 'MODULE_NOT_FOUND') {
-          throw new TypeError('Plugin Error: Cannot find module ' + plugin)
+  Options:
+    --output -o    Output File or Folder
+    --config -c    Path to config file
+    --use -u       PostHTML plugin name
+    --help -h      CLI Help
+    --auto-off     Disable automatically loads plug-ins with configuration from package.json
+    --version -v   CLI Version
+
+  Examples:
+    $ posthtml input.html
+    $ posthtml input.html -o output.html
+    $ posthtml inputFolder/*.html !unicorn.html
+    $ posthtml input.html -o output.html -c posthtml.js
+    $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
+    $ posthtml inputFolder/*.html -o outputFolder
+    $ posthtml inputFolder/**/*.html -o outputFolder
+`, {
+  flags: {
+    config: {
+      type: 'string',
+      alias: 'c'
+    },
+    version: {
+      type: 'boolean',
+      alias: 'v'
+    },
+    help: {
+      type: 'boolean',
+      alias: 'h'
+    },
+    output: {
+      type: 'string',
+      alias: 'o'
+    },
+    use: {
+      type: 'Array',
+      alias: 'u'
+    }
+  }
+});
+
+const read = file => new Promise(resolve => fs.readFile(file, 'utf8', (err, data) => {
+  if (err) {
+    console.warn(err);
+  }
+  resolve(data);
+}));
+
+const processing = async file => {
+  const output = await outResolve(file, cli.flags.output);
+  const config = await cfgResolve(cli.flags);
+
+  console.log(config);
+
+  makeDir(path.dirname(output))
+    .then(read.bind(null, file))
+    .then(html => posthtml(load(config)).process(html))
+    .then(({html}) => {
+      fs.writeFile(output, html, err => {
+        if (err) {
+          console.warn(err);
         }
-      }
-    })
-  } else {
-    // config
-    var config = {}
+        console.log(`The file ${file} has been saved!`);
+      });
+    });
+};
 
-    // create config extends for post-load-plugins
-    if (argv.use) {
-      argv.use.forEach(function (plugin) {
-        config[plugin] = argv[plugin] || {}
-      })
-    }
-
-    if (argv.config) {
-      config = Object.assign(fileConfig, config)
-    }
-  }
-
-  // processing
-  posthtml(argv.autoOff ? plugins : require('post-load-plugins')(config))
-    .process(html)
-    .then(function (result) {
-      fs.writeFileSync(output, result.html)
-    })
-}
-
-function isFile (outputPath) {
-  if (outputPath === undefined) {
-    return false
-  }
-  return Boolean(path.extname(outputPath))
-}
-
-function getOutput (file) {
-  if (argv.output === undefined) {
-    return file
-  }
-  return argv.output + path.basename(file)
-}
-
-function createFolder (outputPath) {
-  if (isFile(outputPath) === true) {
-    outputPath = path.dirname(outputPath)
-  }
-
-  if (fs.existsSync(outputPath) === false) {
-    fs.mkdirSync(outputPath)
-  }
-}
-
-globby(argv.input).then(function (files) {
-  if (argv.output !== undefined) {
-    createFolder(argv.output)
-  }
-
-  files.forEach(function (file) {
-    var output = isFile(argv.output) ? argv.output : getOutput(file)
-    processing(file, output)
-  })
-})
+fg.stream(cli.input)
+  .on('data', processing)
+  .once('error', console.warn);
