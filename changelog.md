@@ -1,3 +1,13 @@
+<a name="0.4.1"></a>
+## <small>0.4.1 (2018-02-20)</small>
+
+* 0.4.1 ([beec2b1](https://github.com/posthtml/posthtml-cli/commit/beec2b1))
+* ci: fix for node 4 ([ca95215](https://github.com/posthtml/posthtml-cli/commit/ca95215))
+* build: fix lost is-promise ([057ca98](https://github.com/posthtml/posthtml-cli/commit/057ca98))
+* build: update changelog ([8c788b5](https://github.com/posthtml/posthtml-cli/commit/8c788b5))
+
+
+
 <a name="0.4.0"></a>
 ## 0.4.0 (2018-02-20)
 

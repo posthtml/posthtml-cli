@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "fast-glob": "^2.0.4",
-    "get-cff": "^0.1.1",
+    "get-cff": "^0.1.2",
     "make-dir": "^1.2.0",
     "meow": "^4.0.0",
     "path-exists": "^3.0.0",
