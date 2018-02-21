@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
@@ -38,6 +38,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.40",
+    "deep-assign": "^2.0.0",
     "fast-glob": "^2.0.4",
     "get-cff": "^0.1.2",
     "make-dir": "^1.2.0",
@@ -63,7 +64,6 @@
     "conventional-changelog-cli": "^1.3.14",
     "coveralls": "^3.0.0",
     "cpy": "^6.0.0",
-    "deep-assign": "^2.0.0",
     "eslint": "^4.18.0",
     "eslint-config-xo": "^0.20.1",
     "eslint-config-xo-space": "^0.18.0",
