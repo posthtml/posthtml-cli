@@ -1,3 +1,14 @@
+<a name="0.4.2"></a>
+## <small>0.4.2 (2018-02-21)</small>
+
+* 0.4.2 ([bff9b24](https://github.com/posthtml/posthtml-cli/commit/bff9b24))
+* fix: for node 4, add runtime ([6de4d9b](https://github.com/posthtml/posthtml-cli/commit/6de4d9b))
+* fix: try for node 4 ([4db1e9a](https://github.com/posthtml/posthtml-cli/commit/4db1e9a))
+* build: update changelog ([c89fa18](https://github.com/posthtml/posthtml-cli/commit/c89fa18))
+* build: update depDev ([cbe9b38](https://github.com/posthtml/posthtml-cli/commit/cbe9b38))
+
+
+
 <a name="0.4.1"></a>
 ## <small>0.4.1 (2018-02-20)</small>
 

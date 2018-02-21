@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
@@ -37,6 +37,7 @@
     "cli"
   ],
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.40",
     "fast-glob": "^2.0.4",
     "get-cff": "^0.1.2",
     "make-dir": "^1.2.0",
@@ -50,6 +51,7 @@
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
     "@babel/node": "^7.0.0-beta.40",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.40",
     "@babel/preset-env": "^7.0.0-beta.40",
     "@babel/register": "^7.0.0-beta.40",
     "@commitlint/cli": "^6.1.0",
@@ -102,8 +104,7 @@
         {
           "targets": {
             "node": 4
-          },
-          "useBuiltIns": "usage"
+          }
         }
       ],
       [
@@ -113,6 +114,9 @@
           "mangle": false
         }
       ]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
     ]
   },
   "posthtml": {
