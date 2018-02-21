@@ -1,3 +1,13 @@
+<a name="0.4.3"></a>
+## <small>0.4.3 (2018-02-21)</small>
+
+* 0.4.3 ([18c699f](https://github.com/posthtml/posthtml-cli/commit/18c699f))
+* build: update changelog ([4ea9bac](https://github.com/posthtml/posthtml-cli/commit/4ea9bac))
+* build: update depDev ([d3cb15f](https://github.com/posthtml/posthtml-cli/commit/d3cb15f))
+* fix: deep-assign must be in dev ([675d952](https://github.com/posthtml/posthtml-cli/commit/675d952))
+
+
+
 <a name="0.4.2"></a>
 ## <small>0.4.2 (2018-02-21)</small>
 
