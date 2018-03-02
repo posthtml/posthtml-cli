@@ -1,3 +1,13 @@
+<a name="0.4.4"></a>
+## <small>0.4.4 (2018-03-02)</small>
+
+* 0.4.4 ([9f677d5](https://github.com/posthtml/posthtml-cli/commit/9f677d5))
+* docs: change user name ([cb46fcc](https://github.com/posthtml/posthtml-cli/commit/cb46fcc))
+* build: update changelog ([38ef446](https://github.com/posthtml/posthtml-cli/commit/38ef446))
+* build: update depDev ([1b2b449](https://github.com/posthtml/posthtml-cli/commit/1b2b449))
+
+
+
 <a name="0.4.3"></a>
 ## <small>0.4.3 (2018-02-21)</small>
 
