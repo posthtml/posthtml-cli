@@ -65,8 +65,6 @@ const processing = async file => {
   const output = await outResolve(file, cli.flags.output);
   const config = await cfgResolve(cli.flags);
 
-  console.log(config);
-
   makeDir(path.dirname(output))
     .then(read.bind(null, file))
     .then(html => posthtml(load(config)).process(html))
