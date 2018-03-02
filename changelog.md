@@ -1,3 +1,15 @@
+<a name="0.4.5"></a>
+## <small>0.4.5 (2018-03-02)</small>
+
+* 0.4.5 ([c30f72a](https://github.com/posthtml/posthtml-cli/commit/c30f72a))
+* Revert "docs: change user name" ([5551a3a](https://github.com/posthtml/posthtml-cli/commit/5551a3a))
+* build: add  eslint plugin dependencies, close #269 ([8c6b99e](https://github.com/posthtml/posthtml-cli/commit/8c6b99e)), closes [#269](https://github.com/posthtml/posthtml-cli/issues/269)
+* build: update changelog ([ada757c](https://github.com/posthtml/posthtml-cli/commit/ada757c))
+* build: update depDev ([9d312aa](https://github.com/posthtml/posthtml-cli/commit/9d312aa))
+* style: remove log, close #270 ([61133dd](https://github.com/posthtml/posthtml-cli/commit/61133dd)), closes [#270](https://github.com/posthtml/posthtml-cli/issues/270)
+
+
+
 <a name="0.4.4"></a>
 ## <small>0.4.4 (2018-03-02)</small>
 

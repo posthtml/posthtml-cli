@@ -63,8 +63,8 @@ $ posthtml --help
 [travis-url]: https://travis-ci.org/posthtml/posthtml-cli
 [travis-image]: http://img.shields.io/travis/posthtml/posthtml-cli/master.svg?style=flat-square&label=unix
 
-[appveyor]:     https://ci.appveyor.com/project/Scrum/posthtml-cli
-[appveyor-img]: https://img.shields.io/appveyor/ci/Scrum/posthtml-cli/master.svg?style=flat-square&label=windows
+[appveyor]:     https://ci.appveyor.com/project/GitScrum/posthtml-cli
+[appveyor-img]: https://img.shields.io/appveyor/ci/GitScrum/posthtml-cli/master.svg?style=flat-square&label=windows
 
 [coveralls-url]: https://coveralls.io/r/posthtml/posthtml-cli
 [coveralls-image]: http://img.shields.io/coveralls/posthtml/posthtml-cli.svg?style=flat-square
