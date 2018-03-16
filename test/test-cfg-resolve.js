@@ -43,6 +43,16 @@ test('should return config with key config', async t => {
   t.deepEqual(config, expected);
 });
 
+test('should return resolve parth to config from key config', async t => {
+  const flags = {
+    config: 'config/.config'
+  };
+  const config = await cfgResolve(flags);
+  const expected = {'posthtml-bem': {}};
+
+  t.deepEqual(config, expected);
+});
+
 test('should return config with key config and use key', async t => {
   const flags = {
     use: 'posthtml-assets',
