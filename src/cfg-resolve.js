@@ -1,3 +1,4 @@
+import path from 'path';
 import getCff from 'get-cff';
 import toCamelCase from 'to-camel-case';
 import pathExists from 'path-exists';
@@ -7,6 +8,7 @@ export default (flags = {}) => new Promise(async resolve => {
   let {config, use} = flags;
 
   if (config) {
+    config = path.resolve(config);
     config = await pathExists(config) ? await getCff(config) : {};
   }
 

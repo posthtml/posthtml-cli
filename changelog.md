@@ -1,3 +1,12 @@
+<a name="0.4.6"></a>
+## <small>0.4.6 (2018-03-16)</small>
+
+* 0.4.6 ([90cb619](https://github.com/posthtml/posthtml-cli/commit/90cb619))
+* fix: resolve config path, close #273 ([4dfa3e7](https://github.com/posthtml/posthtml-cli/commit/4dfa3e7)), closes [#273](https://github.com/posthtml/posthtml-cli/issues/273)
+* build: update changelog ([f4aa225](https://github.com/posthtml/posthtml-cli/commit/f4aa225))
+
+
+
 <a name="0.4.5"></a>
 ## <small>0.4.5 (2018-03-02)</small>
 
