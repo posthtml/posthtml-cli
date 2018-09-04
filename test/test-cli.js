@@ -6,9 +6,16 @@ import pathExists from 'path-exists';
 import readPkg from 'read-pkg';
 import copy from 'cpy';
 import tempfile from 'tempfile';
+// import cli from '../src/cli';
 
 const cli = path.resolve('lib/cli.js');
-const read = file => new Promise(resolve => fs.readFile(file, 'utf8', (err, data) => resolve(data)));
+const read = file => new Promise((resolve, reject) => fs.readFile(file, 'utf8', (err, data) => {
+  if (err) {
+    return reject(err);
+  }
+
+  resolve(data);
+}));
 
 test('Check version', async t => {
   const {stdout} = await execa(cli, ['-v']);
