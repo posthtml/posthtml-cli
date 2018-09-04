@@ -1,4 +1,17 @@
-<a name="0.4.6"></a>
+## <small>0.4.7 (2018-09-04)</small>
+
+* 0.4.7 ([10f1b9f](https://github.com/posthtml/posthtml-cli/commit/10f1b9f))
+* test: return strange fail test ([4c0537e](https://github.com/posthtml/posthtml-cli/commit/4c0537e))
+* test: skip one strange fail test. todo need repair ([52052ab](https://github.com/posthtml/posthtml-cli/commit/52052ab))
+* build: add rules for changelog ([38393f8](https://github.com/posthtml/posthtml-cli/commit/38393f8))
+* build: change script system and bump nusky to next ([8731a25](https://github.com/posthtml/posthtml-cli/commit/8731a25))
+* build: drop support node 4,5 ([01e02b8](https://github.com/posthtml/posthtml-cli/commit/01e02b8))
+* build: update changelog ([7e497a9](https://github.com/posthtml/posthtml-cli/commit/7e497a9))
+* build: update depDev ([6e12b94](https://github.com/posthtml/posthtml-cli/commit/6e12b94))
+* ci: bump to node 10 ([ffeb119](https://github.com/posthtml/posthtml-cli/commit/ffeb119))
+
+
+
 ## <small>0.4.6 (2018-03-16)</small>
 
 * 0.4.6 ([90cb619](https://github.com/posthtml/posthtml-cli/commit/90cb619))
@@ -7,7 +20,6 @@
 
 
 
-<a name="0.4.5"></a>
 ## <small>0.4.5 (2018-03-02)</small>
 
 * 0.4.5 ([c30f72a](https://github.com/posthtml/posthtml-cli/commit/c30f72a))
@@ -19,7 +31,6 @@
 
 
 
-<a name="0.4.4"></a>
 ## <small>0.4.4 (2018-03-02)</small>
 
 * 0.4.4 ([9f677d5](https://github.com/posthtml/posthtml-cli/commit/9f677d5))
@@ -29,7 +40,6 @@
 
 
 
-<a name="0.4.3"></a>
 ## <small>0.4.3 (2018-02-21)</small>
 
 * 0.4.3 ([18c699f](https://github.com/posthtml/posthtml-cli/commit/18c699f))
@@ -39,7 +49,6 @@
 
 
 
-<a name="0.4.2"></a>
 ## <small>0.4.2 (2018-02-21)</small>
 
 * 0.4.2 ([bff9b24](https://github.com/posthtml/posthtml-cli/commit/bff9b24))
@@ -50,7 +59,6 @@
 
 
 
-<a name="0.4.1"></a>
 ## <small>0.4.1 (2018-02-20)</small>
 
 * 0.4.1 ([beec2b1](https://github.com/posthtml/posthtml-cli/commit/beec2b1))
@@ -60,7 +68,6 @@
 
 
 
-<a name="0.4.0"></a>
 ## 0.4.0 (2018-02-20)
 
 * 0.4.0 ([a9c1646](https://github.com/posthtml/posthtml-cli/commit/a9c1646))
@@ -96,7 +103,6 @@
 
 
 
-<a name="0.3.2"></a>
 ## <small>0.3.2 (2018-01-21)</small>
 
 * 0.3.2 ([c5643d6](https://github.com/posthtml/posthtml-cli/commit/c5643d6))
@@ -112,7 +118,6 @@
 
 
 
-<a name="0.3.1"></a>
 ## <small>0.3.1 (2017-10-10)</small>
 
 * 0.3.1 ([71ea44d](https://github.com/posthtml/posthtml-cli/commit/71ea44d))
@@ -130,7 +135,6 @@
 
 
 
-<a name="0.3.0"></a>
 ## 0.3.0 (2017-06-01)
 
 * 0.3.0 ([e4ad2b5](https://github.com/posthtml/posthtml-cli/commit/e4ad2b5))
@@ -165,7 +169,6 @@
 
 
 
-<a name="0.2.16"></a>
 ## <small>0.2.16 (2017-04-03)</small>
 
 * 0.2.16 ([3153345](https://github.com/posthtml/posthtml-cli/commit/3153345))
@@ -177,7 +180,6 @@
 
 
 
-<a name="0.2.15"></a>
 ## <small>0.2.15 (2017-03-31)</small>
 
 * 0.2.15 ([981be22](https://github.com/posthtml/posthtml-cli/commit/981be22))
@@ -189,7 +191,6 @@
 
 
 
-<a name="0.2.14"></a>
 ## <small>0.2.14 (2017-03-31)</small>
 
 * 0.2.14 ([7ca36b1](https://github.com/posthtml/posthtml-cli/commit/7ca36b1))
@@ -217,7 +218,6 @@
 
 
 
-<a name="0.2.13"></a>
 ## <small>0.2.13 (2017-02-01)</small>
 
 * 0.2.13 ([7b069ba](https://github.com/posthtml/posthtml-cli/commit/7b069ba))
@@ -230,7 +230,6 @@
 
 
 
-<a name="0.2.12"></a>
 ## <small>0.2.12 (2017-01-23)</small>
 
 * 0.2.12 ([4210a0a](https://github.com/posthtml/posthtml-cli/commit/4210a0a))
@@ -246,7 +245,6 @@
 
 
 
-<a name="0.2.11"></a>
 ## <small>0.2.11 (2016-12-28)</small>
 
 * 0.2.11 ([1acd5f8](https://github.com/posthtml/posthtml-cli/commit/1acd5f8))
@@ -259,7 +257,6 @@
 
 
 
-<a name="0.2.10"></a>
 ## <small>0.2.10 (2016-11-28)</small>
 
 * 0.2.10 ([e4bdfed](https://github.com/posthtml/posthtml-cli/commit/e4bdfed))
@@ -284,7 +281,6 @@
 
 
 
-<a name="0.2.8"></a>
 ## <small>0.2.8 (2016-11-16)</small>
 
 * 0.2.8 ([96d2030](https://github.com/posthtml/posthtml-cli/commit/96d2030))
@@ -302,7 +298,6 @@
 
 
 
-<a name="0.2.7"></a>
 ## <small>0.2.7 (2016-09-23)</small>
 
 * 0.2.7 ([44b00f9](https://github.com/posthtml/posthtml-cli/commit/44b00f9))
@@ -313,7 +308,6 @@
 
 
 
-<a name="0.2.6"></a>
 ## <small>0.2.6 (2016-09-08)</small>
 
 * 0.2.6 ([780c653](https://github.com/posthtml/posthtml-cli/commit/780c653))
@@ -336,7 +330,6 @@
 
 
 
-<a name="0.2.5"></a>
 ## <small>0.2.5 (2016-07-28)</small>
 
 * style(*): fix clinton report recommendation ([c62395e](https://github.com/posthtml/posthtml-cli/commit/c62395e))
@@ -365,7 +358,6 @@
 
 
 
-<a name="0.2.4"></a>
 ## <small>0.2.4 (2016-06-16)</small>
 
 * bump ([89e5c62](https://github.com/posthtml/posthtml-cli/commit/89e5c62))
@@ -382,7 +374,6 @@
 
 
 
-<a name="0.2.3"></a>
 ## <small>0.2.3 (2016-06-03)</small>
 
 * bump ([de488de](https://github.com/posthtml/posthtml-cli/commit/de488de))
@@ -396,7 +387,6 @@
 
 
 
-<a name="0.2.2"></a>
 ## <small>0.2.2 (2016-05-10)</small>
 
 * Added css modules testing ([d763927](https://github.com/posthtml/posthtml-cli/commit/d763927))
@@ -410,7 +400,6 @@
 
 
 
-<a name="0.2.1"></a>
 ## <small>0.2.1 (2016-05-05)</small>
 
 * bump ([59d8e60](https://github.com/posthtml/posthtml-cli/commit/59d8e60))
@@ -419,7 +408,6 @@
 
 
 
-<a name="0.2.0"></a>
 ## 0.2.0 (2016-05-05)
 
 * Add posthtml-bem for testing ([0abb7ff](https://github.com/posthtml/posthtml-cli/commit/0abb7ff))
@@ -443,7 +431,6 @@
 
 
 
-<a name="0.1.2"></a>
 ## <small>0.1.2 (2016-04-28)</small>
 
 * bump ([67ba3d3](https://github.com/posthtml/posthtml-cli/commit/67ba3d3))
@@ -456,7 +443,6 @@
 
 
 
-<a name="0.1.1"></a>
 ## <small>0.1.1 (2016-04-22)</small>
 
 * bump ([2607d13](https://github.com/posthtml/posthtml-cli/commit/2607d13))
@@ -470,7 +456,6 @@
 
 
 
-<a name="0.1.0"></a>
 ## 0.1.0 (2016-03-28)
 
 * bump ([bf4aba6](https://github.com/posthtml/posthtml-cli/commit/bf4aba6))
@@ -481,7 +466,6 @@
 
 
 
-<a name="0.0.22"></a>
 ## <small>0.0.22 (2016-03-23)</small>
 
 * Added node support ([f2b2755](https://github.com/posthtml/posthtml-cli/commit/f2b2755))
@@ -496,7 +480,6 @@
 
 
 
-<a name="0.0.21"></a>
 ## <small>0.0.21 (2016-03-21)</small>
 
 * bump ([9337d26](https://github.com/posthtml/posthtml-cli/commit/9337d26))
@@ -505,7 +488,6 @@
 
 
 
-<a name="0.0.20"></a>
 ## <small>0.0.20 (2016-03-21)</small>
 
 * Fixed #49, update posthtml-load-plugins to v0.9.2 ([d1ab1ac](https://github.com/posthtml/posthtml-cli/commit/d1ab1ac)), closes [#49](https://github.com/posthtml/posthtml-cli/issues/49)
@@ -514,7 +496,6 @@
 
 
 
-<a name="0.0.19"></a>
 ## <small>0.0.19 (2016-03-21)</small>
 
 * Fixed #41, update load pkg ([068f540](https://github.com/posthtml/posthtml-cli/commit/068f540)), closes [#41](https://github.com/posthtml/posthtml-cli/issues/41)
@@ -523,7 +504,6 @@
 
 
 
-<a name="0.0.18"></a>
 ## <small>0.0.18 (2016-03-14)</small>
 
 * bump ([57112bf](https://github.com/posthtml/posthtml-cli/commit/57112bf))
@@ -532,7 +512,6 @@
 
 
 
-<a name="0.0.17"></a>
 ## <small>0.0.17 (2016-03-13)</small>
 
 * bump ([8104b0c](https://github.com/posthtml/posthtml-cli/commit/8104b0c))
@@ -542,7 +521,6 @@
 
 
 
-<a name="0.0.16"></a>
 ## <small>0.0.16 (2016-03-09)</small>
 
 * Added tmp fix for issue #34 ([1f29bd2](https://github.com/posthtml/posthtml-cli/commit/1f29bd2)), closes [#34](https://github.com/posthtml/posthtml-cli/issues/34)
@@ -567,7 +545,6 @@
 
 
 
-<a name="0.0.15"></a>
 ## <small>0.0.15 (2016-03-05)</small>
 
 * Added path-exests to package.json ([f3de9ea](https://github.com/posthtml/posthtml-cli/commit/f3de9ea))
@@ -588,7 +565,6 @@
 
 
 
-<a name="0.0.14"></a>
 ## <small>0.0.14 (2016-03-02)</small>
 
 * Added cfg posthtml and pkg for testing, update test run ([3909cac](https://github.com/posthtml/posthtml-cli/commit/3909cac))
@@ -607,7 +583,6 @@
 
 
 
-<a name="0.0.13"></a>
 ## <small>0.0.13 (2016-02-18)</small>
 
 * added lib folder ([949bf9d](https://github.com/posthtml/posthtml-cli/commit/949bf9d))
@@ -620,7 +595,6 @@
 
 
 
-<a name="0.0.12"></a>
 ## <small>0.0.12 (2016-02-03)</small>
 
 * bump ([e7d9552](https://github.com/posthtml/posthtml-cli/commit/e7d9552))
@@ -631,7 +605,6 @@
 
 
 
-<a name="0.0.11"></a>
 ## <small>0.0.11 (2016-01-26)</small>
 
 * Add PostHTML link ([4029634](https://github.com/posthtml/posthtml-cli/commit/4029634))
@@ -646,7 +619,6 @@
 
 
 
-<a name="0.0.10"></a>
 ## <small>0.0.10 (2016-01-21)</small>
 
 * bump ([93565dd](https://github.com/posthtml/posthtml-cli/commit/93565dd))
@@ -655,7 +627,6 @@
 
 
 
-<a name="0.0.9"></a>
 ## <small>0.0.9 (2016-01-20)</small>
 
 * bump ([5bf1b0c](https://github.com/posthtml/posthtml-cli/commit/5bf1b0c))
@@ -664,7 +635,6 @@
 
 
 
-<a name="0.0.8"></a>
 ## <small>0.0.8 (2016-01-20)</small>
 
 * bump ([52c66f5](https://github.com/posthtml/posthtml-cli/commit/52c66f5))
@@ -673,7 +643,6 @@
 
 
 
-<a name="0.0.7"></a>
 ## <small>0.0.7 (2016-01-20)</small>
 
 * #5 fixed bug ([cec89e5](https://github.com/posthtml/posthtml-cli/commit/cec89e5))
@@ -683,7 +652,6 @@
 
 
 
-<a name="0.0.6"></a>
 ## <small>0.0.6 (2016-01-20)</small>
 
 * bump ([ed17e85](https://github.com/posthtml/posthtml-cli/commit/ed17e85))
@@ -692,7 +660,6 @@
 
 
 
-<a name="0.0.5"></a>
 ## <small>0.0.5 (2016-01-20)</small>
 
 * bump ([a3602eb](https://github.com/posthtml/posthtml-cli/commit/a3602eb))
@@ -701,7 +668,6 @@
 
 
 
-<a name="0.0.4"></a>
 ## <small>0.0.4 (2016-01-20)</small>
 
 * added config for required plugin, v0.0.3 ... v0.0.4 ([90ce7dc](https://github.com/posthtml/posthtml-cli/commit/90ce7dc))
@@ -710,7 +676,6 @@
 
 
 
-<a name="0.0.3"></a>
 ## <small>0.0.3 (2016-01-19)</small>
 
 * add config, v0.0.2 ... v0.0.3 ([ff7ce39](https://github.com/posthtml/posthtml-cli/commit/ff7ce39))
@@ -719,7 +684,6 @@
 
 
 
-<a name="0.0.2"></a>
 ## <small>0.0.2 (2016-01-19)</small>
 
 * add the germ of the kernel ([f6c5a4f](https://github.com/posthtml/posthtml-cli/commit/f6c5a4f))
@@ -728,7 +692,6 @@
 
 
 
-<a name="0.0.1"></a>
 ## <small>0.0.1 (2016-01-19)</small>
 
 * add nyc for test ([155004b](https://github.com/posthtml/posthtml-cli/commit/155004b))
@@ -738,7 +701,6 @@
 
 
 
-<a name="0.0.0"></a>
 ## 0.0.0 (2016-01-18)
 
 * init ([79148f8](https://github.com/posthtml/posthtml-cli/commit/79148f8))
