@@ -15,7 +15,7 @@
     "posthtml": "lib/cli.js"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "prepush": "npm t",
@@ -37,7 +37,6 @@
     "cli"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.0.0",
     "deep-assign": "^2.0.0",
     "fast-glob": "^2.1.0",
     "get-cff": "^0.1.2",
@@ -52,7 +51,6 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/node": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
     "@commitlint/cli": "^7.1.1",
@@ -90,11 +88,11 @@
   },
   "readme": "posthtml/posthtml-cli/readme",
   "husky": {
-      "hooks": {
-        "pre-push": "npm t",
-        "pre-commit": "clinton && lint-staged",
-        "commit-msg": "commitlint --extends=@commitlint/config-angular -e"
-      }
+    "hooks": {
+      "pre-push": "npm t",
+      "pre-commit": "clinton && lint-staged",
+      "commit-msg": "commitlint --extends=@commitlint/config-angular -e"
+    }
   },
   "lint-staged": {
     "{src,test}/**/*.js": "eslint",
@@ -111,7 +109,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": 4
+            "node": 6
           }
         }
       ],
@@ -122,9 +120,6 @@
           "mangle": false
         }
       ]
-    ],
-    "plugins": [
-      "@babel/plugin-transform-runtime"
     ]
   },
   "posthtml": {
