@@ -52,7 +52,7 @@ $ posthtml --help
 [npm-download-image]: https://img.shields.io/npm/dm/posthtml-cli.svg?style=flat-square
 
 [node-url]: ""
-[node-image]: https://img.shields.io/node/v/post-sequence.svg?maxAge=2592000&style=flat-square
+[node-image]: https://img.shields.io/node/v/posthtml-cli.svg?maxAge=2592000&style=flat-square
 
 [npm-url]: https://npmjs.org/package/posthtml-cli
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
