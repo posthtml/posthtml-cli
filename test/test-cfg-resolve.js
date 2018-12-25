@@ -1,6 +1,6 @@
 import test from 'ava';
 import isPromise from 'is-promise';
-import cfgResolve from '../src/cfg-resolve';
+import cfgResolve from '../lib/cfg-resolve';
 
 test('should return function', t => {
   t.true(typeof cfgResolve === 'function');
