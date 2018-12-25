@@ -6,7 +6,6 @@ import pathExists from 'path-exists';
 import readPkg from 'read-pkg';
 import copy from 'cpy';
 import tempfile from 'tempfile';
-// import cli from '../src/cli';
 
 const cli = path.resolve('lib/cli.js');
 const read = file => new Promise((resolve, reject) => fs.readFile(file, 'utf8', (err, data) => {

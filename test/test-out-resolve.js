@@ -1,6 +1,6 @@
 import test from 'ava';
 import isPromise from 'is-promise';
-import outResolve from '../src/out-resolve';
+import outResolve from '../lib/out-resolve';
 
 test('should return function', t => {
   t.true(typeof outResolve === 'function');
