@@ -1,3 +1,14 @@
+## <small>0.4.8 (2018-12-25)</small>
+
+* 0.4.8 ([579752a](https://github.com/posthtml/posthtml-cli/commit/579752a))
+* build: update changelog ([96d7dc9](https://github.com/posthtml/posthtml-cli/commit/96d7dc9))
+* build: update depDev ([9cffd4e](https://github.com/posthtml/posthtml-cli/commit/9cffd4e))
+* build: update depDev ([7293173](https://github.com/posthtml/posthtml-cli/commit/7293173))
+* test: now test only build js, close #278 ([9e05027](https://github.com/posthtml/posthtml-cli/commit/9e05027)), closes [#278](https://github.com/posthtml/posthtml-cli/issues/278)
+* docs: fix typo for node support ([ec47530](https://github.com/posthtml/posthtml-cli/commit/ec47530))
+
+
+
 ## <small>0.4.7 (2018-09-04)</small>
 
 * 0.4.7 ([10f1b9f](https://github.com/posthtml/posthtml-cli/commit/10f1b9f))
@@ -140,8 +151,8 @@
 * 0.3.0 ([e4ad2b5](https://github.com/posthtml/posthtml-cli/commit/e4ad2b5))
 * chore: add lock file ([a87c4ff](https://github.com/posthtml/posthtml-cli/commit/a87c4ff))
 * chore: not need ([0dab12c](https://github.com/posthtml/posthtml-cli/commit/0dab12c))
-* chore: remove not use pkg ([85a6aeb](https://github.com/posthtml/posthtml-cli/commit/85a6aeb))
 * chore: remove not use pkg ([46028b8](https://github.com/posthtml/posthtml-cli/commit/46028b8))
+* chore: remove not use pkg ([85a6aeb](https://github.com/posthtml/posthtml-cli/commit/85a6aeb))
 * chore: update depDev ([b93c713](https://github.com/posthtml/posthtml-cli/commit/b93c713))
 * chore(changelog): Update changelog v`npm view posthtml-cli version` ([4676e0e](https://github.com/posthtml/posthtml-cli/commit/4676e0e))
 * chore(package): update babel-eslint to version 7.2.3 ([09e4f7f](https://github.com/posthtml/posthtml-cli/commit/09e4f7f))
@@ -411,9 +422,9 @@
 ## 0.2.0 (2016-05-05)
 
 * Add posthtml-bem for testing ([0abb7ff](https://github.com/posthtml/posthtml-cli/commit/0abb7ff))
-* bump ([72b5c34](https://github.com/posthtml/posthtml-cli/commit/72b5c34))
 * bump ([f4457b4](https://github.com/posthtml/posthtml-cli/commit/f4457b4))
 * bump ([923d93d](https://github.com/posthtml/posthtml-cli/commit/923d93d))
+* bump ([72b5c34](https://github.com/posthtml/posthtml-cli/commit/72b5c34))
 * Fix typo ([23242f1](https://github.com/posthtml/posthtml-cli/commit/23242f1))
 * Fixed #72, add option use ([89732b5](https://github.com/posthtml/posthtml-cli/commit/89732b5)), closes [#72](https://github.com/posthtml/posthtml-cli/issues/72)
 * Fixed #73, update devDep ([f53eeb4](https://github.com/posthtml/posthtml-cli/commit/f53eeb4)), closes [#73](https://github.com/posthtml/posthtml-cli/issues/73)
@@ -527,17 +538,17 @@
 * bump ([e7b584c](https://github.com/posthtml/posthtml-cli/commit/e7b584c))
 * Fixed #38, update test, double code ([8b59110](https://github.com/posthtml/posthtml-cli/commit/8b59110)), closes [#38](https://github.com/posthtml/posthtml-cli/issues/38)
 * Update cli.js ([b935aa1](https://github.com/posthtml/posthtml-cli/commit/b935aa1))
+* Update cli.js ([da0d52d](https://github.com/posthtml/posthtml-cli/commit/da0d52d))
 * Update cli.js ([d17b0aa](https://github.com/posthtml/posthtml-cli/commit/d17b0aa))
 * Update cli.js ([2ae3ddf](https://github.com/posthtml/posthtml-cli/commit/2ae3ddf))
-* Update cli.js ([da0d52d](https://github.com/posthtml/posthtml-cli/commit/da0d52d))
 * update indent adn usage example ([91a3d06](https://github.com/posthtml/posthtml-cli/commit/91a3d06))
-* Update package.json ([aee3a86](https://github.com/posthtml/posthtml-cli/commit/aee3a86))
-* Update package.json ([feb1fd7](https://github.com/posthtml/posthtml-cli/commit/feb1fd7))
 * Update package.json ([44bac39](https://github.com/posthtml/posthtml-cli/commit/44bac39))
+* Update package.json ([82d9e28](https://github.com/posthtml/posthtml-cli/commit/82d9e28))
+* Update package.json ([cc21c54](https://github.com/posthtml/posthtml-cli/commit/cc21c54))
 * Update package.json ([cf82282](https://github.com/posthtml/posthtml-cli/commit/cf82282))
 * Update package.json ([35d9726](https://github.com/posthtml/posthtml-cli/commit/35d9726))
-* Update package.json ([cc21c54](https://github.com/posthtml/posthtml-cli/commit/cc21c54))
-* Update package.json ([82d9e28](https://github.com/posthtml/posthtml-cli/commit/82d9e28))
+* Update package.json ([aee3a86](https://github.com/posthtml/posthtml-cli/commit/aee3a86))
+* Update package.json ([feb1fd7](https://github.com/posthtml/posthtml-cli/commit/feb1fd7))
 * Update readme, added description for config ([b430aab](https://github.com/posthtml/posthtml-cli/commit/b430aab))
 * Update README.md ([f51a9a7](https://github.com/posthtml/posthtml-cli/commit/f51a9a7))
 * Update README.md ([7767b6a](https://github.com/posthtml/posthtml-cli/commit/7767b6a))
