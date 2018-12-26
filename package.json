@@ -151,6 +151,7 @@
       "test/**",
       "tmp/**",
       "lib/**",
+      ".idea/**",
       "*.{html,jpg}"
     ],
     "rules": {
