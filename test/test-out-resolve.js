@@ -1,3 +1,4 @@
+import path from 'path';
 import test from 'ava';
 import isPromise from 'is-promise';
 import outResolve from '../lib/out-resolve';
@@ -15,7 +16,7 @@ test('only input should return file.ext', async t => {
 });
 
 test('only input should return tmp/file.ext', async t => {
-  t.is(await outResolve('tmp/file.ext'), 'tmp/file.ext');
+  t.is(await outResolve('tmp/file.ext'), path.normalize('tmp/file.ext'));
 });
 
 test('input file and output file should return output.ext', async t => {
@@ -23,11 +24,11 @@ test('input file and output file should return output.ext', async t => {
 });
 
 test('input file and output folder should return tmp/file.ext', async t => {
-  t.is(await outResolve('file.ext', 'tmp'), 'tmp/file.ext');
+  t.is(await outResolve('file.ext', 'tmp'), path.normalize('tmp/file.ext'));
 });
 
 test('input files and output folder should return tmp/test/*.ext', async t => {
-  t.is(await outResolve('test/*.ext', 'tmp'), 'tmp/test/*.ext');
+  t.is(await outResolve('test/*.ext', 'tmp'), path.normalize('tmp/test/*.ext'));
 });
 
 test('input files and output file should return output.ext', async t => {
@@ -35,6 +36,6 @@ test('input files and output file should return output.ext', async t => {
 });
 
 test('input files and output file should return tmp/output.ext', async t => {
-  t.is(await outResolve('test/*', 'tmp/output.ext'), 'tmp/output.ext');
+  t.is(await outResolve('test/*', 'tmp/output.ext'), path.normalize('tmp/output.ext'));
 });
 
