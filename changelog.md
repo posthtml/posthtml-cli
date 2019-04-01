@@ -1,3 +1,16 @@
+## <small>0.4.9 (2019-04-01)</small>
+
+* build: drop support old node ([efe8508](https://github.com/posthtml/posthtml-cli/commit/efe8508))
+* build: update build scripts ([692272f](https://github.com/posthtml/posthtml-cli/commit/692272f))
+* build: update changelog ([0014038](https://github.com/posthtml/posthtml-cli/commit/0014038))
+* build: update depdev ([e1cde86](https://github.com/posthtml/posthtml-cli/commit/e1cde86))
+* ci: drop support old node ([2a4367c](https://github.com/posthtml/posthtml-cli/commit/2a4367c))
+* docs: drop support old node ([855f953](https://github.com/posthtml/posthtml-cli/commit/855f953))
+* test: fix party normalize ([37d5d42](https://github.com/posthtml/posthtml-cli/commit/37d5d42))
+* test: normalize path, close #279 ([70c0936](https://github.com/posthtml/posthtml-cli/commit/70c0936)), closes [#279](https://github.com/posthtml/posthtml-cli/issues/279)
+
+
+
 ## <small>0.4.8 (2018-12-25)</small>
 
 * 0.4.8 ([579752a](https://github.com/posthtml/posthtml-cli/commit/579752a))
@@ -20,6 +33,7 @@
 * build: update changelog ([7e497a9](https://github.com/posthtml/posthtml-cli/commit/7e497a9))
 * build: update depDev ([6e12b94](https://github.com/posthtml/posthtml-cli/commit/6e12b94))
 * ci: bump to node 10 ([ffeb119](https://github.com/posthtml/posthtml-cli/commit/ffeb119))
+* fix: clarify external config format ([c673d18](https://github.com/posthtml/posthtml-cli/commit/c673d18))
 
 
 
