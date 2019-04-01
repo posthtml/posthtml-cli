@@ -16,7 +16,7 @@ test('only input should return file.ext', async t => {
 });
 
 test('only input should return tmp/file.ext', async t => {
-  t.is(await outResolve('tmp/file.ext'), path.normalize('tmp/file.ext'));
+  t.is(await outResolve('tmp/file.ext'), 'tmp/file.ext');
 });
 
 test('input file and output file should return output.ext', async t => {
@@ -36,6 +36,6 @@ test('input files and output file should return output.ext', async t => {
 });
 
 test('input files and output file should return tmp/output.ext', async t => {
-  t.is(await outResolve('test/*', 'tmp/output.ext'), path.normalize('tmp/output.ext'));
+  t.is(await outResolve('test/*', 'tmp/output.ext'), 'tmp/output.ext');
 });
 
