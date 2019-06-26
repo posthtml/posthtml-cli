@@ -6,7 +6,6 @@ import fg from 'fast-glob';
 import meow from 'meow';
 import makeDir from 'make-dir';
 import posthtml from 'posthtml';
-import load from 'post-load-plugins';
 import outResolve from './out-resolve';
 import cfgResolve from './cfg-resolve';
 
@@ -18,7 +17,6 @@ const cli = meow(`
     --config -c    Path to config file
     --use -u       PostHTML plugin name
     --help -h      CLI Help
-    --auto-off     Disable automatically loads plug-ins with configuration from package.json
     --version -v   CLI Version
 
   Examples:
@@ -54,25 +52,29 @@ const cli = meow(`
   }
 });
 
-const read = file => new Promise(resolve => fs.readFile(file, 'utf8', (err, data) => {
-  if (err) {
-    console.warn(err);
+const read = file => new Promise(resolve => fs.readFile(file, 'utf8', (error, data) => {
+  if (error) {
+    console.warn(error);
   }
+
   resolve(data);
 }));
 
 const processing = async file => {
   const output = await outResolve(file, cli.flags.output);
   const config = await cfgResolve(cli.flags);
+  const plugins = Object.keys(config.plugins || {})
+    .map(plugin => require(plugin)(config.plugins[plugin]));
 
   makeDir(path.dirname(output))
     .then(read.bind(null, file))
-    .then(html => posthtml(load(config)).process(html))
+    .then(html => posthtml(plugins).process(html))
     .then(({html}) => {
-      fs.writeFile(output, html, err => {
-        if (err) {
-          console.warn(err);
+      fs.writeFile(output, html, error => {
+        if (error) {
+          console.warn(error);
         }
+
         console.log(`The file ${file} has been saved!`);
       });
     });

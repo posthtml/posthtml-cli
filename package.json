@@ -39,7 +39,6 @@
     "make-dir": "^3.0.0",
     "meow": "^5.0.0",
     "path-exists": "^4.0.0",
-    "post-load-plugins": "0.0.24",
     "posthtml": "^0.11.4",
     "to-camel-case": "^1.0.0"
   },
@@ -64,8 +63,7 @@
     "eslint-config-xo-space": "^0.21.0",
     "eslint-plugin-ava": "^7.1.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-dependencies": "^2.4.0",
-    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-node": "^9.1.0",
@@ -122,26 +120,6 @@
   },
   "posthtml": {
     "customElements": {}
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "plugins": [
-      "dependencies",
-      "html",
-      "ava",
-      "unicorn",
-      "babel",
-      "markdown"
-    ],
-    "extends": [
-      "plugin:unicorn/recommended",
-      "plugin:ava/recommended",
-      "xo",
-      "xo-space"
-    ],
-    "rules": {
-      "capitalized-comments": "off"
-    }
   },
   "clinton": {
     "ignores": [
