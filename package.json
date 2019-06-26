@@ -4,7 +4,7 @@
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
-  "homepage": "posthtml/posthtml-cli#readme",
+  "homepage": "https://posthtml/posthtml-cli#readme",
   "bugs": "posthtml/posthtml-cli/issues",
   "author": {
     "name": "Ivan Demidov",
