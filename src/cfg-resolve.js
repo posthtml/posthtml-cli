@@ -1,20 +1,22 @@
-import path from 'path';
-import getCff from 'get-cff';
+import cosmiconfig from 'cosmiconfig';
 import toCamelCase from 'to-camel-case';
-import pathExists from 'path-exists';
-import deepAssign from 'deep-assign';
+import mergeOptions from 'merge-options';
 
-export default (flags = {}) => new Promise(async resolve => {
+export default (flags = {}) => new Promise(resolve => {
+  const explorer = cosmiconfig('posthtml');
   let {config, use} = flags;
 
   if (config) {
-    config = path.resolve(config);
-    config = await pathExists(config) ? await getCff(config) : {};
+    ({config} = explorer.loadSync(config));
   }
 
   if (use) {
-    use = [].concat(use).reduce((cfg, key) => deepAssign(cfg, {[key]: flags[toCamelCase(key)] || {}}), {});
+    use = [].concat(use).reduce((cfg, key) => mergeOptions(cfg, {plugins: {[key]: flags[toCamelCase(key)] || {}}}), {});
   }
 
-  resolve(deepAssign({}, use || {}, config || {}));
+  if (!config && !use) {
+    ({config} = explorer.searchSync());
+  }
+
+  resolve(mergeOptions({}, use || {}, config || {}));
 });
