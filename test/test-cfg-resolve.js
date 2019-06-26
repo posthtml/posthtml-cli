@@ -15,7 +15,7 @@ test('should return config with one use key without property', async t => {
     use: 'posthtml-bem'
   };
   const config = await cfgResolve(flags);
-  const expected = {'posthtml-bem': {}};
+  const expected = {plugins: {'posthtml-bem': {}}};
 
   t.deepEqual(config, expected);
 });
@@ -28,7 +28,7 @@ test('should return config with one use key with one property', async t => {
     }
   };
   const config = await cfgResolve(flags);
-  const expected = {'posthtml-bem': {prefix: '__'}};
+  const expected = {plugins: {'posthtml-bem': {prefix: '__'}}};
 
   t.deepEqual(config, expected);
 });
@@ -38,7 +38,7 @@ test('should return config with key config', async t => {
     config: 'test/config/.config'
   };
   const config = await cfgResolve(flags);
-  const expected = {'posthtml-bem': {}};
+  const expected = {plugins: {'posthtml-bem': {}}};
 
   t.deepEqual(config, expected);
 });
@@ -49,7 +49,7 @@ test('should return config with key config and use key', async t => {
     config: 'test/config/.config'
   };
   const config = await cfgResolve(flags);
-  const expected = {'posthtml-bem': {}, 'posthtml-assets': {}};
+  const expected = {plugins: {'posthtml-bem': {}, 'posthtml-assets': {}}};
 
   t.deepEqual(config, expected);
 });
