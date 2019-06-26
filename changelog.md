@@ -729,6 +729,3 @@
 ## 0.0.0 (2016-01-18)
 
 * init ([79148f8](https://github.com/posthtml/posthtml-cli/commit/79148f8))
-
-
-
