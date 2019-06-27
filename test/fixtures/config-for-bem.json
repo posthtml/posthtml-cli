@@ -1,10 +1,12 @@
 {
-    "bem": {
+  "plugins": {
+    "posthtml-bem": {
         "elemPrefix": "__",
         "modPrefix": "-",
         "modDlmtr": "--"
     },
-    "customElements": {
+    "posthtml-custom-elements": {
         "defaultTag": "span"
     }
+  }
 }

@@ -35,22 +35,20 @@ $ posthtml --help
     $ posthtml inputFolder/*.html -o outputFolder
     $ posthtml inputFolder/**/*.html -o outputFolder
 ```
->**Note:** This package does not respect the order of patterns. First, all the negative patterns are applied, and only then the positive patterns.
 
-> **Note:** Automatically loads plug-ins with configuration from package.json using [post-load-plugins](https://github.com/post-org/post-load-plugins) if not used `--auto-off` key
-
-Also note that in case of using external config file, the config itself needs to be contained inside "posthtml" key:
-```js
-module.exports = {
-  posthtml: {
-    plugins: {
-      'posthtml-plugin': {
-        foo: 'bar'
-      }
+## Options
+```json
+{
+  input: 'src/*.html',
+  output: 'dist',
+  plugins: {
+    'posthtml-plugin-name': {
+      property: 'value'
     }
   }
 };
 ```
+> example config *`.posthtmlrc`*
 
 [posthtml-url]: http://github.com/posthtml/posthtml
 
