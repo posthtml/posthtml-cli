@@ -40,8 +40,8 @@ $ posthtml --help
 ```js
 module.exports = {
   plugins: {
-    'posthtml-plugin': {
-      foo: 'bar'
+    'posthtml-plugin-name': {
+      property: 'value'
     }
   }
 };
