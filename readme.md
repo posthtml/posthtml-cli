@@ -35,10 +35,12 @@ $ posthtml --help
     $ posthtml inputFolder/*.html -o outputFolder
     $ posthtml inputFolder/**/*.html -o outputFolder
 ```
->**Note:** This package does not respect the order of patterns. First, all the negative patterns are applied, and only then the positive patterns.
 
-```js
-module.exports = {
+## Options
+```json
+{
+  input: 'src/*.html',
+  output: 'dist',
   plugins: {
     'posthtml-plugin-name': {
       property: 'value'
@@ -46,6 +48,7 @@ module.exports = {
   }
 };
 ```
+> example config *`.posthtmlrc`*
 
 [posthtml-url]: http://github.com/posthtml/posthtml
 
