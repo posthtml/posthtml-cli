@@ -39,11 +39,11 @@ $ posthtml --help
 ## Options
 ```json
 {
-  input: 'src/*.html',
-  output: 'dist',
-  plugins: {
-    'posthtml-plugin-name': {
-      property: 'value'
+  "input": "src/*.html",
+  "output": "dist",
+  "plugins": {
+    "posthtml-plugin-name": {
+      "property": "value"
     }
   }
 };
