@@ -1,7 +1,38 @@
+## 0.5.0 (2019-06-27)
+
+* build: fix linter ([50e592d](https://github.com/posthtml/posthtml-cli/commit/50e592d))
+* build: npm lock to false ([43f1f4b](https://github.com/posthtml/posthtml-cli/commit/43f1f4b))
+* build: perf script for changelog ([e963ea9](https://github.com/posthtml/posthtml-cli/commit/e963ea9))
+* build: update config for chgngelog ([de5ff40](https://github.com/posthtml/posthtml-cli/commit/de5ff40))
+* build: update config for editor ([33ffa69](https://github.com/posthtml/posthtml-cli/commit/33ffa69))
+* build: update depDev ([4f5cbb5](https://github.com/posthtml/posthtml-cli/commit/4f5cbb5))
+* build(deps): bump handlebars from 4.1.0 to 4.1.2 ([41d500a](https://github.com/posthtml/posthtml-cli/commit/41d500a))
+* build(deps): bump js-yaml from 3.12.0 to 3.13.1 ([7cd5a58](https://github.com/posthtml/posthtml-cli/commit/7cd5a58))
+* test: fix config name ([7c878c3](https://github.com/posthtml/posthtml-cli/commit/7c878c3))
+* test: fixed after add config plugins, #288 ([8ec280f](https://github.com/posthtml/posthtml-cli/commit/8ec280f)), closes [#288](https://github.com/posthtml/posthtml-cli/issues/288)
+* test: for config io, #280, #256 ([0bb76e4](https://github.com/posthtml/posthtml-cli/commit/0bb76e4)), closes [#280](https://github.com/posthtml/posthtml-cli/issues/280) [#256](https://github.com/posthtml/posthtml-cli/issues/256)
+* test: for two key use ([85f927d](https://github.com/posthtml/posthtml-cli/commit/85f927d))
+* test: skip test replace for windows ([d423b70](https://github.com/posthtml/posthtml-cli/commit/d423b70))
+* ci: normalize path for windows ([624c4ce](https://github.com/posthtml/posthtml-cli/commit/624c4ce))
+* ci: try fix for windows ([e39cdbe](https://github.com/posthtml/posthtml-cli/commit/e39cdbe))
+* ci: update coverals script trigger ([dee2e5b](https://github.com/posthtml/posthtml-cli/commit/dee2e5b))
+* docs: add simpl example options ([bd27aee](https://github.com/posthtml/posthtml-cli/commit/bd27aee))
+* docs: correct according change config ([32f9f96](https://github.com/posthtml/posthtml-cli/commit/32f9f96))
+* docs: update options example ([c6231c7](https://github.com/posthtml/posthtml-cli/commit/c6231c7))
+* docs: update path to readme ([5c5518f](https://github.com/posthtml/posthtml-cli/commit/5c5518f))
+* feat: add config plugins, #288 ([de59985](https://github.com/posthtml/posthtml-cli/commit/de59985)), closes [#288](https://github.com/posthtml/posthtml-cli/issues/288)
+* feat: add io in config, close #280, close #256 ([e3222b8](https://github.com/posthtml/posthtml-cli/commit/e3222b8)), closes [#280](https://github.com/posthtml/posthtml-cli/issues/280) [#256](https://github.com/posthtml/posthtml-cli/issues/256)
+* perf: change to cosmiconfig ([05f1b04](https://github.com/posthtml/posthtml-cli/commit/05f1b04))
+* refactor: remove post-load-plugins, close #287, close #286, close #275 ([5e62b38](https://github.com/posthtml/posthtml-cli/commit/5e62b38)), closes [#287](https://github.com/posthtml/posthtml-cli/issues/287) [#286](https://github.com/posthtml/posthtml-cli/issues/286) [#275](https://github.com/posthtml/posthtml-cli/issues/275)
+
+
+
 ## <small>0.4.9 (2019-04-01)</small>
 
+* 0.4.9 ([f0e376c](https://github.com/posthtml/posthtml-cli/commit/f0e376c))
 * build: drop support old node ([efe8508](https://github.com/posthtml/posthtml-cli/commit/efe8508))
 * build: update build scripts ([692272f](https://github.com/posthtml/posthtml-cli/commit/692272f))
+* build: update changelog ([6ea8d34](https://github.com/posthtml/posthtml-cli/commit/6ea8d34))
 * build: update changelog ([0014038](https://github.com/posthtml/posthtml-cli/commit/0014038))
 * build: update depdev ([e1cde86](https://github.com/posthtml/posthtml-cli/commit/e1cde86))
 * ci: drop support old node ([2a4367c](https://github.com/posthtml/posthtml-cli/commit/2a4367c))
@@ -729,3 +760,6 @@
 ## 0.0.0 (2016-01-18)
 
 * init ([79148f8](https://github.com/posthtml/posthtml-cli/commit/79148f8))
+
+
+
