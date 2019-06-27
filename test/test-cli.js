@@ -8,9 +8,9 @@ import copy from 'cpy';
 import tempfile from 'tempfile';
 
 const cli = path.resolve('lib/cli.js');
-const read = file => new Promise((resolve, reject) => fs.readFile(file, 'utf8', (err, data) => {
-  if (err) {
-    return reject(err);
+const read = file => new Promise((resolve, reject) => fs.readFile(file, 'utf8', (error, data) => {
+  if (error) {
+    return reject(error);
   }
 
   resolve(data);
@@ -85,8 +85,7 @@ test('Transform html witch config in file and stdin options use', async t => {
     '--posthtml-bem.elemPrefix=--',
     '--posthtml-bem.modPrefix',
     '_',
-    '--posthtml-bem.modDlmtr',
-    '--'
+    '--posthtml-bem.modDlmtr'
   ]);
   t.true(await pathExists(filename));
   t.is((await read('test/expected/output-bem.html')), (await read(filename)));
@@ -106,6 +105,28 @@ test('Transform html witch stdin options use', async t => {
   ]);
   t.true(await pathExists(filename));
   t.is((await read('test/expected/output-custom-elements.html')), (await read(filename)));
+});
+
+test('Transform html witch stdin options use two key', async t => {
+  t.plan(2);
+  const filename = tempfile('.html');
+  await execa(cli, [
+    'test/fixtures/input-bem.html',
+    '-o',
+    filename,
+    '-u',
+    'posthtml-bem',
+    '--posthtml-bem.elemPrefix=--',
+    '--posthtml-bem.modPrefix',
+    '_',
+    '--posthtml-bem.modDlmtr',
+    '-u',
+    'posthtml-custom-elements',
+    '--posthtml-custom-elements.defaultTag',
+    'span'
+  ]);
+  t.true(await pathExists(filename));
+  t.is((await read('test/expected/output-bem.html')), (await read(filename)));
 });
 
 test('Transform html stdin options use witch modules', async t => {
