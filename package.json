@@ -21,6 +21,7 @@
     "version": "conventional-changelog -i changelog.md -s -r 0 && git commit -am \"build: update changelog\"",
     "prepare": "npm run build",
     "build": "rimraf lib && babel src -d lib",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pretest": "npm run build",
     "test": "nyc ava"
   },
