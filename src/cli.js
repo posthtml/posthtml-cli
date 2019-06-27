@@ -60,11 +60,15 @@ const read = file => new Promise(resolve => fs.readFile(file, 'utf8', (error, da
   resolve(data);
 }));
 
+const getPlugins = config => Object.keys(config.plugins || {})
+  .map(plugin => require(plugin)(config.plugins[plugin]));
+
+const config = cfgResolve(cli);
+
 const processing = async file => {
-  const output = await outResolve(file, cli.flags.output);
-  const config = await cfgResolve(cli.flags);
-  const plugins = Object.keys(config.plugins || {})
-    .map(plugin => require(plugin)(config.plugins[plugin]));
+  const output = await outResolve(file, config.output);
+  // const output = path.resolve(config.output, path.basename(file));
+  const plugins = getPlugins(config);
 
   makeDir(path.dirname(output))
     .then(read.bind(null, file))
@@ -80,6 +84,6 @@ const processing = async file => {
     });
 };
 
-fg.stream(cli.input)
+fg.stream(config.input)
   .on('data', processing)
   .once('error', console.warn);
