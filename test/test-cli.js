@@ -58,17 +58,17 @@ test('Transform html from two file', async t => {
   t.plan(2);
   const folder = await tempfile();
   await execa(cli, ['test/fixtures/input.html', 'test/fixtures/input-indent.html', '-o', folder]);
-  t.is((await read('test/expected/output-config-pkg.html')), (await read(`${folder}/test/fixtures/input.html`)));
-  t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/test/fixtures/input-indent.html`)));
+  t.is((await read('test/expected/output-config-pkg.html')), (await read(`${folder}/input.html`)));
+  t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
 });
 
 test('Transform html witch options replace', async t => {
   t.plan(2);
   const folder = await tempfile();
-  await copy(['test/fixtures/input.html', 'test/fixtures/input-indent.html'], folder, {parents: true});
-  await execa(cli, [`${folder}/test/fixtures/input.html`, `${folder}/test/fixtures/input-indent.html`]);
-  t.is((await read('test/expected/output-config-pkg.html')), (await read(`${folder}/test/fixtures/input.html`)));
-  t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/test/fixtures/input-indent.html`)));
+  await copy(['test/fixtures/input.html', 'test/fixtures/input-indent.html'], folder);
+  await execa(cli, [`${folder}/input.html`, `${folder}/input-indent.html`]);
+  t.is((await read('test/expected/output-config-pkg.html')), (await read(`${folder}/input.html`)));
+  t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
 });
 
 test('Transform html witch config in file and stdin options use', async t => {
@@ -143,4 +143,48 @@ test('Transform html stdin options use witch modules', async t => {
   ]);
   t.true(await pathExists(filename));
   t.is((await read('test/expected/output-modules.html')), (await read(filename)));
+});
+
+test('Transform html stdin options only config one-io', async t => {
+  t.plan(2);
+  await execa(cli, [
+    '-c',
+    'test/fixtures/by-config/one-io/config.json'
+  ]);
+  t.true(await pathExists('test/expected/by-config/one-io/output.html'));
+  t.is(
+    (await read('test/expected/by-config/one-io/output.html')),
+    (await read('test/fixtures/by-config/one-io/input.html'))
+  );
+});
+
+test('Transform html stdin options only config two-io to dir', async t => {
+  t.plan(4);
+  await execa(cli, [
+    '-c',
+    'test/fixtures/by-config/two-io/config.json'
+  ]);
+  t.true(await pathExists('test/expected/by-config/two-io/input-1.html'));
+  t.true(await pathExists('test/expected/by-config/two-io/input-2.html'));
+  t.is(
+    (await read('test/expected/by-config/two-io/input-1.html')),
+    (await read('test/fixtures/by-config/two-io/input-1.html'))
+  );
+  t.is(
+    (await read('test/expected/by-config/two-io/input-2.html')),
+    (await read('test/fixtures/by-config/two-io/input-2.html'))
+  );
+});
+
+test('Transform html stdin options only config one-io-by-pattern', async t => {
+  t.plan(2);
+  await execa(cli, [
+    '-c',
+    'test/fixtures/by-config/one-io-by-pattern/config.json'
+  ]);
+  t.true(await pathExists('test/expected/by-config/one-io-by-pattern/input-1.html'));
+  t.is(
+    (await read('test/expected/by-config/one-io-by-pattern/input-1.html')),
+    (await read('test/fixtures/by-config/one-io-by-pattern/input-1.html'))
+  );
 });

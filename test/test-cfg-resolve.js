@@ -1,23 +1,18 @@
 import test from 'ava';
-import isPromise from 'is-promise';
 import cfgResolve from '../lib/cfg-resolve';
 
 test('should return function', t => {
   t.true(typeof cfgResolve === 'function');
 });
 
-test('should return promise', t => {
-  t.true(isPromise(cfgResolve()));
-});
-
 test('should return config with one use key without property', async t => {
   const flags = {
     use: 'posthtml-bem'
   };
-  const config = await cfgResolve(flags);
-  const expected = {plugins: {'posthtml-bem': {}}};
+  const config = await cfgResolve({flags});
+  const expected = {'posthtml-bem': {}};
 
-  t.deepEqual(config, expected);
+  t.deepEqual(config.plugins, expected);
 });
 
 test('should return config with one use key with one property', async t => {
@@ -27,20 +22,20 @@ test('should return config with one use key with one property', async t => {
       prefix: '__'
     }
   };
-  const config = await cfgResolve(flags);
-  const expected = {plugins: {'posthtml-bem': {prefix: '__'}}};
+  const config = await cfgResolve({flags});
+  const expected = {'posthtml-bem': {prefix: '__'}};
 
-  t.deepEqual(config, expected);
+  t.deepEqual(config.plugins, expected);
 });
 
 test('should return config with key config', async t => {
   const flags = {
     config: 'test/config/.config'
   };
-  const config = await cfgResolve(flags);
-  const expected = {plugins: {'posthtml-bem': {}}};
+  const config = await cfgResolve({flags});
+  const expected = {'posthtml-bem': {}};
 
-  t.deepEqual(config, expected);
+  t.deepEqual(config.plugins, expected);
 });
 
 test('should return config with key config and use key', async t => {
@@ -48,9 +43,9 @@ test('should return config with key config and use key', async t => {
     use: 'posthtml-assets',
     config: 'test/config/.config'
   };
-  const config = await cfgResolve(flags);
-  const expected = {plugins: {'posthtml-bem': {}, 'posthtml-assets': {}}};
+  const config = await cfgResolve({flags});
+  const expected = {'posthtml-bem': {}, 'posthtml-assets': {}};
 
-  t.deepEqual(config, expected);
+  t.deepEqual(config.plugins, expected);
 });
 
