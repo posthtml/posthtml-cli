@@ -149,7 +149,7 @@ test('Transform html stdin options only config one-io', async t => {
   t.plan(2);
   await execa(cli, [
     '-c',
-    'test/fixtures/by-config/one-io/config.json'
+    'test/fixtures/by-config/one-io/.config'
   ]);
   t.true(await pathExists('test/expected/by-config/one-io/output.html'));
   t.is(
@@ -162,7 +162,7 @@ test('Transform html stdin options only config two-io to dir', async t => {
   t.plan(4);
   await execa(cli, [
     '-c',
-    'test/fixtures/by-config/two-io/config.json'
+    'test/fixtures/by-config/two-io/.config'
   ]);
   t.true(await pathExists('test/expected/by-config/two-io/input-1.html'));
   t.true(await pathExists('test/expected/by-config/two-io/input-2.html'));
@@ -180,7 +180,7 @@ test('Transform html stdin options only config one-io-by-pattern', async t => {
   t.plan(2);
   await execa(cli, [
     '-c',
-    'test/fixtures/by-config/one-io-by-pattern/config.json'
+    'test/fixtures/by-config/one-io-by-pattern/.config'
   ]);
   t.true(await pathExists('test/expected/by-config/one-io-by-pattern/input-1.html'));
   t.is(
