@@ -67,8 +67,7 @@ const config = cfgResolve(cli);
 
 const processing = async file => {
   const output = await outResolve(file, config.output);
-  // const output = path.resolve(config.output, path.basename(file));
-  const plugins = getPlugins(config);
+  const plugins = Array.isArray(config.plugins) ? config.plugins : getPlugins(config);
 
   makeDir(path.dirname(output))
     .then(read.bind(null, file))

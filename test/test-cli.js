@@ -188,3 +188,16 @@ test('Transform html stdin options only config one-io-by-pattern', async t => {
     (await read('test/fixtures/by-config/one-io-by-pattern/input-1.html'))
   );
 });
+
+test('Transform html stdin options only config one-io anf plugins array', async t => {
+  t.plan(2);
+  await execa(cli, [
+    '-c',
+    'test/fixtures/by-config/one-io-and-plugins-array/posthtml.config.js'
+  ]);
+  t.true(await pathExists('test/expected/by-config/one-io-and-plugins-array/output.html'));
+  t.is(
+    (await read('test/expected/by-config/one-io-and-plugins-array/output.html')),
+    (await read('test/fixtures/by-config/one-io-and-plugins-array/input.html'))
+  );
+});

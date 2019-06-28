@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
@@ -95,6 +95,9 @@
     "*.md": "eslint"
   },
   "ava": {
+    "files": [
+      "test/test-*"
+    ],
     "require": [
       "@babel/register"
     ]

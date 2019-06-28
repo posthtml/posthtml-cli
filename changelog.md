@@ -1,8 +1,21 @@
+## <small>0.5.1 (2019-06-28)</small>
+
+* ci: try fix in windows ([ad49a51](https://github.com/posthtml/posthtml-cli/commit/ad49a51))
+* build: add path in test script ([efa1950](https://github.com/posthtml/posthtml-cli/commit/efa1950))
+* fix: if plugins is array ([f550f11](https://github.com/posthtml/posthtml-cli/commit/f550f11))
+* test: expected for plugins array ([df36e4f](https://github.com/posthtml/posthtml-cli/commit/df36e4f))
+* test: when plugins array ([1c1b3db](https://github.com/posthtml/posthtml-cli/commit/1c1b3db))
+* docs: update example ([2a7130c](https://github.com/posthtml/posthtml-cli/commit/2a7130c))
+
+
+
 ## 0.5.0 (2019-06-27)
 
+* 0.5.0 ([0199026](https://github.com/posthtml/posthtml-cli/commit/0199026))
 * build: fix linter ([50e592d](https://github.com/posthtml/posthtml-cli/commit/50e592d))
 * build: npm lock to false ([43f1f4b](https://github.com/posthtml/posthtml-cli/commit/43f1f4b))
 * build: perf script for changelog ([e963ea9](https://github.com/posthtml/posthtml-cli/commit/e963ea9))
+* build: update changelog ([09980f6](https://github.com/posthtml/posthtml-cli/commit/09980f6))
 * build: update config for chgngelog ([de5ff40](https://github.com/posthtml/posthtml-cli/commit/de5ff40))
 * build: update config for editor ([33ffa69](https://github.com/posthtml/posthtml-cli/commit/33ffa69))
 * build: update depDev ([4f5cbb5](https://github.com/posthtml/posthtml-cli/commit/4f5cbb5))
