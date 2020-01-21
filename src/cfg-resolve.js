@@ -1,13 +1,13 @@
-import cosmiconfig from 'cosmiconfig';
+import {cosmiconfigSync} from 'cosmiconfig';
 import toCamelCase from 'to-camel-case';
 import mergeOptions from 'merge-options';
 
 export default ({input, flags = {}}) => {
-  const explorer = cosmiconfig('posthtml');
+  const explorer = cosmiconfigSync('posthtml');
   let {config, use, output} = flags;
 
   if (config) {
-    ({config} = explorer.loadSync(config));
+    ({config} = explorer.load(config));
   }
 
   if (use) {
@@ -15,7 +15,7 @@ export default ({input, flags = {}}) => {
   }
 
   if (!config && !use) {
-    ({config} = explorer.searchSync());
+    ({config} = explorer.search());
   }
 
   return mergeOptions({

@@ -46,7 +46,7 @@ const cli = meow(`
       alias: 'o'
     },
     use: {
-      type: 'Array',
+      type: 'array',
       alias: 'u'
     }
   }

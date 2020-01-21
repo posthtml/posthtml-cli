@@ -1,7 +1,16 @@
+## <small>0.5.2 (2020-01-21)</small>
+
+* fix: after update dep ([4ecb916](https://github.com/posthtml/posthtml-cli/commit/4ecb916))
+* build: update dep dev ([af63894](https://github.com/posthtml/posthtml-cli/commit/af63894))
+
+
+
 ## <small>0.5.1 (2019-06-28)</small>
 
-* ci: try fix in windows ([ad49a51](https://github.com/posthtml/posthtml-cli/commit/ad49a51))
+* 0.5.1 ([16fbf31](https://github.com/posthtml/posthtml-cli/commit/16fbf31))
 * build: add path in test script ([efa1950](https://github.com/posthtml/posthtml-cli/commit/efa1950))
+* build: update changelog ([603a125](https://github.com/posthtml/posthtml-cli/commit/603a125))
+* ci: try fix in windows ([ad49a51](https://github.com/posthtml/posthtml-cli/commit/ad49a51))
 * fix: if plugins is array ([f550f11](https://github.com/posthtml/posthtml-cli/commit/f550f11))
 * test: expected for plugins array ([df36e4f](https://github.com/posthtml/posthtml-cli/commit/df36e4f))
 * test: when plugins array ([1c1b3db](https://github.com/posthtml/posthtml-cli/commit/1c1b3db))
@@ -52,6 +61,7 @@
 * docs: drop support old node ([855f953](https://github.com/posthtml/posthtml-cli/commit/855f953))
 * test: fix party normalize ([37d5d42](https://github.com/posthtml/posthtml-cli/commit/37d5d42))
 * test: normalize path, close #279 ([70c0936](https://github.com/posthtml/posthtml-cli/commit/70c0936)), closes [#279](https://github.com/posthtml/posthtml-cli/issues/279)
+* fix: clarify external config format ([c673d18](https://github.com/posthtml/posthtml-cli/commit/c673d18))
 
 
 
@@ -77,7 +87,6 @@
 * build: update changelog ([7e497a9](https://github.com/posthtml/posthtml-cli/commit/7e497a9))
 * build: update depDev ([6e12b94](https://github.com/posthtml/posthtml-cli/commit/6e12b94))
 * ci: bump to node 10 ([ffeb119](https://github.com/posthtml/posthtml-cli/commit/ffeb119))
-* fix: clarify external config format ([c673d18](https://github.com/posthtml/posthtml-cli/commit/c673d18))
 
 
 
@@ -379,11 +388,14 @@
 
 ## <small>0.2.6 (2016-09-08)</small>
 
+* 0.2.5 ([06cd83c](https://github.com/posthtml/posthtml-cli/commit/06cd83c))
 * 0.2.6 ([780c653](https://github.com/posthtml/posthtml-cli/commit/780c653))
 * docs(readme): fix patch to license ([fa37204](https://github.com/posthtml/posthtml-cli/commit/fa37204))
 * docs(readme): remove semi-colons ([9f86f2b](https://github.com/posthtml/posthtml-cli/commit/9f86f2b))
 * chore(changelog): Update changelog ([a0afcb8](https://github.com/posthtml/posthtml-cli/commit/a0afcb8))
 * chore(changelog): Update changelog ([b5a6160](https://github.com/posthtml/posthtml-cli/commit/b5a6160))
+* chore(package): add auto node publish ([6096ac9](https://github.com/posthtml/posthtml-cli/commit/6096ac9))
+* chore(package): add testen for test support list node ([b044e81](https://github.com/posthtml/posthtml-cli/commit/b044e81))
 * chore(package): update ava to version 0.16.0 ([7b41df2](https://github.com/posthtml/posthtml-cli/commit/7b41df2))
 * chore(package): update clinton to version 0.8.0 ([174f1f1](https://github.com/posthtml/posthtml-cli/commit/174f1f1))
 * chore(package): update eslint-formatter-pretty to version 0.3.0 ([530070f](https://github.com/posthtml/posthtml-cli/commit/530070f))
@@ -404,16 +416,10 @@
 * style(*): fix clinton report recommendation ([c62395e](https://github.com/posthtml/posthtml-cli/commit/c62395e))
 * style(package): bump version v0.2.5 ([aa01917](https://github.com/posthtml/posthtml-cli/commit/aa01917))
 * style(package): update author info ([eb8383f](https://github.com/posthtml/posthtml-cli/commit/eb8383f))
-* 0.2.5 ([06cd83c](https://github.com/posthtml/posthtml-cli/commit/06cd83c))
-* Create MAINTAINERS ([d87f6dd](https://github.com/posthtml/posthtml-cli/commit/d87f6dd))
-* return reverse to only node 6 ([a12431f](https://github.com/posthtml/posthtml-cli/commit/a12431f))
-* Update MAINTAINERS ([c2a2908](https://github.com/posthtml/posthtml-cli/commit/c2a2908))
-* chore(package): add auto node publish ([6096ac9](https://github.com/posthtml/posthtml-cli/commit/6096ac9))
 * chore(package): add auto node publish ([0ca5d7f](https://github.com/posthtml/posthtml-cli/commit/0ca5d7f))
 * chore(package): add changelog-cli generator ([ee55422](https://github.com/posthtml/posthtml-cli/commit/ee55422))
 * chore(package): add clinton ([3631eb8](https://github.com/posthtml/posthtml-cli/commit/3631eb8))
 * chore(package): add conventional changelog linter ([2fedad3](https://github.com/posthtml/posthtml-cli/commit/2fedad3))
-* chore(package): add testen for test support list node ([b044e81](https://github.com/posthtml/posthtml-cli/commit/b044e81))
 * chore(package): add testen for testin support node version ([16f98d6](https://github.com/posthtml/posthtml-cli/commit/16f98d6))
 * chore(package): change engines node support version ([5640c93](https://github.com/posthtml/posthtml-cli/commit/5640c93))
 * chore(package): change xo to eslint ([dbc509e](https://github.com/posthtml/posthtml-cli/commit/dbc509e))
@@ -424,6 +430,11 @@
 * docs(readme): add icon node support ([a70ac5d](https://github.com/posthtml/posthtml-cli/commit/a70ac5d))
 * docs(readme): add testen icons ([44c8c57](https://github.com/posthtml/posthtml-cli/commit/44c8c57))
 * docs(readme): fix linter error ([d176533](https://github.com/posthtml/posthtml-cli/commit/d176533))
+* Create MAINTAINERS ([d87f6dd](https://github.com/posthtml/posthtml-cli/commit/d87f6dd))
+* Fixed linter report error ([e6e0c16](https://github.com/posthtml/posthtml-cli/commit/e6e0c16))
+* return reverse to only node 6 ([a12431f](https://github.com/posthtml/posthtml-cli/commit/a12431f))
+* Update devDep ([dab5cc5](https://github.com/posthtml/posthtml-cli/commit/dab5cc5))
+* Update MAINTAINERS ([c2a2908](https://github.com/posthtml/posthtml-cli/commit/c2a2908))
 
 
 
@@ -431,9 +442,7 @@
 
 * bump ([89e5c62](https://github.com/posthtml/posthtml-cli/commit/89e5c62))
 * Fixed #94, try to return support old node ([203d3d7](https://github.com/posthtml/posthtml-cli/commit/203d3d7)), closes [#94](https://github.com/posthtml/posthtml-cli/issues/94)
-* Fixed linter report error ([e6e0c16](https://github.com/posthtml/posthtml-cli/commit/e6e0c16))
 * not support less node 6 ([09b1776](https://github.com/posthtml/posthtml-cli/commit/09b1776))
-* Update devDep ([dab5cc5](https://github.com/posthtml/posthtml-cli/commit/dab5cc5))
 * Update package.json ([ff9af7d](https://github.com/posthtml/posthtml-cli/commit/ff9af7d))
 * Update package.json ([345ce01](https://github.com/posthtml/posthtml-cli/commit/345ce01))
 * Update README.md ([6bcc5b0](https://github.com/posthtml/posthtml-cli/commit/6bcc5b0))
