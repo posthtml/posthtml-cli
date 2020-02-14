@@ -60,8 +60,10 @@ const read = file => new Promise(resolve => fs.readFile(file, 'utf8', (error, da
   resolve(data);
 }));
 
+const interopRequire = object => object && object.__esModule ? object.default : object;
+
 const getPlugins = config => Object.keys(config.plugins || {})
-  .map(plugin => require(plugin)(config.plugins[plugin]));
+  .map(plugin => interopRequire(require(plugin))(config.plugins[plugin]));
 
 const config = cfgResolve(cli);
 
