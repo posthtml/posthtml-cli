@@ -15,7 +15,7 @@
     "posthtml": "lib/cli.js"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=10"
   },
   "scripts": {
     "version": "conventional-changelog -i changelog.md -s -r 0 && git add changelog.md && git commit -m \"build: update changelog\"",

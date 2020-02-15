@@ -12,6 +12,8 @@
 $ npm install --global posthtml-cli
 ```
 
+> Note: This project is compatible with node v10+
+
 ## Usage
 
 ```bash
