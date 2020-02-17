@@ -4,4 +4,4 @@ module.exports = {
   plugins: [
     require('posthtml-custom-elements')()
   ]
-};
+}
