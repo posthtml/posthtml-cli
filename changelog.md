@@ -1,7 +1,20 @@
+## <small>0.5.4 (2020-02-17)</small>
+
+* build: update dep dev and move config to file ([fd39ed8](https://github.com/posthtml/posthtml-cli/commit/fd39ed8))
+* fix: require of plugin that exports ES module ([bf735d1](https://github.com/posthtml/posthtml-cli/commit/bf735d1))
+* fix: version pkg ([8a7b8c6](https://github.com/posthtml/posthtml-cli/commit/8a7b8c6))
+* chore: [BREAKING] drop node 8 ([7c6af90](https://github.com/posthtml/posthtml-cli/commit/7c6af90))
+* chore: appveyor changes ([84700dc](https://github.com/posthtml/posthtml-cli/commit/84700dc))
+* chore: refactore minor ([0161b58](https://github.com/posthtml/posthtml-cli/commit/0161b58))
+
+
+
 ## <small>0.5.2 (2020-01-21)</small>
 
-* fix: after update dep ([4ecb916](https://github.com/posthtml/posthtml-cli/commit/4ecb916))
+* 0.5.2 ([9eac9f1](https://github.com/posthtml/posthtml-cli/commit/9eac9f1))
+* build: update changelog ([f2ee8ef](https://github.com/posthtml/posthtml-cli/commit/f2ee8ef))
 * build: update dep dev ([af63894](https://github.com/posthtml/posthtml-cli/commit/af63894))
+* fix: after update dep ([4ecb916](https://github.com/posthtml/posthtml-cli/commit/4ecb916))
 
 
 
