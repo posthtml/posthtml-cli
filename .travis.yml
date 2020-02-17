@@ -3,7 +3,8 @@ node_js:
   - "node"
   - "lts/*"
   - 10
-  - 8
+  - 12
+  - 13
 
 after_success:
   - npm run coverage
