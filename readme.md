@@ -26,6 +26,7 @@ $ posthtml --help
     --output -o    Output File or Folder
     --config -c    Path to config file
     --use -u       PostHTML plugin name
+    --base -b      Mirror the directory structure relative to this path in the output directory
     --help -h      CLI Help
     --version -v   CLI Version
 
