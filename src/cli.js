@@ -16,7 +16,7 @@ const cli = meow(`
     --output -o    Output File or Folder
     --config -c    Path to config file
     --use -u       PostHTML plugin name
-    --base -b      Mirror the directory structure relative to this path in the output directory
+    --root -r      Mirror the directory structure relative to this path in the output directory
     --help -h      CLI Help
     --version -v   CLI Version
 
@@ -28,7 +28,7 @@ const cli = meow(`
     $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
     $ posthtml inputFolder/*.html -o outputFolder
     $ posthtml inputFolder/**/*.html -o outputFolder
-    $ posthtml inputFolder/**/*.html -o outputFolder -b inputFolder
+    $ posthtml inputFolder/**/*.html -o outputFolder -r inputFolder
 `, {
   flags: {
     config: {
@@ -51,9 +51,9 @@ const cli = meow(`
       type: 'array',
       alias: 'u'
     },
-    base: {
+    root: {
       type: 'string',
-      alias: 'b'
+      alias: 'r'
     }
   }
 });
@@ -74,7 +74,7 @@ const getPlugins = config => Object.keys(config.plugins || {})
 const config = cfgResolve(cli);
 
 const processing = async file => {
-  const output = await outResolve(file, config.output, config.base);
+  const output = await outResolve(file, config.output, config.root);
   const plugins = Array.isArray(config.plugins) ? config.plugins : getPlugins(config);
 
   makeDir(path.dirname(output))
