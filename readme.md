@@ -23,13 +23,13 @@ $ posthtml --help
     $ posthtml <patterns>
 
   Options:
-    --output -o    Output File or Folder
-    --config -c    Path to config file
-    --use -u       PostHTML plugin name
-    --root -r      Mirror the directory structure relative to this path in the output directory(default: .)
+    --output -o      Output File or Folder
+    --config -c      Path to config file
+    --use -u         PostHTML plugin name
+    --root -r        Mirror the directory structure relative to this path in the output directory(default: .)
     --allInOutput -a Save the nesting structure for output
-    --help -h      CLI Help
-    --version -v   CLI Version
+    --help -h        CLI Help
+    --version -v     CLI Version
 
   Examples:
     $ posthtml input.html
