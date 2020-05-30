@@ -26,7 +26,8 @@ $ posthtml --help
     --output -o    Output File or Folder
     --config -c    Path to config file
     --use -u       PostHTML plugin name
-    --root -r      Mirror the directory structure relative to this path in the output directory
+    --root -r      Mirror the directory structure relative to this path in the output directory(default: .)
+    --allInOutput -a Save the nesting structure for output
     --help -h      CLI Help
     --version -v   CLI Version
 
@@ -37,7 +38,8 @@ $ posthtml --help
     $ posthtml input.html -o output.html -c posthtml.js
     $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
     $ posthtml inputFolder/*.html -o outputFolder
-    $ posthtml inputFolder/**/*.html -o outputFolder
+    $ posthtml inputFolder/**/*.html -o outputFolder -a
+    $ posthtml inputFolder/**/*.html -o outputFolder -a -r inputFolder
 ```
 
 ## Options
