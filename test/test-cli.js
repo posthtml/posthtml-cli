@@ -201,3 +201,43 @@ test('Transform html stdin options only config one-io anf plugins array', async 
     (await read('test/fixtures/by-config/one-io-and-plugins-array/input.html'))
   );
 });
+
+test('Output with keeping the folder structure with allInOutput option', async t => {
+  t.plan(3);
+  await execa(cli, [
+    'test/fixtures/input-nesting/**/*.html',
+    '-o',
+    'test/expected/output-nesting',
+    '-a'
+  ]);
+  t.true(await pathExists('test/expected/output-nesting'));
+  t.is(
+    (await read('test/fixtures/input-nesting/input-nesting.html')),
+    (await read('test/expected/output-nesting/test/fixtures/input-nesting/input-nesting.html'))
+  );
+  t.is(
+    (await read('test/fixtures/input-nesting/input-nesting-child/input-nesting.html')),
+    (await read('test/expected/output-nesting/test/fixtures/input-nesting/input-nesting-child/input-nesting.html'))
+  );
+});
+
+test('Specify the root of the output folder structure with root option', async t => {
+  t.plan(3);
+  await execa(cli, [
+    'test/fixtures/input-nesting/**/*.html',
+    '-o',
+    'test/expected/output-nesting-root',
+    '-a',
+    '-r',
+    'test/fixtures/input-nesting'
+  ]);
+  t.true(await pathExists('test/expected/output-nesting-root'));
+  t.is(
+    (await read('test/fixtures/input-nesting/input-nesting.html')),
+    (await read('test/expected/output-nesting-root/input-nesting.html'))
+  );
+  t.is(
+    (await read('test/fixtures/input-nesting/input-nesting-child/input-nesting.html')),
+    (await read('test/expected/output-nesting-root/input-nesting-child/input-nesting.html'))
+  );
+});
