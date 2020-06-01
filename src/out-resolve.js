@@ -1,6 +1,6 @@
 import path from 'path';
 
-export default (input, {output, root, allInOutput}) => new Promise(resolve => {
+export default (input, {output, root, allInOutput} = {}) => new Promise(resolve => {
   if (output && path.extname(output)) {
     return resolve(output);
   }
@@ -11,8 +11,9 @@ export default (input, {output, root, allInOutput}) => new Promise(resolve => {
     if (allInOutput) {
       inputPath = path.relative(root, input);
     }
+
     return resolve(path.join(output, inputPath));
   }
 
-  resolve(input);
+  return resolve(input);
 });
