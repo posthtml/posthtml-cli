@@ -80,7 +80,7 @@ const getPlugins = config => Object.keys(config.plugins || {})
 const config = cfgResolve(cli);
 
 const processing = async file => {
-  const output = await outResolve(file, config.output, config.root, config.allInOutput);
+  const output = await outResolve(file, config);
   const plugins = Array.isArray(config.plugins) ? config.plugins : getPlugins(config);
 
   makeDir(path.dirname(output))
