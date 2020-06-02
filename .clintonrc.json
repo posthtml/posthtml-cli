@@ -9,6 +9,7 @@
   "rules": {
     "cli": "off",
     "xo": "off",
-    "ava": "off"
+    "ava": "off",
+    "use-travis": "off"
   }
 }
