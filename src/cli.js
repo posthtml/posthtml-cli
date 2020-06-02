@@ -13,11 +13,13 @@ const cli = meow(`
   Usage: posthtml <patterns>
 
   Options:
-    --output -o    Output File or Folder
-    --config -c    Path to config file
-    --use -u       PostHTML plugin name
-    --help -h      CLI Help
-    --version -v   CLI Version
+    --output -o      Output File or Folder
+    --config -c      Path to config file
+    --use -u         PostHTML plugin name
+    --root -r        Mirror the directory structure relative to this path in the output directory(default: .)
+    --allInOutput -a Save the nesting structure for output
+    --help -h        CLI Help
+    --version -v     CLI Version
 
   Examples:
     $ posthtml input.html
@@ -26,7 +28,8 @@ const cli = meow(`
     $ posthtml input.html -o output.html -c posthtml.js
     $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
     $ posthtml inputFolder/*.html -o outputFolder
-    $ posthtml inputFolder/**/*.html -o outputFolder
+    $ posthtml inputFolder/**/*.html -o outputFolder -a
+    $ posthtml inputFolder/**/*.html -o outputFolder -a -r inputFolder
 `, {
   flags: {
     config: {
@@ -48,6 +51,15 @@ const cli = meow(`
     use: {
       type: 'array',
       alias: 'u'
+    },
+    root: {
+      type: 'string',
+      alias: 'r',
+      default: '.'
+    },
+    allInOutput: {
+      type: 'boolean',
+      alias: 'a'
     }
   }
 });
@@ -68,7 +80,7 @@ const getPlugins = config => Object.keys(config.plugins || {})
 const config = cfgResolve(cli);
 
 const processing = async file => {
-  const output = await outResolve(file, config.output);
+  const output = await outResolve(file, config);
   const plugins = Array.isArray(config.plugins) ? config.plugins : getPlugins(config);
 
   makeDir(path.dirname(output))
