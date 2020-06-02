@@ -49,8 +49,9 @@ const cli = meow(`
       alias: 'o'
     },
     use: {
-      type: 'array',
-      alias: 'u'
+      type: 'string',
+      alias: 'u',
+      isMultiple: true
     },
     root: {
       type: 'string',
@@ -84,7 +85,7 @@ const processing = async file => {
   const plugins = Array.isArray(config.plugins) ? config.plugins : getPlugins(config);
 
   makeDir(path.dirname(output))
-    .then(read.bind(null, file))
+    .then(read.bind(undefined, file))
     .then(html => posthtml(plugins).process(html))
     .then(({html}) => {
       fs.writeFile(output, html, error => {
