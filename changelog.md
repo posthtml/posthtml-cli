@@ -1,5 +1,27 @@
+## 0.6.0 (2020-06-02)
+
+* ci: add nyc config ([3c23315](https://github.com/posthtml/posthtml-cli/commit/3c23315))
+* ci: enable package lock ([52b5eda](https://github.com/posthtml/posthtml-cli/commit/52b5eda))
+* ci: migrate to github action, close #299 ([fe8e6c3](https://github.com/posthtml/posthtml-cli/commit/fe8e6c3)), closes [#299](https://github.com/posthtml/posthtml-cli/issues/299)
+* ci: off use travis ([13b31e3](https://github.com/posthtml/posthtml-cli/commit/13b31e3))
+* docs: readme.md space adjustment ([13af1fc](https://github.com/posthtml/posthtml-cli/commit/13af1fc))
+* docs: update github badges ([f0c75ef](https://github.com/posthtml/posthtml-cli/commit/f0c75ef))
+* style: after update dep dev ([ec75743](https://github.com/posthtml/posthtml-cli/commit/ec75743))
+* build: update dep dev ([dc9f63c](https://github.com/posthtml/posthtml-cli/commit/dc9f63c))
+* test: add tests for allInOutput and root options ([362a00b](https://github.com/posthtml/posthtml-cli/commit/362a00b))
+* test: added timeout option to test script ([279ad8b](https://github.com/posthtml/posthtml-cli/commit/279ad8b))
+* test: rename base to root ([cbe615e](https://github.com/posthtml/posthtml-cli/commit/cbe615e))
+* test: test modified to argument changes ([785d64c](https://github.com/posthtml/posthtml-cli/commit/785d64c))
+* refactor: code refactor ([59cdbf1](https://github.com/posthtml/posthtml-cli/commit/59cdbf1))
+* feat: add allInOutput option ([2bdc8be](https://github.com/posthtml/posthtml-cli/commit/2bdc8be)), closes [/github.com/posthtml/posthtml-cli/pull/298#pullrequestreview-420695022](https://github.com//github.com/posthtml/posthtml-cli/pull/298/issues/pullrequestreview-420695022)
+* feat: base option ([d334ebe](https://github.com/posthtml/posthtml-cli/commit/d334ebe))
+
+
+
 ## <small>0.5.4 (2020-02-17)</small>
 
+* 0.5.4 ([7740663](https://github.com/posthtml/posthtml-cli/commit/7740663))
+* build: update changelog ([1eedf68](https://github.com/posthtml/posthtml-cli/commit/1eedf68))
 * build: update dep dev and move config to file ([fd39ed8](https://github.com/posthtml/posthtml-cli/commit/fd39ed8))
 * fix: require of plugin that exports ES module ([bf735d1](https://github.com/posthtml/posthtml-cli/commit/bf735d1))
 * fix: version pkg ([8a7b8c6](https://github.com/posthtml/posthtml-cli/commit/8a7b8c6))

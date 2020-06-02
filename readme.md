@@ -2,7 +2,7 @@
 
 > [PostHTML][posthtml-url] сommand line interface
 
-[![Trasiv Build Status][travis-image]][travis-url][![AppVeyor Build Status][appveyor-img]][appveyor][![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Dependency Status][depstat-image]][depstat-url][![XO code style][style]][style-url][![Coveralls Status][coveralls-image]][coveralls-url]
+[![Actions Status](https://github.com/posthtml/posthtml-cli/workflows/Actions%20Status/badge.svg?style=flat-square)](https://github.com/posthtml/posthtml-cli/actions?query=workflow%3A%22CI+tests%22)[![node][node-image]][node-url][![NPM version][npm-image]][npm-url][![Dependency Status][depstat-image]][depstat-url][![XO code style][style]][style-url][![Coveralls Status][coveralls-image]][coveralls-url]
 
 [![npm downloads][npm-download-image]][npm-download-url][![npm][npm-total-download-image]][npm-total-download-url][![Package Quality][pkg-q-image]][pkg-q-url]
 
@@ -71,10 +71,6 @@ $ posthtml --help
 [npm-image]: http://img.shields.io/npm/v/posthtml-cli.svg?style=flat-square
 [testen-url]: https://github.com/egoist/testen
 [testen-image]: https://img.shields.io/badge/testen-passing-brightgreen.svg?style=flat-square
-[travis-url]: https://travis-ci.org/posthtml/posthtml-cli
-[travis-image]: http://img.shields.io/travis/posthtml/posthtml-cli/master.svg?style=flat-square&label=unix
-[appveyor]: https://ci.appveyor.com/project/GitScrum/posthtml-cli
-[appveyor-img]: https://img.shields.io/appveyor/ci/GitScrum/posthtml-cli/master.svg?style=flat-square&label=windows
 [coveralls-url]: https://coveralls.io/r/posthtml/posthtml-cli
 [coveralls-image]: http://img.shields.io/coveralls/posthtml/posthtml-cli.svg?style=flat-square
 [depstat-url]: https://david-dm.org/posthtml/posthtml-cli
