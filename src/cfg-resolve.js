@@ -23,5 +23,5 @@ export default ({input, flags = {}}) => {
     output,
     root,
     allInOutput
-  }, use || {}, config || {});
+  }, config || {}, use || {});
 };
