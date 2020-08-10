@@ -30,7 +30,7 @@ test('should return config with one use key with one property', async t => {
 
 test('should return config with key config', async t => {
   const flags = {
-    config: 'test/config/.config'
+    config: 'test/config/.config-plugins'
   };
   const config = await cfgResolve({flags});
   const expected = {'posthtml-bem': {}};
@@ -41,11 +41,27 @@ test('should return config with key config', async t => {
 test('should return config with key config and use key', async t => {
   const flags = {
     use: 'posthtml-assets',
-    config: 'test/config/.config'
+    config: 'test/config/.config-plugins'
   };
   const config = await cfgResolve({flags});
   const expected = {'posthtml-bem': {}, 'posthtml-assets': {}};
 
   t.deepEqual(config.plugins, expected);
+});
+
+test('should return config when CLI params priority', async t => {
+  const input = {input: 'src/template/**/*.html'};
+  const flags = {
+    config: 'test/config/.config-input-priority'
+  };
+  const config = await cfgResolve({input, flags});
+  const expected = {
+    allInOutput: undefined,
+    input: 'src/template/**/*.html',
+    output: undefined,
+    root: './'
+  };
+
+  t.deepEqual(config, expected);
 });
 
