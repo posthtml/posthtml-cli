@@ -50,7 +50,7 @@ test('should return config with key config and use key', async t => {
 });
 
 test('should return config when CLI params priority', async t => {
-  const input = {input: 'src/template/**/*.html'};
+  const input = 'src/template/**/*.html';
   const flags = {
     config: 'test/config/.config-input-priority'
   };
