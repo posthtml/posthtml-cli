@@ -1,5 +1,20 @@
+## 0.7.0 (2020-08-10)
+
+* build: update dep dev ([129e717](https://github.com/posthtml/posthtml-cli/commit/129e717))
+* fix: after change use priority ([5b41e62](https://github.com/posthtml/posthtml-cli/commit/5b41e62))
+* fix: override config file options via CLI args, close #304 ([e1f1334](https://github.com/posthtml/posthtml-cli/commit/e1f1334)), closes [#304](https://github.com/posthtml/posthtml-cli/issues/304)
+* fix: priority use higher than config ([e41d220](https://github.com/posthtml/posthtml-cli/commit/e41d220))
+* fix: test for issue #304 ([51f9190](https://github.com/posthtml/posthtml-cli/commit/51f9190)), closes [#304](https://github.com/posthtml/posthtml-cli/issues/304)
+* test: override config file options via CLI args, issue #304 ([c6f50d5](https://github.com/posthtml/posthtml-cli/commit/c6f50d5)), closes [#304](https://github.com/posthtml/posthtml-cli/issues/304)
+* perf: off no reduce ([9815f80](https://github.com/posthtml/posthtml-cli/commit/9815f80))
+
+
+
 ## 0.6.0 (2020-06-02)
 
+* 0.6.0 ([153a9d7](https://github.com/posthtml/posthtml-cli/commit/153a9d7))
+* build: update changelog ([bc8f8ce](https://github.com/posthtml/posthtml-cli/commit/bc8f8ce))
+* build: update dep dev ([dc9f63c](https://github.com/posthtml/posthtml-cli/commit/dc9f63c))
 * ci: add nyc config ([3c23315](https://github.com/posthtml/posthtml-cli/commit/3c23315))
 * ci: enable package lock ([52b5eda](https://github.com/posthtml/posthtml-cli/commit/52b5eda))
 * ci: migrate to github action, close #299 ([fe8e6c3](https://github.com/posthtml/posthtml-cli/commit/fe8e6c3)), closes [#299](https://github.com/posthtml/posthtml-cli/issues/299)
@@ -7,7 +22,6 @@
 * docs: readme.md space adjustment ([13af1fc](https://github.com/posthtml/posthtml-cli/commit/13af1fc))
 * docs: update github badges ([f0c75ef](https://github.com/posthtml/posthtml-cli/commit/f0c75ef))
 * style: after update dep dev ([ec75743](https://github.com/posthtml/posthtml-cli/commit/ec75743))
-* build: update dep dev ([dc9f63c](https://github.com/posthtml/posthtml-cli/commit/dc9f63c))
 * test: add tests for allInOutput and root options ([362a00b](https://github.com/posthtml/posthtml-cli/commit/362a00b))
 * test: added timeout option to test script ([279ad8b](https://github.com/posthtml/posthtml-cli/commit/279ad8b))
 * test: rename base to root ([cbe615e](https://github.com/posthtml/posthtml-cli/commit/cbe615e))

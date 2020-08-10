@@ -4,7 +4,7 @@ import mergeOptions from 'merge-options';
 
 export default ({input, flags = {}}) => {
   const explorer = cosmiconfigSync('posthtml');
-  let {config, use, output, root, allInOutput} = flags;
+  let {config, use, output, root = './', allInOutput} = flags;
 
   if (config) {
     ({config} = explorer.load(config));
@@ -18,10 +18,10 @@ export default ({input, flags = {}}) => {
     ({config} = explorer.search());
   }
 
-  return mergeOptions({
+  return mergeOptions(config || {}, {
     input,
     output,
     root,
     allInOutput
-  }, use || {}, config || {});
+  }, use || {});
 };

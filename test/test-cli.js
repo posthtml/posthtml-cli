@@ -115,15 +115,15 @@ test('Transform html witch stdin options use two key', async t => {
     '-o',
     filename,
     '-u',
+    'posthtml-custom-elements',
+    '--posthtml-custom-elements.defaultTag',
+    'span',
+    '-u',
     'posthtml-bem',
     '--posthtml-bem.elemPrefix=--',
     '--posthtml-bem.modPrefix',
     '_',
-    '--posthtml-bem.modDlmtr',
-    '-u',
-    'posthtml-custom-elements',
-    '--posthtml-custom-elements.defaultTag',
-    'span'
+    '--posthtml-bem.modDlmtr'
   ]);
   t.true(await pathExists(filename));
   t.is((await read('test/expected/output-bem.html')), (await read(filename)));
