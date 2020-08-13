@@ -8,13 +8,15 @@ import readPkg from 'read-pkg';
 import tempfile from 'tempfile';
 
 const cli = path.resolve('lib/cli.js');
-const read = file => new Promise((resolve, reject) => fs.readFile(file, 'utf8', (error, data) => {
-  if (error) {
-    return reject(error);
-  }
+const read = file => new Promise((resolve, reject) => {
+  fs.readFile(file, 'utf8', (error, data) => {
+    if (error) {
+      return reject(error);
+    }
 
-  resolve(data);
-}));
+    resolve(data);
+  });
+});
 
 test('Check version', async t => {
   const {stdout} = await execa(cli, ['-v']);
@@ -143,6 +145,19 @@ test('Transform html stdin options use witch modules', async t => {
   ]);
   t.true(await pathExists(filename));
   t.is((await read('test/expected/output-modules.html')), (await read(filename)));
+});
+
+test('Transform html stdin options', async t => {
+  t.plan(2);
+  await execa(cli, [
+    '-c',
+    'test/fixtures/by-config/options/.config'
+  ]);
+  t.true(await pathExists('test/expected/by-config/options/output.html'));
+  t.is(
+    (await read('test/expected/by-config/options/output.html')),
+    (await read('test/fixtures/by-config/options/input.html'))
+  );
 });
 
 test('Transform html stdin options only config one-io', async t => {

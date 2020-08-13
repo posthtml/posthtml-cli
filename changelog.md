@@ -1,5 +1,17 @@
+## <small>0.7.1 (2020-08-13)</small>
+
+* build: update dep dev ([dc8b828](https://github.com/posthtml/posthtml-cli/commit/dc8b828))
+* fix: options for procees from config, close #306 ([f4d3eed](https://github.com/posthtml/posthtml-cli/commit/f4d3eed)), closes [#306](https://github.com/posthtml/posthtml-cli/issues/306)
+* test: for options in config, issue #306 ([a0e093a](https://github.com/posthtml/posthtml-cli/commit/a0e093a)), closes [#306](https://github.com/posthtml/posthtml-cli/issues/306)
+* test: for resolve options in config ([80b70ff](https://github.com/posthtml/posthtml-cli/commit/80b70ff))
+* perf: resolve options in config ([dbbbee8](https://github.com/posthtml/posthtml-cli/commit/dbbbee8))
+
+
+
 ## 0.7.0 (2020-08-10)
 
+* 0.7.0 ([2b605dc](https://github.com/posthtml/posthtml-cli/commit/2b605dc))
+* build: update changelog ([77b8cb5](https://github.com/posthtml/posthtml-cli/commit/77b8cb5))
 * build: update dep dev ([129e717](https://github.com/posthtml/posthtml-cli/commit/129e717))
 * fix: after change use priority ([5b41e62](https://github.com/posthtml/posthtml-cli/commit/5b41e62))
 * fix: override config file options via CLI args, close #304 ([e1f1334](https://github.com/posthtml/posthtml-cli/commit/e1f1334)), closes [#304](https://github.com/posthtml/posthtml-cli/issues/304)

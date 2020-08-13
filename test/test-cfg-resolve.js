@@ -28,7 +28,7 @@ test('should return config with one use key with one property', async t => {
   t.deepEqual(config.plugins, expected);
 });
 
-test('should return config with key config', async t => {
+test('should return config with key config plugins', async t => {
   const flags = {
     config: 'test/config/.config-plugins'
   };
@@ -36,6 +36,26 @@ test('should return config with key config', async t => {
   const expected = {'posthtml-bem': {}};
 
   t.deepEqual(config.plugins, expected);
+});
+
+test('should return config with key config options', async t => {
+  const flags = {
+    config: 'test/config/.config-options'
+  };
+  const config = await cfgResolve({flags});
+  const expected = {sync: true};
+
+  t.deepEqual(config.options, expected);
+});
+
+test('should return config options', async t => {
+  const flags = {
+    options: {sync: true}
+  };
+  const config = await cfgResolve({flags});
+  const expected = {sync: true};
+
+  t.deepEqual(config.options, expected);
 });
 
 test('should return config with key config and use key', async t => {
@@ -55,13 +75,8 @@ test('should return config when CLI params priority', async t => {
     config: 'test/config/.config-input-priority'
   };
   const config = await cfgResolve({input, flags});
-  const expected = {
-    allInOutput: undefined,
-    input: 'src/template/**/*.html',
-    output: undefined,
-    root: './'
-  };
+  const expected = 'src/template/**/*.html';
 
-  t.deepEqual(config, expected);
+  t.deepEqual(config.input, expected);
 });
 
