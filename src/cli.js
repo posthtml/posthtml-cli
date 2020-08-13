@@ -53,6 +53,11 @@ const cli = meow(`
       alias: 'u',
       isMultiple: true
     },
+    // https://github.com/sindresorhus/meow/issues/158
+    // options: {
+    //   type: 'string',
+    //   isMultiple: true
+    // },
     root: {
       type: 'string',
       alias: 'r',
@@ -65,13 +70,15 @@ const cli = meow(`
   }
 });
 
-const read = file => new Promise(resolve => fs.readFile(file, 'utf8', (error, data) => {
-  if (error) {
-    console.warn(error);
-  }
+const read = file => new Promise(resolve => {
+  fs.readFile(file, 'utf8', (error, data) => {
+    if (error) {
+      console.warn(error);
+    }
 
-  resolve(data);
-}));
+    resolve(data);
+  });
+});
 
 const interopRequire = object => object && object.__esModule ? object.default : object;
 
@@ -86,7 +93,7 @@ const processing = async file => {
 
   makeDir(path.dirname(output))
     .then(read.bind(undefined, file))
-    .then(html => posthtml(plugins).process(html))
+    .then(html => Promise.resolve(posthtml(plugins).process(html, config.options)))
     .then(({html}) => {
       fs.writeFile(output, html, error => {
         if (error) {
