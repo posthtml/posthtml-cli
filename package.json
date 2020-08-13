@@ -23,7 +23,7 @@
     "build": "rimraf lib && babel src -d lib",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pretest": "npm run build",
-    "test": "nyc ava --timeout=1m --verbose"
+    "test": "nyc ava test/test-cli.js --timeout=1m --verbose"
   },
   "files": [
     "lib/"
@@ -37,9 +37,9 @@
     "cosmiconfig": "^7.0.0",
     "fast-glob": "^3.2.4",
     "make-dir": "^3.0.0",
-    "meow": "^7.0.1",
+    "meow": "^7.1.0",
     "merge-options": "^2.0.0",
-    "posthtml": "^0.13.1",
+    "posthtml": "^0.13.2",
     "to-camel-case": "^1.0.0"
   },
   "devDependencies": {
@@ -50,12 +50,12 @@
     "@babel/register": "^7.10.5",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-angular": "^9.1.1",
-    "acorn": "^7.4.0",
+    "acorn": "^8.0.1",
     "ava": "^3.11.1",
     "babel-eslint": "^10.0.3",
     "babel-preset-minify": "^0.5.1",
     "clinton": "^0.14.0",
-    "conventional-changelog-cli": "^2.0.31",
+    "conventional-changelog-cli": "^2.1.0",
     "coveralls": "^3.0.9",
     "cpy": "^8.0.0",
     "eslint": "^7.6.0",
