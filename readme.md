@@ -47,8 +47,13 @@ $ posthtml --help
 
 ```json
 {
-  "input": "src/*.html",
+  "root": "src",
+  "input": "*.html",
   "output": "dist",
+  "options": {
+    "sync": true,
+    "directives": [{"name": "?php", "start": "<", "end": ">"}]
+  },
   "plugins": {
     "posthtml-plugin-name": {
       "property": "value"
