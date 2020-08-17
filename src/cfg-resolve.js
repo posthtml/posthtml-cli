@@ -1,3 +1,4 @@
+import path from 'path';
 import {cosmiconfigSync} from 'cosmiconfig';
 import toCamelCase from 'to-camel-case';
 import mergeOptions from 'merge-options';
@@ -19,7 +20,7 @@ export default ({input, flags = {}}) => {
   }
 
   return mergeOptions(config || {}, {
-    input,
+    input: input.map(file => path.join(path.resolve(root), file)),
     output,
     options,
     root,
