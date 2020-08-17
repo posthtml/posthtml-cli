@@ -1,5 +1,18 @@
+## <small>0.7.2 (2020-08-17)</small>
+
+* build: commit lint incorrect work on v9.1.2, #312 ([255ceb1](https://github.com/posthtml/posthtml-cli/commit/255ceb1)), closes [#312](https://github.com/posthtml/posthtml-cli/issues/312)
+* build: update dep dev ([44a79b3](https://github.com/posthtml/posthtml-cli/commit/44a79b3))
+* ci: skip test on window, #308 ([850c93a](https://github.com/posthtml/posthtml-cli/commit/850c93a)), closes [#308](https://github.com/posthtml/posthtml-cli/issues/308)
+* docs: describe list input file to folder ([e6d06a0](https://github.com/posthtml/posthtml-cli/commit/e6d06a0))
+* docs: describe posthtml options and root param, close #310 ([f77f469](https://github.com/posthtml/posthtml-cli/commit/f77f469)), closes [#310](https://github.com/posthtml/posthtml-cli/issues/310)
+* fix: resolve input from root, close #303 ([5ec996f](https://github.com/posthtml/posthtml-cli/commit/5ec996f)), closes [#303](https://github.com/posthtml/posthtml-cli/issues/303)
+
+
+
 ## <small>0.7.1 (2020-08-13)</small>
 
+* 0.7.1 ([0813824](https://github.com/posthtml/posthtml-cli/commit/0813824))
+* build: update changelog ([10fa016](https://github.com/posthtml/posthtml-cli/commit/10fa016))
 * build: update dep dev ([dc8b828](https://github.com/posthtml/posthtml-cli/commit/dc8b828))
 * fix: options for procees from config, close #306 ([f4d3eed](https://github.com/posthtml/posthtml-cli/commit/f4d3eed)), closes [#306](https://github.com/posthtml/posthtml-cli/issues/306)
 * test: for options in config, issue #306 ([a0e093a](https://github.com/posthtml/posthtml-cli/commit/a0e093a)), closes [#306](https://github.com/posthtml/posthtml-cli/issues/306)

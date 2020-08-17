@@ -35,6 +35,7 @@ $ posthtml --help
     $ posthtml input.html
     $ posthtml input.html -o output.html
     $ posthtml inputFolder/*.html !unicorn.html
+    $ posthtml input-one.html input-two.html -o outputFolder
     $ posthtml input.html -o output.html -c posthtml.js
     $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
     $ posthtml inputFolder/*.html -o outputFolder
@@ -46,8 +47,13 @@ $ posthtml --help
 
 ```json
 {
-  "input": "src/*.html",
+  "root": "src",
+  "input": "*.html",
   "output": "dist",
+  "options": {
+    "sync": true,
+    "directives": [{"name": "?php", "start": "<", "end": ">"}]
+  },
   "plugins": {
     "posthtml-plugin-name": {
       "property": "value"
