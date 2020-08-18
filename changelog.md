@@ -1,6 +1,29 @@
+## <small>0.7.3 (2020-08-18)</small>
+
+* perf: default for base config ([8d93107](https://github.com/posthtml/posthtml-cli/commit/8d93107))
+* perf: tree options from for plugins, #303 ([981e911](https://github.com/posthtml/posthtml-cli/commit/981e911)), closes [#303](https://github.com/posthtml/posthtml-cli/issues/303)
+* test: async/await not needed ([3165971](https://github.com/posthtml/posthtml-cli/commit/3165971))
+* test: default for base config ([7a96127](https://github.com/posthtml/posthtml-cli/commit/7a96127))
+* test: fix input file param, issue #308,#313 ([d76f655](https://github.com/posthtml/posthtml-cli/commit/d76f655)), closes [#308](https://github.com/posthtml/posthtml-cli/issues/308) [#313](https://github.com/posthtml/posthtml-cli/issues/313)
+* test: fix not remove expected files/folders ([f744687](https://github.com/posthtml/posthtml-cli/commit/f744687))
+* test: fix one/two io ([e72206a](https://github.com/posthtml/posthtml-cli/commit/e72206a))
+* test: if input not found ([4360836](https://github.com/posthtml/posthtml-cli/commit/4360836))
+* test: input from config, issue #308,#313 ([c8f9a54](https://github.com/posthtml/posthtml-cli/commit/c8f9a54)), closes [#308](https://github.com/posthtml/posthtml-cli/issues/308) [#313](https://github.com/posthtml/posthtml-cli/issues/313)
+* test: output resolve from config, issue #308 ([c13d78b](https://github.com/posthtml/posthtml-cli/commit/c13d78b)), closes [#308](https://github.com/posthtml/posthtml-cli/issues/308)
+* test: resolve output when CLI priority ([4ad0c33](https://github.com/posthtml/posthtml-cli/commit/4ad0c33))
+* fix: input map is not defined ([144a101](https://github.com/posthtml/posthtml-cli/commit/144a101))
+* fix: resolve incommitg input, close #313 ([4540719](https://github.com/posthtml/posthtml-cli/commit/4540719)), closes [#313](https://github.com/posthtml/posthtml-cli/issues/313)
+* fix: resolve or error inputs file, close #313 ([0b53fa2](https://github.com/posthtml/posthtml-cli/commit/0b53fa2)), closes [#313](https://github.com/posthtml/posthtml-cli/issues/313)
+* fix: resolve output from config, close #308 ([8588060](https://github.com/posthtml/posthtml-cli/commit/8588060)), closes [#308](https://github.com/posthtml/posthtml-cli/issues/308)
+* build: up node targets for preset env ([3a01485](https://github.com/posthtml/posthtml-cli/commit/3a01485))
+
+
+
 ## <small>0.7.2 (2020-08-17)</small>
 
+* 0.7.2 ([81b6217](https://github.com/posthtml/posthtml-cli/commit/81b6217))
 * build: commit lint incorrect work on v9.1.2, #312 ([255ceb1](https://github.com/posthtml/posthtml-cli/commit/255ceb1)), closes [#312](https://github.com/posthtml/posthtml-cli/issues/312)
+* build: update changelog ([83181f7](https://github.com/posthtml/posthtml-cli/commit/83181f7))
 * build: update dep dev ([44a79b3](https://github.com/posthtml/posthtml-cli/commit/44a79b3))
 * ci: skip test on window, #308 ([850c93a](https://github.com/posthtml/posthtml-cli/commit/850c93a)), closes [#308](https://github.com/posthtml/posthtml-cli/issues/308)
 * docs: describe list input file to folder ([e6d06a0](https://github.com/posthtml/posthtml-cli/commit/e6d06a0))
