@@ -19,8 +19,17 @@ export default ({input, flags = {}}) => {
     ({config} = explorer.search());
   }
 
+  input = []
+    .concat(input || config?.input)
+    .filter(Boolean)
+    .map(file => path.join(path.resolve(root), file));
+
+  if (input.length === 0) {
+    throw new TypeError('input files not found');
+  }
+
   return mergeOptions(config || {}, {
-    input: [].concat(input).map(file => path.join(path.resolve(root), file)),
+    input,
     output,
     options,
     root,
