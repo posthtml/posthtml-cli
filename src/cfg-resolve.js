@@ -27,7 +27,7 @@ export default ({input, flags = {}}) => {
   }
 
   input = []
-    .concat(input.length > 0 ? input : config?.input)
+    .concat(input && input.length > 0 ? input : config?.input)
     .filter(Boolean)
     .map(file => path.join(path.resolve(root), file));
 
