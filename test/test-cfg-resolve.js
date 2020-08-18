@@ -5,6 +5,14 @@ test('should return function', t => {
   t.true(typeof cfgResolve === 'function');
 });
 
+test('should throw error `input files not found`', t => {
+  const error = t.throws(() => {
+    cfgResolve({});
+  }, {instanceOf: TypeError});
+
+  t.is(error.message, 'input files not found');
+});
+
 test('should return config with one use key without property', async t => {
   const flags = {
     use: 'posthtml-bem'
