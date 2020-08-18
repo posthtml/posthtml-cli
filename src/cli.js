@@ -94,7 +94,7 @@ const processing = async file => {
 
   makeDir(path.dirname(output))
     .then(read.bind(undefined, file))
-    .then(html => Promise.resolve(posthtml(plugins).process(html, config.options)))
+    .then(html => Promise.resolve(posthtml(plugins).process(html, {...config.options, from: file})))
     .then(({html}) => {
       fs.writeFile(output, html, error => {
         if (error) {
