@@ -61,10 +61,11 @@ const cli = meow(`
     root: {
       type: 'string',
       alias: 'r',
-      default: '.'
+      default: './'
     },
     allInOutput: {
       type: 'boolean',
+      default: false,
       alias: 'a'
     }
   }
