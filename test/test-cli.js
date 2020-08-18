@@ -6,6 +6,7 @@ import pathExists from 'path-exists';
 import readPkg from 'read-pkg';
 // import copy from 'cpy';
 import tempfile from 'tempfile';
+import rimraf from 'rimraf';
 
 const cli = path.resolve('lib/cli.js');
 const read = file => new Promise((resolve, reject) => {
@@ -148,111 +149,127 @@ test('Transform html stdin options use witch modules', async t => {
 });
 
 test('Transform html stdin options', async t => {
+  const outputPath = 'test/expected/by-config/options/output.html';
+  rimraf.sync(outputPath);
   t.plan(2);
   await execa(cli, [
     '-c',
     'test/fixtures/by-config/options/.config'
   ]);
-  t.true(await pathExists('test/expected/by-config/options/output.html'));
+  t.true(await pathExists(outputPath));
   t.is(
-    (await read('test/expected/by-config/options/output.html')),
+    (await read(outputPath)),
     (await read('test/fixtures/by-config/options/input.html'))
   );
 });
 
 test('Transform html stdin options only config one-io', async t => {
+  const outputPath = 'test/expected/by-config/one-io/output.html';
+  rimraf.sync(outputPath);
   t.plan(2);
   await execa(cli, [
     '-c',
     'test/fixtures/by-config/one-io/.config'
   ]);
-  t.true(await pathExists('test/expected/by-config/one-io/output.html'));
+  t.true(await pathExists(outputPath));
   t.is(
-    (await read('test/expected/by-config/one-io/output.html')),
+    (await read(outputPath)),
     (await read('test/fixtures/by-config/one-io/input.html'))
   );
 });
 
 test('Transform html stdin options only config two-io to dir', async t => {
+  const outputPath1 = 'test/expected/by-config/two-io/input-1.html';
+  const outputPath2 = 'test/expected/by-config/two-io/input-2.html';
+  rimraf.sync(outputPath1);
+  rimraf.sync(outputPath2);
   t.plan(4);
   await execa(cli, [
     '-c',
     'test/fixtures/by-config/two-io/.config'
   ]);
-  t.true(await pathExists('test/expected/by-config/two-io/input-1.html'));
-  t.true(await pathExists('test/expected/by-config/two-io/input-2.html'));
+  t.true(await pathExists(outputPath1));
+  t.true(await pathExists(outputPath2));
   t.is(
-    (await read('test/expected/by-config/two-io/input-1.html')),
+    (await read(outputPath1)),
     (await read('test/fixtures/by-config/two-io/input-1.html'))
   );
   t.is(
-    (await read('test/expected/by-config/two-io/input-2.html')),
+    (await read(outputPath2)),
     (await read('test/fixtures/by-config/two-io/input-2.html'))
   );
 });
 
 test('Transform html stdin options only config one-io-by-pattern', async t => {
+  const outputPath = 'test/expected/by-config/one-io-by-pattern/input-1.html';
+  rimraf.sync(outputPath);
   t.plan(2);
   await execa(cli, [
     '-c',
     'test/fixtures/by-config/one-io-by-pattern/.config'
   ]);
-  t.true(await pathExists('test/expected/by-config/one-io-by-pattern/input-1.html'));
+  t.true(await pathExists(outputPath));
   t.is(
-    (await read('test/expected/by-config/one-io-by-pattern/input-1.html')),
+    (await read(outputPath)),
     (await read('test/fixtures/by-config/one-io-by-pattern/input-1.html'))
   );
 });
 
 test('Transform html stdin options only config one-io anf plugins array', async t => {
+  const outputPath = 'test/expected/by-config/one-io-and-plugins-array/output.html';
+  rimraf.sync(outputPath);
   t.plan(2);
   await execa(cli, [
     '-c',
     'test/fixtures/by-config/one-io-and-plugins-array/posthtml.config.js'
   ]);
-  t.true(await pathExists('test/expected/by-config/one-io-and-plugins-array/output.html'));
+  t.true(await pathExists(outputPath));
   t.is(
-    (await read('test/expected/by-config/one-io-and-plugins-array/output.html')),
+    (await read(outputPath)),
     (await read('test/fixtures/by-config/one-io-and-plugins-array/input.html'))
   );
 });
 
 test('Output with keeping the folder structure with allInOutput option', async t => {
+  const outputPath = 'test/expected/output-nesting';
+  rimraf.sync(outputPath);
   t.plan(3);
   await execa(cli, [
     'test/fixtures/input-nesting/**/*.html',
     '-o',
-    'test/expected/output-nesting',
+    outputPath,
     '-a'
   ]);
-  t.true(await pathExists('test/expected/output-nesting'));
+  t.true(await pathExists(outputPath));
   t.is(
     (await read('test/fixtures/input-nesting/input-nesting.html')),
-    (await read('test/expected/output-nesting/test/fixtures/input-nesting/input-nesting.html'))
+    (await read(`${outputPath}/test/fixtures/input-nesting/input-nesting.html`))
   );
   t.is(
     (await read('test/fixtures/input-nesting/input-nesting-child/input-nesting.html')),
-    (await read('test/expected/output-nesting/test/fixtures/input-nesting/input-nesting-child/input-nesting.html'))
+    (await read(`${outputPath}/test/fixtures/input-nesting/input-nesting-child/input-nesting.html`))
   );
 });
 
 test('Specify the root of the output folder structure with root option', async t => {
+  const outputPath = 'test/expected/output-nesting-root';
+  rimraf.sync(outputPath);
   t.plan(3);
   await execa(cli, [
-    'test/fixtures/input-nesting/**/*.html',
+    '**/*.html',
     '-o',
-    'test/expected/output-nesting-root',
+    outputPath,
     '-a',
     '-r',
     'test/fixtures/input-nesting'
   ]);
-  t.true(await pathExists('test/expected/output-nesting-root'));
+  t.true(await pathExists(outputPath));
   t.is(
     (await read('test/fixtures/input-nesting/input-nesting.html')),
-    (await read('test/expected/output-nesting-root/input-nesting.html'))
+    (await read(`${outputPath}/input-nesting.html`))
   );
   t.is(
     (await read('test/fixtures/input-nesting/input-nesting-child/input-nesting.html')),
-    (await read('test/expected/output-nesting-root/input-nesting-child/input-nesting.html'))
+    (await read(`${outputPath}/input-nesting-child/input-nesting.html`))
   );
 });

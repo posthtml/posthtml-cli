@@ -5,7 +5,14 @@ import mergeOptions from 'merge-options';
 
 export default ({input, flags = {}}) => {
   const explorer = cosmiconfigSync('posthtml');
-  let {config, use, options = {}, output, root = './', allInOutput} = flags;
+  let {
+    config,
+    use,
+    options = {},
+    output,
+    root = './',
+    allInOutput = false
+  } = flags;
 
   if (config) {
     ({config} = explorer.load(config));
@@ -19,11 +26,20 @@ export default ({input, flags = {}}) => {
     ({config} = explorer.search());
   }
 
-  return mergeOptions(config || {}, {
-    input: input.map(file => path.join(path.resolve(root), file)),
-    output,
+  input = []
+    .concat(input && input.length > 0 ? input : config?.input)
+    .filter(Boolean)
+    .map(file => path.join(path.resolve(root), file));
+
+  if (input.length === 0) {
+    throw new TypeError('input files not found');
+  }
+
+  return mergeOptions(config ?? {}, {
+    input,
+    output: output ?? config?.output,
     options,
     root,
     allInOutput
-  }, use || {});
+  }, use ?? {});
 };
