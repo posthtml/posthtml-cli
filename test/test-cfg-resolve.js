@@ -112,6 +112,17 @@ test('should return config when input param from config', t => {
   t.deepEqual(config.input, expected);
 });
 
+test('should return config when output param from config', t => {
+  const input = 'input.html';
+  const flags = {
+    config: 'test/config/.config-output'
+  };
+  const config = cfgResolve({input, flags});
+  const expected = 'dist/output.html';
+
+  t.deepEqual(config.output, expected);
+});
+
 test('should return config when CLI input param priority', t => {
   const input = 'src/template/**/*.html';
   const flags = {
