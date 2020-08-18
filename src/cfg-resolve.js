@@ -20,7 +20,7 @@ export default ({input, flags = {}}) => {
   }
 
   return mergeOptions(config || {}, {
-    input: input.map(file => path.join(path.resolve(root), file)),
+    input: [].concat(input).map(file => path.join(path.resolve(root), file)),
     output,
     options,
     root,
