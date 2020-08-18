@@ -134,3 +134,14 @@ test('should return config when CLI input param priority', t => {
   t.deepEqual(config.input, expected);
 });
 
+test('should return config when CLI output param priority', t => {
+  const input = 'input.html';
+  const flags = {
+    output: 'public/output.html',
+    config: 'test/config/.config-output-priority'
+  };
+  const config = cfgResolve({input, flags});
+  const expected = 'public/output.html';
+
+  t.deepEqual(config.output, expected);
+});
