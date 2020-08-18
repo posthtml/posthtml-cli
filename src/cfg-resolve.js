@@ -27,7 +27,7 @@ export default ({input, flags = {}}) => {
   }
 
   input = []
-    .concat(input || config?.input)
+    .concat(input.length > 0 ? input : config?.input)
     .filter(Boolean)
     .map(file => path.join(path.resolve(root), file));
 
@@ -35,11 +35,11 @@ export default ({input, flags = {}}) => {
     throw new TypeError('input files not found');
   }
 
-  return mergeOptions(config || {}, {
+  return mergeOptions(config ?? {}, {
     input,
-    output,
+    output: output ?? config?.output,
     options,
     root,
     allInOutput
-  }, use || {});
+  }, use ?? {});
 };
