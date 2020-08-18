@@ -14,6 +14,24 @@ test('should throw error `input files not found`', t => {
   t.is(error.message, 'input files not found');
 });
 
+test('should return simple config', t => {
+  const input = 'input.html';
+  const flags = {};
+  const config = cfgResolve({input, flags});
+  const expected = {
+    allInOutput: false,
+    input: [path.resolve('input.html')],
+    options: {},
+    output: undefined,
+    plugins: {
+      'posthtml-custom-elements': {}
+    },
+    root: './'
+  };
+
+  t.deepEqual(config, expected);
+});
+
 test('should return config plugins with one use key without property', t => {
   const input = 'input.html';
   const flags = {
