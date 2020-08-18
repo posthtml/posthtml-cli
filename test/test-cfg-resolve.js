@@ -84,6 +84,16 @@ test('should return config with key config and use key', t => {
   t.deepEqual(config.plugins, expected);
 });
 
+test('should return config when input param from config', t => {
+  const flags = {
+    config: 'test/config/.config-input'
+  };
+  const config = cfgResolve({flags});
+  const expected = [path.resolve('src/**/*.html')];
+
+  t.deepEqual(config.input, expected);
+});
+
 test('should return config when CLI input param priority', t => {
   const input = 'src/template/**/*.html';
   const flags = {
