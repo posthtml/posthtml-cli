@@ -1,6 +1,6 @@
 {
   "name": "posthtml-cli",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "CLI for posthtml",
   "license": "MIT",
   "repository": "posthtml/posthtml-cli",
@@ -23,7 +23,7 @@
     "build": "rimraf lib && babel src -d lib",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pretest": "npm run build",
-    "test": "nyc ava test/test-*.js --timeout=1m --verbose"
+    "test": "nyc ava --timeout=1m --verbose"
   },
   "files": [
     "lib/"
