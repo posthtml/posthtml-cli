@@ -273,3 +273,24 @@ test('Specify the root of the output folder structure with root option', async t
     (await read(`${outputPath}/input-nesting-child/input-nesting.html`))
   );
 });
+
+test('Ignoring files by pattern', async t => {
+  const outputPath = 'test/expected/output-ignoring';
+  rimraf.sync(outputPath);
+  t.plan(3);
+  await execa(cli, [
+    '**/*.html',
+    '!ignoring-input-child/**/*.html',
+    '-o',
+    outputPath,
+    '-a',
+    '-r',
+    'test/fixtures/input-ignoring'
+  ]);
+  t.true(await pathExists(outputPath));
+  t.is(
+    (await read('test/fixtures/input-ignoring/input.html')),
+    (await read(`${outputPath}/input.html`))
+  );
+  t.false(await pathExists('test/expected/input-ignoring/ignoring-input-child'));
+});

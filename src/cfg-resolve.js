@@ -25,21 +25,28 @@ export default ({input, flags = {}}) => {
     use = [].concat(use).reduce((cfg, name) => {
       let cliOptions = flags[toCamelCase(name)];
       let configOptions = configPluginOptions[name];
+
       // We merge this way because options can be both strings and objects.
-      const merged = mergeOptions({ [name]: configOptions }, { [name]: cliOptions || {}});
+      const merged = mergeOptions({[name]: configOptions}, {[name]: cliOptions || {}});
+
       // Assigning as we loop `use` makes sure that the order in cfg.plugins is correct.
       cfg.plugins[name] = merged[name];
+
       if (configOptions) {
         delete configPluginOptions[name];
       }
+
       return cfg;
-    }, { plugins: {} });
+    }, {plugins: {}});
 
     // Add the remaining plugins if there is any.
     if (config && config.plugins) {
       for (let name in configPluginOptions) {
-        use.plugins[name] = configPluginOptions[name];
+        if (configPluginOptions[name]) {
+          use.plugins[name] = configPluginOptions[name];
+        }
       }
+
       // Now all the plugins are in `use.plugins`.
       // Delete `config.plugins` for correct merging later: mergeOptions(config, {...}, use)
       delete config.plugins;
@@ -53,7 +60,17 @@ export default ({input, flags = {}}) => {
   input = []
     .concat(input && input.length > 0 ? input : config?.input)
     .filter(Boolean)
-    .map(file => path.join(path.resolve(root), file));
+    .map(file => {
+      const ignoreFile = file.startsWith('!');
+      let ignoreSymbol = '';
+
+      if (ignoreFile) {
+        ignoreSymbol = '!';
+        file = file.slice(1);
+      }
+
+      return path.join(ignoreSymbol, path.resolve(root), file);
+    });
 
   if (input.length === 0) {
     throw new TypeError('input files not found');
