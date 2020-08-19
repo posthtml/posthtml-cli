@@ -1,5 +1,15 @@
+## <small>0.7.4 (2020-08-19)</small>
+
+* build: perf runner test script ([40237d0](https://github.com/posthtml/posthtml-cli/commit/40237d0))
+* Fix order for plugin set with config and cli ([bb3973a](https://github.com/posthtml/posthtml-cli/commit/bb3973a))
+
+
+
 ## <small>0.7.3 (2020-08-18)</small>
 
+* 0.7.3 ([e6ab03f](https://github.com/posthtml/posthtml-cli/commit/e6ab03f))
+* build: up node targets for preset env ([3a01485](https://github.com/posthtml/posthtml-cli/commit/3a01485))
+* build: update changelog ([b3d0bce](https://github.com/posthtml/posthtml-cli/commit/b3d0bce))
 * perf: default for base config ([8d93107](https://github.com/posthtml/posthtml-cli/commit/8d93107))
 * perf: tree options from for plugins, #303 ([981e911](https://github.com/posthtml/posthtml-cli/commit/981e911)), closes [#303](https://github.com/posthtml/posthtml-cli/issues/303)
 * test: async/await not needed ([3165971](https://github.com/posthtml/posthtml-cli/commit/3165971))
@@ -15,7 +25,6 @@
 * fix: resolve incommitg input, close #313 ([4540719](https://github.com/posthtml/posthtml-cli/commit/4540719)), closes [#313](https://github.com/posthtml/posthtml-cli/issues/313)
 * fix: resolve or error inputs file, close #313 ([0b53fa2](https://github.com/posthtml/posthtml-cli/commit/0b53fa2)), closes [#313](https://github.com/posthtml/posthtml-cli/issues/313)
 * fix: resolve output from config, close #308 ([8588060](https://github.com/posthtml/posthtml-cli/commit/8588060)), closes [#308](https://github.com/posthtml/posthtml-cli/issues/308)
-* build: up node targets for preset env ([3a01485](https://github.com/posthtml/posthtml-cli/commit/3a01485))
 
 
 
