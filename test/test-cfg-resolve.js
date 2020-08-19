@@ -145,3 +145,15 @@ test('should return config when CLI output param priority', t => {
 
   t.deepEqual(config.output, expected);
 });
+
+test('should resolve plugins set via config and stdin (use) in order', async t => {
+  const input = 'input.html';
+  const flags = {
+    use: ['posthtml-d', 'posthtml-bem'],
+    posthtmlBem: { foo: 'after' },
+    posthtmlD: { bar: 'before' },
+    config: 'test/config/.config-plugins'
+  };
+  const config = cfgResolve({input, flags});
+  t.deepEqual(Object.keys(config.plugins), ['posthtml-d', 'posthtml-bem']);
+});

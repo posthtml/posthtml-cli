@@ -25,7 +25,7 @@ test('Check version', async t => {
   t.is(stdout, version);
 });
 
-test('Transform html witch config in package.json', async t => {
+test('Transform html with config in package.json', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, ['test/fixtures/input.html', '-o', filename]);
@@ -33,7 +33,7 @@ test('Transform html witch config in package.json', async t => {
   t.is((await read('test/expected/output-config-pkg.html')), (await read(filename)));
 });
 
-test('Transform html witch indent', async t => {
+test('Transform html with indent', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, ['test/fixtures/input-indent.html', '-o', filename]);
@@ -41,7 +41,7 @@ test('Transform html witch indent', async t => {
   t.is((await read('test/expected/output-indent.html')), (await read(filename)));
 });
 
-test('Transform html witch config in file', async t => {
+test('Transform html with config in file', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, ['test/fixtures/input.html', '-o', filename, '-c', 'test/fixtures/config.json']);
@@ -49,7 +49,7 @@ test('Transform html witch config in file', async t => {
   t.is((await read('test/expected/output-config-file.html')), (await read(filename)));
 });
 
-test('Transform html witch dot config in file', async t => {
+test('Transform html with dot config in file', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, ['test/fixtures/input.html', '-o', filename, '-c', 'test/fixtures/.config']);
@@ -65,7 +65,7 @@ test('Transform html from two file', async t => {
   t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
 });
 
-// test('Transform html witch options replace', async t => {
+// test('Transform html with options replace', async t => {
 //   t.plan(2);
 //   const folder = await tempfile();
 //   await copy(['test/fixtures/input.html', 'test/fixtures/input-indent.html'], folder);
@@ -74,7 +74,7 @@ test('Transform html from two file', async t => {
 //   t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
 // });
 
-test('Transform html witch config in file and stdin options use', async t => {
+test('Transform html with config in file and stdin options use', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, [
@@ -94,7 +94,7 @@ test('Transform html witch config in file and stdin options use', async t => {
   t.is((await read('test/expected/output-bem.html')), (await read(filename)));
 });
 
-test('Transform html witch stdin options use', async t => {
+test('Transform html with stdin options use', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, [
@@ -110,7 +110,7 @@ test('Transform html witch stdin options use', async t => {
   t.is((await read('test/expected/output-custom-elements.html')), (await read(filename)));
 });
 
-test('Transform html witch stdin options use two key', async t => {
+test('Transform html with stdin options use two key', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, [
@@ -118,21 +118,21 @@ test('Transform html witch stdin options use two key', async t => {
     '-o',
     filename,
     '-u',
-    'posthtml-custom-elements',
-    '--posthtml-custom-elements.defaultTag',
-    'span',
-    '-u',
     'posthtml-bem',
     '--posthtml-bem.elemPrefix=--',
     '--posthtml-bem.modPrefix',
     '_',
-    '--posthtml-bem.modDlmtr'
+    '--posthtml-bem.modDlmtr',
+    '-u',
+    'posthtml-custom-elements',
+    '--posthtml-custom-elements.defaultTag',
+    'span'
   ]);
   t.true(await pathExists(filename));
   t.is((await read('test/expected/output-bem.html')), (await read(filename)));
 });
 
-test('Transform html stdin options use witch modules', async t => {
+test('Transform html stdin options use with modules', async t => {
   t.plan(2);
   const filename = tempfile('.html');
   await execa(cli, [
