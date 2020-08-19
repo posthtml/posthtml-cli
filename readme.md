@@ -35,6 +35,7 @@ $ posthtml --help
     $ posthtml input.html
     $ posthtml input.html -o output.html
     $ posthtml inputFolder/*.html !unicorn.html
+    $ posthtml '**/*.html' '\!**/unicorn.html'
     $ posthtml input-one.html input-two.html -o outputFolder
     $ posthtml input.html -o output.html -c posthtml.js
     $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
@@ -42,6 +43,7 @@ $ posthtml --help
     $ posthtml inputFolder/**/*.html -o outputFolder -a
     $ posthtml inputFolder/**/*.html -o outputFolder -a -r inputFolder
 ```
+> ⚠️ Please note that when using patterns on the command line `*` and `!` escaping of characters is necessary. When using as npc scripts, you only need to screen the pattern `*`. [About the reasons](https://github.com/posthtml/posthtml-cli/issues/317#issuecomment-676330082)
 
 ## Options
 
