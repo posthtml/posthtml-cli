@@ -1,7 +1,17 @@
+## <small>0.7.5 (2020-08-19)</small>
+
+* docs: about escaping when use pattern ([ae3db76](https://github.com/posthtml/posthtml-cli/commit/ae3db76))
+* fix: incorrect resolve ignoring folder/files, close #317 ([8cc3e69](https://github.com/posthtml/posthtml-cli/commit/8cc3e69)), closes [#317](https://github.com/posthtml/posthtml-cli/issues/317)
+* test: ignoring folder/files, issue #317 ([7a4e8dc](https://github.com/posthtml/posthtml-cli/commit/7a4e8dc)), closes [#317](https://github.com/posthtml/posthtml-cli/issues/317)
+
+
+
 ## <small>0.7.4 (2020-08-19)</small>
 
-* build: perf runner test script ([40237d0](https://github.com/posthtml/posthtml-cli/commit/40237d0))
+* 0.7.4 ([158e2cc](https://github.com/posthtml/posthtml-cli/commit/158e2cc))
 * Fix order for plugin set with config and cli ([bb3973a](https://github.com/posthtml/posthtml-cli/commit/bb3973a))
+* build: perf runner test script ([40237d0](https://github.com/posthtml/posthtml-cli/commit/40237d0))
+* build: update changelog ([c187bc0](https://github.com/posthtml/posthtml-cli/commit/c187bc0))
 
 
 
