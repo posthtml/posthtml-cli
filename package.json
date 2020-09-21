@@ -23,7 +23,7 @@
     "build": "rimraf lib && babel src -d lib",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "pretest": "npm run build",
-    "test": "nyc ava --timeout=1m --verbose"
+    "test": "nyc ava test/test-cli.js --timeout=1m --verbose"
   },
   "files": [
     "lib/"

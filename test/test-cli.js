@@ -25,10 +25,14 @@ test('Check version', async t => {
   t.is(stdout, version);
 });
 
-test('Transform html with config in package.json', async t => {
+test.only('Transform html with config in package.json', async t => {
   t.plan(2);
   const filename = tempfile('.html');
-  await execa(cli, ['test/fixtures/input.html', '-o', filename]);
+  console.log(filename);
+  const fixtures = path.normalize('test/fixtures/input.html');
+  console.log(fixtures);
+
+  await execa(cli, [fixtures, '-o', filename]);
   t.true(await pathExists(filename));
   t.is((await read('test/expected/output-config-pkg.html')), (await read(filename)));
 });
