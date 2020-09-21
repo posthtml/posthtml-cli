@@ -110,6 +110,9 @@ console.log({input: config.input})
 config.input = config.input.map(path.normalize);
 console.log({input: config.input})
 
+const dir = fs.readdirSync(path.dirname(config.input[0]))
+console.log({dir})
+
 const entries = fg.sync(config.input)
 
 console.log({entries})
