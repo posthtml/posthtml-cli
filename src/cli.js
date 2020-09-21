@@ -87,8 +87,6 @@ const getPlugins = config => Object.keys(config.plugins || {})
   .map(plugin => interopRequire(require(plugin))(config.plugins[plugin]));
 
 const config = cfgResolve(cli);
-console.log({input: config.input[0], output: config.output})
-console.log({input: path.normalize(config.input[0]), output: path.normalize(config.output)})
 const processing = async file => {
   console.log({file})
   const output = await outResolve(file, config);
@@ -107,6 +105,10 @@ const processing = async file => {
       });
     });
 };
+
+console.log({input: config.input})
+config.input = config.input.map(path.normalize);
+console.log({input: config.input})
 
 const entries = fg.sync(config.input)
 
