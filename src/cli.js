@@ -108,6 +108,10 @@ const processing = async file => {
     });
 };
 
+const entries = fg.sync(config.input)
+
+console.log({entries})
+
 fg.stream(config.input)
   .on('data', processing)
   .once('error', console.warn);
