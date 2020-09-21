@@ -87,8 +87,9 @@ const getPlugins = config => Object.keys(config.plugins || {})
   .map(plugin => interopRequire(require(plugin))(config.plugins[plugin]));
 
 const config = cfgResolve(cli);
-
+console.log({config})
 const processing = async file => {
+  console.log({file})
   const output = await outResolve(file, config);
   const plugins = Array.isArray(config.plugins) ? config.plugins : getPlugins(config);
 
