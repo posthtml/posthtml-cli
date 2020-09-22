@@ -1,5 +1,9 @@
 name: Actions Status
-on: [push, pull_request]
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - master
 env:
   CI: true
 
@@ -12,8 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         node: [10, 12, 14]
-        os: [ubuntu-latest]
-        # os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest]
 
     steps:
       - name: Clone repository

@@ -2,6 +2,7 @@ import path from 'path';
 import {cosmiconfigSync} from 'cosmiconfig';
 import toCamelCase from 'to-camel-case';
 import mergeOptions from 'merge-options';
+import normalizePath from 'normalize-path';
 
 export default ({input, flags = {}}) => {
   const explorer = cosmiconfigSync('posthtml');
@@ -69,16 +70,21 @@ export default ({input, flags = {}}) => {
         file = file.slice(1);
       }
 
-      return path.join(ignoreSymbol, path.resolve(root), file);
+      return `${ignoreSymbol}${normalizePath(path.join(path.resolve(root), file))}`;
     });
 
   if (input.length === 0) {
     throw new TypeError('input files not found');
   }
 
+  output = output ?? config?.output;
+  if (output) {
+    output = normalizePath(output);
+  }
+
   return mergeOptions(config ?? {}, {
     input,
-    output: output ?? config?.output,
+    output,
     options,
     root,
     allInOutput

@@ -1,6 +1,7 @@
 import test from 'ava';
 import path from 'path';
 import cfgResolve from '../lib/cfg-resolve';
+import normalizePath from 'normalize-path';
 
 test('should return function', t => {
   t.true(typeof cfgResolve === 'function');
@@ -20,7 +21,7 @@ test('should return simple config', t => {
   const config = cfgResolve({input, flags});
   const expected = {
     allInOutput: false,
-    input: [path.resolve('input.html')],
+    input: [normalizePath(path.resolve('input.html'))],
     options: {},
     output: undefined,
     plugins: {
@@ -107,7 +108,7 @@ test('should return config when input param from config', t => {
     config: 'test/config/.config-input'
   };
   const config = cfgResolve({flags});
-  const expected = [path.resolve('src/**/*.html')];
+  const expected = [normalizePath(path.resolve('src/**/*.html'))];
 
   t.deepEqual(config.input, expected);
 });
@@ -129,7 +130,7 @@ test('should return config when CLI input param priority', t => {
     config: 'test/config/.config-input-priority'
   };
   const config = cfgResolve({input, flags});
-  const expected = [path.resolve('src/template/**/*.html')];
+  const expected = [normalizePath(path.resolve('src/template/**/*.html'))];
 
   t.deepEqual(config.input, expected);
 });
@@ -146,12 +147,12 @@ test('should return config when CLI output param priority', t => {
   t.deepEqual(config.output, expected);
 });
 
-test('should resolve plugins set via config and stdin (use) in order', async t => {
+test('should resolve plugins set via config and stdin (use) in order', t => {
   const input = 'input.html';
   const flags = {
     use: ['posthtml-d', 'posthtml-bem'],
-    posthtmlBem: { foo: 'after' },
-    posthtmlD: { bar: 'before' },
+    posthtmlBem: {foo: 'after'},
+    posthtmlD: {bar: 'before'},
     config: 'test/config/.config-plugins'
   };
   const config = cfgResolve({input, flags});
