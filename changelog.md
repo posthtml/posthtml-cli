@@ -1,5 +1,18 @@
+## <small>0.7.6 (2020-09-22)</small>
+
+* test: fix for window os ([f657858](https://github.com/posthtml/posthtml-cli/commit/f657858))
+* ci: enable window test, close #316 ([c86172d](https://github.com/posthtml/posthtml-cli/commit/c86172d)), closes [#316](https://github.com/posthtml/posthtml-cli/issues/316)
+* ci: update config ([a4516bc](https://github.com/posthtml/posthtml-cli/commit/a4516bc))
+* build: update dep dev, close #312 ([0807b07](https://github.com/posthtml/posthtml-cli/commit/0807b07)), closes [#312](https://github.com/posthtml/posthtml-cli/issues/312)
+* fix: resolve path on window, close #323 ([2447d87](https://github.com/posthtml/posthtml-cli/commit/2447d87)), closes [#323](https://github.com/posthtml/posthtml-cli/issues/323)
+* docs: fix typo ([27c8748](https://github.com/posthtml/posthtml-cli/commit/27c8748))
+
+
+
 ## <small>0.7.5 (2020-08-19)</small>
 
+* 0.7.5 ([595e05a](https://github.com/posthtml/posthtml-cli/commit/595e05a))
+* build: update changelog ([7c203eb](https://github.com/posthtml/posthtml-cli/commit/7c203eb))
 * docs: about escaping when use pattern ([ae3db76](https://github.com/posthtml/posthtml-cli/commit/ae3db76))
 * fix: incorrect resolve ignoring folder/files, close #317 ([8cc3e69](https://github.com/posthtml/posthtml-cli/commit/8cc3e69)), closes [#317](https://github.com/posthtml/posthtml-cli/issues/317)
 * test: ignoring folder/files, issue #317 ([7a4e8dc](https://github.com/posthtml/posthtml-cli/commit/7a4e8dc)), closes [#317](https://github.com/posthtml/posthtml-cli/issues/317)
