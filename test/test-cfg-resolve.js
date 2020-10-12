@@ -91,6 +91,19 @@ test('should return config options', t => {
   t.deepEqual(config.options, expected);
 });
 
+test('should return config root', t => {
+  const input = 'input.html';
+  const flags = {
+    config: 'test/config/.config-root'
+  };
+  const config = cfgResolve({input, flags});
+  const expectedRoot = './src';
+  const expectedInput = [normalizePath(path.join(process.cwd(), expectedRoot, input))];
+
+  t.is(config.root, expectedRoot);
+  t.deepEqual(config.input, expectedInput);
+});
+
 test('should return config with key config and use key', t => {
   const input = 'input.html';
   const flags = {

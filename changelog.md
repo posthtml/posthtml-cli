@@ -1,9 +1,20 @@
+## <small>0.7.7 (2020-10-12)</small>
+
+* test: incorrect resolve with root, issue #326 ([c4014d3](https://github.com/posthtml/posthtml-cli/commit/c4014d3)), closes [#326](https://github.com/posthtml/posthtml-cli/issues/326)
+* test: normalize expected path ([55b7845](https://github.com/posthtml/posthtml-cli/commit/55b7845))
+* docs: fix example with root ([8a86282](https://github.com/posthtml/posthtml-cli/commit/8a86282))
+* fix: resolve path with root, close #326 ([45a42ee](https://github.com/posthtml/posthtml-cli/commit/45a42ee)), closes [#326](https://github.com/posthtml/posthtml-cli/issues/326)
+
+
+
 ## <small>0.7.6 (2020-09-22)</small>
 
+* 0.7.6 ([0cc6ffe](https://github.com/posthtml/posthtml-cli/commit/0cc6ffe))
+* build: update changelog ([85c8caf](https://github.com/posthtml/posthtml-cli/commit/85c8caf))
+* build: update dep dev, close #312 ([0807b07](https://github.com/posthtml/posthtml-cli/commit/0807b07)), closes [#312](https://github.com/posthtml/posthtml-cli/issues/312)
 * test: fix for window os ([f657858](https://github.com/posthtml/posthtml-cli/commit/f657858))
 * ci: enable window test, close #316 ([c86172d](https://github.com/posthtml/posthtml-cli/commit/c86172d)), closes [#316](https://github.com/posthtml/posthtml-cli/issues/316)
 * ci: update config ([a4516bc](https://github.com/posthtml/posthtml-cli/commit/a4516bc))
-* build: update dep dev, close #312 ([0807b07](https://github.com/posthtml/posthtml-cli/commit/0807b07)), closes [#312](https://github.com/posthtml/posthtml-cli/issues/312)
 * fix: resolve path on window, close #323 ([2447d87](https://github.com/posthtml/posthtml-cli/commit/2447d87)), closes [#323](https://github.com/posthtml/posthtml-cli/issues/323)
 * docs: fix typo ([27c8748](https://github.com/posthtml/posthtml-cli/commit/27c8748))
 

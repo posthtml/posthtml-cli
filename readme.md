@@ -41,7 +41,7 @@ $ posthtml --help
     $ posthtml input.html -o output.html -u posthtml-bem --posthtml-bem.elemPrefix __
     $ posthtml inputFolder/*.html -o outputFolder
     $ posthtml inputFolder/**/*.html -o outputFolder -a
-    $ posthtml inputFolder/**/*.html -o outputFolder -a -r inputFolder
+    $ posthtml '**/*.html' -o outputFolder -a -r inputFolder
 ```
 > ⚠️ Please note that when using patterns on the command line `*` and `!` escaping of characters is necessary. When using as **npm** scripts, you only need to screen the pattern `*`. [About the reasons](https://github.com/posthtml/posthtml-cli/issues/317#issuecomment-676330082)
 

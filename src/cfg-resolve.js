@@ -58,6 +58,10 @@ export default ({input, flags = {}}) => {
     ({config} = explorer.search());
   }
 
+  if (config?.root) {
+    root = config.root;
+  }
+
   input = []
     .concat(input && input.length > 0 ? input : config?.input)
     .filter(Boolean)
