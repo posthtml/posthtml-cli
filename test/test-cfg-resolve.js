@@ -98,7 +98,7 @@ test('should return config root', t => {
   };
   const config = cfgResolve({input, flags});
   const expectedRoot = './src';
-  const expectedInput = [path.join(process.cwd(), expectedRoot, input)];
+  const expectedInput = [normalizePath(path.join(process.cwd(), expectedRoot, input))];
 
   t.is(config.root, expectedRoot);
   t.deepEqual(config.input, expectedInput);
