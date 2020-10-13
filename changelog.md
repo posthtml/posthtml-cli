@@ -1,5 +1,14 @@
+## 0.8.0 (2020-10-13)
+
+* build: update dep dev ([a5634aa](https://github.com/posthtml/posthtml-cli/commit/a5634aa))
+* feat: update notifier, close #296 ([ec1305a](https://github.com/posthtml/posthtml-cli/commit/ec1305a)), closes [#296](https://github.com/posthtml/posthtml-cli/issues/296)
+
+
+
 ## <small>0.7.7 (2020-10-12)</small>
 
+* 0.7.7 ([a5c47c1](https://github.com/posthtml/posthtml-cli/commit/a5c47c1))
+* build: update changelog ([09e523e](https://github.com/posthtml/posthtml-cli/commit/09e523e))
 * test: incorrect resolve with root, issue #326 ([c4014d3](https://github.com/posthtml/posthtml-cli/commit/c4014d3)), closes [#326](https://github.com/posthtml/posthtml-cli/issues/326)
 * test: normalize expected path ([55b7845](https://github.com/posthtml/posthtml-cli/commit/55b7845))
 * docs: fix example with root ([8a86282](https://github.com/posthtml/posthtml-cli/commit/8a86282))
