@@ -5,9 +5,13 @@ import fs from 'fs';
 import fg from 'fast-glob';
 import meow from 'meow';
 import makeDir from 'make-dir';
+import updateNotifier from 'update-notifier';
 import posthtml from 'posthtml';
 import outResolve from './out-resolve';
 import cfgResolve from './cfg-resolve';
+
+const package_ = require('../package.json');
+updateNotifier({pkg: package_}).notify();
 
 const cli = meow(`
   Usage: posthtml <patterns>
