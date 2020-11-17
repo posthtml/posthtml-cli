@@ -1,5 +1,15 @@
+## <small>0.8.1 (2020-11-17)</small>
+
+* build: lock ([1b8dffc](https://github.com/posthtml/posthtml-cli/commit/1b8dffc))
+* fix: allInOutput config in JSON is ignored, close #330 ([236c902](https://github.com/posthtml/posthtml-cli/commit/236c902)), closes [#330](https://github.com/posthtml/posthtml-cli/issues/330)
+* test: allInOutput config in JSON is ignored, issue #330 ([11d9fb7](https://github.com/posthtml/posthtml-cli/commit/11d9fb7)), closes [#330](https://github.com/posthtml/posthtml-cli/issues/330)
+
+
+
 ## 0.8.0 (2020-10-13)
 
+* 0.8.0 ([d07f45b](https://github.com/posthtml/posthtml-cli/commit/d07f45b))
+* build: update changelog ([3eded7c](https://github.com/posthtml/posthtml-cli/commit/3eded7c))
 * build: update dep dev ([a5634aa](https://github.com/posthtml/posthtml-cli/commit/a5634aa))
 * feat: update notifier, close #296 ([ec1305a](https://github.com/posthtml/posthtml-cli/commit/ec1305a)), closes [#296](https://github.com/posthtml/posthtml-cli/issues/296)
 
