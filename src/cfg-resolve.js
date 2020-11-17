@@ -62,6 +62,10 @@ export default ({input, flags = {}}) => {
     root = config.root;
   }
 
+  if (config?.allInOutput) {
+    allInOutput = config.allInOutput;
+  }
+
   input = []
     .concat(input && input.length > 0 ? input : config?.input)
     .filter(Boolean)
