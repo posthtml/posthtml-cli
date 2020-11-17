@@ -104,6 +104,16 @@ test('should return config root', t => {
   t.deepEqual(config.input, expectedInput);
 });
 
+test('should return config allInOutput', t => {
+  const input = 'input.html';
+  const flags = {
+    config: 'test/config/.config-allInOutput'
+  };
+  const config = cfgResolve({input, flags});
+
+  t.true(config.allInOutput);
+});
+
 test('should return config with key config and use key', t => {
   const input = 'input.html';
   const flags = {
