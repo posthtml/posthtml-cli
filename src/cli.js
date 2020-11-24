@@ -71,6 +71,11 @@ const cli = meow(`
       type: 'boolean',
       default: false,
       alias: 'a'
+    },
+    skip: {
+      type: 'string',
+      alias: 's',
+      isMultiple: true
     }
   }
 });
@@ -95,10 +100,15 @@ const config = cfgResolve(cli);
 const processing = async file => {
   const output = await outResolve(file, config);
   const plugins = Array.isArray(config.plugins) ? config.plugins : getPlugins(config);
+  const skipParse = config.skip.includes(file);
 
   makeDir(path.dirname(output))
     .then(read.bind(undefined, file))
-    .then(html => Promise.resolve(posthtml(plugins).process(html, {...config.options, from: file})))
+    .then(html => Promise.resolve(posthtml(plugins).process(html, {
+      ...config.options,
+      skipParse,
+      from: file
+    })))
     .then(({html}) => {
       fs.writeFile(output, html, error => {
         if (error) {

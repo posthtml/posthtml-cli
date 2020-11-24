@@ -27,7 +27,8 @@ test('should return simple config', t => {
     plugins: {
       'posthtml-custom-elements': {}
     },
-    root: './'
+    root: './',
+    skip: []
   };
 
   t.deepEqual(config, expected);
@@ -134,6 +135,16 @@ test('should return config when input param from config', t => {
   const expected = [normalizePath(path.resolve('src/**/*.html'))];
 
   t.deepEqual(config.input, expected);
+});
+
+test('should return config when skip param from config', t => {
+  const input = 'input.html';
+  const flags = {
+    config: 'test/config/.config-skip'
+  };
+  const config = cfgResolve({input, flags});
+  const expected = [normalizePath(path.resolve('input-skip.html'))];
+  t.deepEqual(config.skip, expected);
 });
 
 test('should return config when output param from config', t => {
