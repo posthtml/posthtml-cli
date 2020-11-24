@@ -294,3 +294,30 @@ test('Ignoring files by pattern', async t => {
   );
   t.false(await pathExists('test/expected/input-ignoring/ignoring-input-child'));
 });
+
+test('Skip parsing file', async t => {
+  const outputPath = 'test/expected/output-skip';
+  rimraf.sync(outputPath);
+  t.plan(3);
+  await execa(cli, [
+    '**/*.html',
+    '-o',
+    outputPath,
+    '-a',
+    '-r',
+    'test/fixtures/input-skip',
+    '-s',
+    'input-skip.html',
+    '-u',
+    'posthtml-custom-elements'
+  ]);
+  t.true(await pathExists(outputPath));
+  t.is(
+    (await read('test/fixtures/input-skip/input.html')),
+    (await read(`${outputPath}/input.html`))
+  );
+  t.is(
+    (await read('test/fixtures/input-skip/input-skip.html')),
+    (await read(`${outputPath}/input-skip.html`))
+  );
+});
