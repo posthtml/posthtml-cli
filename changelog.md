@@ -1,6 +1,17 @@
+## 0.9.0 (2020-11-24)
+
+* build: update dep dev ([41f89ec](https://github.com/posthtml/posthtml-cli/commit/41f89ec))
+* docs: description for skip parse, #332 ([3cb4612](https://github.com/posthtml/posthtml-cli/commit/3cb4612)), closes [#332](https://github.com/posthtml/posthtml-cli/issues/332)
+* feat: skip parse option, close #332 ([a77c7a1](https://github.com/posthtml/posthtml-cli/commit/a77c7a1)), closes [#332](https://github.com/posthtml/posthtml-cli/issues/332)
+* test: for skip options, issue #332 ([a1188b2](https://github.com/posthtml/posthtml-cli/commit/a1188b2)), closes [#332](https://github.com/posthtml/posthtml-cli/issues/332)
+
+
+
 ## <small>0.8.1 (2020-11-17)</small>
 
+* 0.8.1 ([f103051](https://github.com/posthtml/posthtml-cli/commit/f103051))
 * build: lock ([1b8dffc](https://github.com/posthtml/posthtml-cli/commit/1b8dffc))
+* build: update changelog ([597ab5c](https://github.com/posthtml/posthtml-cli/commit/597ab5c))
 * fix: allInOutput config in JSON is ignored, close #330 ([236c902](https://github.com/posthtml/posthtml-cli/commit/236c902)), closes [#330](https://github.com/posthtml/posthtml-cli/issues/330)
 * test: allInOutput config in JSON is ignored, issue #330 ([11d9fb7](https://github.com/posthtml/posthtml-cli/commit/11d9fb7)), closes [#330](https://github.com/posthtml/posthtml-cli/issues/330)
 
