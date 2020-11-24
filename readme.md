@@ -54,7 +54,7 @@ $ posthtml --help
   "root": "src",
   "input": "*.html",
   "output": "dist",
-  "skip": ["skip.html", "file.html"]
+  "skip": ["skip.html", "file.html"],
   "options": {
     "sync": true,
     "directives": [{"name": "?php", "start": "<", "end": ">"}]
