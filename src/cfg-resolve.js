@@ -12,6 +12,7 @@ export default ({input, flags = {}}) => {
     options = {},
     output,
     root = './',
+    skip = [],
     allInOutput = false
   } = flags;
 
@@ -66,6 +67,10 @@ export default ({input, flags = {}}) => {
     allInOutput = config.allInOutput;
   }
 
+  if (config?.skip) {
+    skip = skip.concat(config.skip);
+  }
+
   input = []
     .concat(input && input.length > 0 ? input : config?.input)
     .filter(Boolean)
@@ -90,11 +95,14 @@ export default ({input, flags = {}}) => {
     output = normalizePath(output);
   }
 
+  skip = skip.map(file => normalizePath(path.join(path.resolve(root), file)));
+
   return mergeOptions(config ?? {}, {
     input,
     output,
     options,
     root,
-    allInOutput
+    allInOutput,
+    skip
   }, use ?? {});
 };
