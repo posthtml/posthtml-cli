@@ -40,13 +40,13 @@
     "meow": "^7.1.1",
     "merge-options": "^3.0.4",
     "normalize-path": "^3.0.0",
-    "posthtml": "^0.15.0",
+    "posthtml": "^0.15.1",
     "to-camel-case": "^1.0.0",
     "update-notifier": "^5.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.8",
-    "@babel/core": "^7.12.8",
+    "@babel/core": "^7.12.9",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.12.7",
     "@babel/register": "^7.11.5",
