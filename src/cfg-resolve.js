@@ -3,6 +3,7 @@ import {cosmiconfigSync} from 'cosmiconfig';
 import toCamelCase from 'to-camel-case';
 import mergeOptions from 'merge-options';
 import normalizePath from 'normalize-path';
+import fg from 'fast-glob';
 
 export default ({input, flags = {}}) => {
   const explorer = cosmiconfigSync('posthtml');
@@ -95,7 +96,7 @@ export default ({input, flags = {}}) => {
     output = normalizePath(output);
   }
 
-  skip = skip.map(file => normalizePath(path.join(path.resolve(root), file)));
+  skip = fg.sync(skip, {cwd: path.resolve(root)}).map(file => normalizePath(path.join(path.resolve(root), file)));
 
   return mergeOptions(config ?? {}, {
     input,
