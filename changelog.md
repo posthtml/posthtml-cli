@@ -1,5 +1,16 @@
+## <small>0.9.1 (2020-11-27)</small>
+
+* build: update dep dev ([c542315](https://github.com/posthtml/posthtml-cli/commit/c542315))
+* perf: skip files by pattern ([0bb92bc](https://github.com/posthtml/posthtml-cli/commit/0bb92bc))
+* test: skip by pattern ([1dac470](https://github.com/posthtml/posthtml-cli/commit/1dac470))
+* docs: add open collective ([70902c0](https://github.com/posthtml/posthtml-cli/commit/70902c0))
+* docs: fix typo ([1b89474](https://github.com/posthtml/posthtml-cli/commit/1b89474))
+
+
+
 ## 0.9.0 (2020-11-24)
 
+* 0.9.0 ([59bffb6](https://github.com/posthtml/posthtml-cli/commit/59bffb6))
 * build: update dep dev ([41f89ec](https://github.com/posthtml/posthtml-cli/commit/41f89ec))
 * docs: description for skip parse, #332 ([3cb4612](https://github.com/posthtml/posthtml-cli/commit/3cb4612)), closes [#332](https://github.com/posthtml/posthtml-cli/issues/332)
 * feat: skip parse option, close #332 ([a77c7a1](https://github.com/posthtml/posthtml-cli/commit/a77c7a1)), closes [#332](https://github.com/posthtml/posthtml-cli/issues/332)
