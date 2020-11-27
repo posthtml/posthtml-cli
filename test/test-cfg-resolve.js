@@ -143,7 +143,17 @@ test('should return config when skip param from config', t => {
     config: 'test/config/.config-skip'
   };
   const config = cfgResolve({input, flags});
-  const expected = [normalizePath(path.resolve('input-skip.html'))];
+  const expected = [normalizePath(path.join(path.resolve('test/fixtures/input-skip/'), 'input-skip.html'))];
+  t.deepEqual(config.skip, expected);
+});
+
+test('should return config when skip param from config by pattern', t => {
+  const input = 'input.html';
+  const flags = {
+    config: 'test/config/.config-skip-by-pattern'
+  };
+  const config = cfgResolve({input, flags});
+  const expected = [normalizePath(path.join(path.resolve('test/fixtures/input-skip-by-pattern/'), 'input-skip-by-pattern.html'))];
   t.deepEqual(config.skip, expected);
 });
 

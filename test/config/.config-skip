@@ -1,3 +1,4 @@
 {
+  'root': 'test/fixtures/input-skip',
   'skip': 'input-skip.html'
 }
