@@ -1,5 +1,12 @@
+## <small>0.9.2 (2021-05-07)</small>
+
+* Fix homepage link in package.json ([a07a0ea](https://github.com/posthtml/posthtml-cli/commit/a07a0ea))
+
+
+
 ## <small>0.9.1 (2020-11-27)</small>
 
+* 0.9.1 ([991588b](https://github.com/posthtml/posthtml-cli/commit/991588b))
 * build: update dep dev ([c542315](https://github.com/posthtml/posthtml-cli/commit/c542315))
 * perf: skip files by pattern ([0bb92bc](https://github.com/posthtml/posthtml-cli/commit/0bb92bc))
 * test: skip by pattern ([1dac470](https://github.com/posthtml/posthtml-cli/commit/1dac470))
