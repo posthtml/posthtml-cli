@@ -9,6 +9,7 @@ import updateNotifier from 'update-notifier';
 import posthtml from 'posthtml';
 import outResolve from './out-resolve';
 import cfgResolve from './cfg-resolve';
+import pluginResolve from './plugin-resolve';
 
 const package_ = require('../package.json');
 updateNotifier({pkg: package_}).notify();
@@ -93,7 +94,7 @@ const read = file => new Promise(resolve => {
 const interopRequire = object => object && object.__esModule ? object.default : object;
 
 const getPlugins = config => Object.keys(config.plugins || {})
-  .map(plugin => interopRequire(require(plugin))(config.plugins[plugin]));
+  .map(plugin => interopRequire(require(pluginResolve(plugin, config.root)))(config.plugins[plugin]));
 
 const config = cfgResolve(cli);
 
