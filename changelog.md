@@ -1,5 +1,15 @@
+## 0.10.0 (2021-06-11)
+
+* feat: resolve local plugin, close #336, close #338 ([44d877b](https://github.com/posthtml/posthtml-cli/commit/44d877b)), closes [#336](https://github.com/posthtml/posthtml-cli/issues/336) [#338](https://github.com/posthtml/posthtml-cli/issues/338)
+* test: resolve local plugin, issue #336, #338 ([2a0cb7d](https://github.com/posthtml/posthtml-cli/commit/2a0cb7d)), closes [#336](https://github.com/posthtml/posthtml-cli/issues/336) [#338](https://github.com/posthtml/posthtml-cli/issues/338)
+* fix: fails without config, close #337 ([8307ed3](https://github.com/posthtml/posthtml-cli/commit/8307ed3)), closes [#337](https://github.com/posthtml/posthtml-cli/issues/337)
+* build: update dep dev ([36e5996](https://github.com/posthtml/posthtml-cli/commit/36e5996))
+
+
+
 ## <small>0.9.2 (2021-05-07)</small>
 
+* 0.9.2 ([b722c15](https://github.com/posthtml/posthtml-cli/commit/b722c15))
 * Fix homepage link in package.json ([a07a0ea](https://github.com/posthtml/posthtml-cli/commit/a07a0ea))
 
 

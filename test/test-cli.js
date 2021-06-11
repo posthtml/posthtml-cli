@@ -65,6 +65,19 @@ test('Transform html from two file', async t => {
   t.is((await read('test/expected/output-indent.html')), (await read(`${folder}/input-indent.html`)));
 });
 
+test('Dont not transform html with local plugin', async t => {
+  const filename = tempfile('.html');
+  await execa(cli, [
+    'test/fixtures/input.html',
+    '-o',
+    filename,
+    '-u',
+    'test/plugins/custom-plugin.js',
+  ]);
+  t.true(await pathExists(filename));
+  t.is((await read('test/fixtures/input.html')), (await read(filename)));
+});
+
 // test('Transform html with options replace', async t => {
 //   t.plan(2);
 //   const folder = await tempfile();
