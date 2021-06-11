@@ -57,7 +57,8 @@ export default ({input, flags = {}}) => {
   }
 
   if (!config && !use) {
-    ({config} = explorer.search());
+    const search = explorer.search();
+    config = search?.config;
   }
 
   if (config?.root) {
