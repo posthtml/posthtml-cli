@@ -64,7 +64,7 @@ $ posthtml --help
       "property": "value"
     }
   }
-};
+}
 ```
 
 > example config _`.posthtmlrc`_
