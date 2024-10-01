@@ -42,7 +42,7 @@
     "normalize-path": "^3.0.0",
     "posthtml": "^0.16.4",
     "to-camel-case": "^1.0.0",
-    "update-notifier": "^5.1.0"
+    "update-notifier": "^7.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
